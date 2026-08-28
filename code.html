@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Igrek Physiothérapie - High-Performance Tech</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-container-highest": "#e1e3e4",
+                "slate-grey": "#4A5568",
+                "on-secondary-container": "#fefcff",
+                "secondary": "#0058bc",
+                "error": "#ba1a1a",
+                "clinical-white": "#FFFFFF",
+                "surface-tint": "#4a5e87",
+                "secondary-fixed": "#d8e2ff",
+                "tertiary-fixed": "#ffdcc4",
+                "primary-fixed": "#d7e2ff",
+                "on-tertiary-fixed-variant": "#6f3800",
+                "surface": "#f8f9fa",
+                "on-secondary-fixed": "#001a41",
+                "surface-container": "#edeeef",
+                "surface-dim": "#d9dadb",
+                "tertiary-container": "#2f1400",
+                "on-secondary": "#ffffff",
+                "primary-container": "#001a3f",
+                "inverse-primary": "#b2c7f5",
+                "on-surface-variant": "#44474e",
+                "tertiary": "#000000",
+                "on-tertiary": "#ffffff",
+                "on-tertiary-container": "#bb7336",
+                "divider-gold": "#F4A261",
+                "primary-fixed-dim": "#b2c7f5",
+                "outline": "#74777f",
+                "on-error-container": "#93000a",
+                "primary": "#000000",
+                "surface-variant": "#e1e3e4",
+                "on-error": "#ffffff",
+                "on-secondary-fixed-variant": "#004493",
+                "tertiary-fixed-dim": "#ffb780",
+                "outline-variant": "#c4c6cf",
+                "on-primary-fixed-variant": "#32476d",
+                "on-background": "#191c1d",
+                "surface-container-high": "#e7e8e9",
+                "on-primary-container": "#6f84ae",
+                "error-container": "#ffdad6",
+                "inverse-surface": "#2e3132",
+                "surface-container-low": "#f3f4f5",
+                "secondary-fixed-dim": "#adc6ff",
+                "on-primary": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "background": "#f0f1f2",
+                "secondary-container": "#0070eb",
+                "surface-bright": "#f8f9fa",
+                "on-surface": "#191c1d",
+                "on-tertiary-fixed": "#2f1400",
+                "on-primary-fixed": "#001a3f",
+                "inverse-on-surface": "#f0f1f2"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "unit": "8px",
+                "gutter-desktop": "24px",
+                "section-padding": "80px",
+                "margin-mobile": "20px",
+                "margin-desktop": "64px",
+                "base": "8px",
+                "lg": "48px",
+                "md": "24px",
+                "xl": "80px",
+                "xs": "4px",
+                "gutter": "24px",
+                "sm": "12px"
+        },
+        "fontFamily": {
+                "display-lg": [
+                        "Space Grotesk", "sans-serif"
+                ],
+                "body-md": [
+                        "Space Grotesk", "sans-serif"
+                ],
+                "label-sm": [
+                        "Space Grotesk", "sans-serif"
+                ],
+                "label-md": [
+                        "Space Grotesk", "sans-serif"
+                ],
+                "headline-lg-mobile": [
+                        "Space Grotesk", "sans-serif"
+                ],
+                "caption": [
+                        "Space Grotesk", "sans-serif"
+                ],
+                "body-lg": [
+                        "Space Grotesk", "sans-serif"
+                ],
+                "headline-md": [
+                        "Space Grotesk", "sans-serif"
+                ],
+                "headline-lg": [
+                        "Space Grotesk", "sans-serif"
+                ]
+        },
+        "fontSize": {
+                "display-lg": [
+                        "56px",
+                        {
+                                "lineHeight": "64px",
+                                "letterSpacing": "-0.03em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.1em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "caption": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg": [
+                        "40px",
+                        {
+                                "lineHeight": "48px",
+                                "fontWeight": "700",
+                                "letterSpacing": "-0.02em"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@300..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    .dot-grid {
+        background-color: #f0f1f2;
+        background-image: radial-gradient(#c4c6cf 1px, transparent 1px);
+        background-size: 24px 24px;
+    }
+    .glass-card {
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+    }
+    .neon-text-gradient {
+        background: linear-gradient(135deg, #0058bc 0%, #F4A261 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .neon-icon {
+        filter: drop-shadow(0 0 6px rgba(0, 88, 188, 0.6));
+    }
+    .neon-icon-orange {
+        filter: drop-shadow(0 0 6px rgba(244, 162, 97, 0.6));
+    }
+</style>
+</head>
+<body class="dot-grid text-on-background font-body-md antialiased overflow-x-hidden min-h-screen">
+<!-- Top Navigation Bar -->
+<nav class="sticky top-4 mx-4 md:mx-auto max-w-7xl z-50 glass-card rounded-2xl px-6 py-4 flex justify-between items-center transition-all duration-300">
+<div class="font-headline-md text-headline-md font-bold tracking-tight uppercase">
+            IGREK<span class="text-secondary">.TECH</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-secondary border-b-2 border-secondary pb-1 font-label-md uppercase tracking-widest hover:text-primary transition-colors duration-200" href="#">Services</a>
+<a class="text-on-surface-variant hover:text-primary font-label-md uppercase tracking-widest transition-colors duration-200" href="#">About</a>
+<a class="text-on-surface-variant hover:text-primary font-label-md uppercase tracking-widest transition-colors duration-200" href="#">Contact</a>
+</div>
+<button class="bg-gradient-to-r from-secondary to-[#0070eb] text-white font-label-md uppercase tracking-wider px-6 py-3 rounded-xl hover:shadow-[0_0_15px_rgba(0,88,188,0.5)] transition-all duration-300 transform hover:-translate-y-0.5">
+            Initialize Appt
+        </button>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full min-h-[90vh] flex items-center overflow-hidden py-xl px-margin-mobile md:px-margin-desktop">
+<!-- Vibrant Background Accents -->
+<div class="absolute top-1/4 -left-32 w-96 h-96 bg-secondary/20 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="absolute bottom-1/4 -right-32 w-96 h-96 bg-divider-gold/20 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-10 mt-12">
+<div class="flex flex-col gap-8 max-w-2xl">
+<div class="inline-flex items-center gap-2 glass-card px-4 py-2 rounded-full w-fit border border-secondary/20">
+<span class="material-symbols-outlined text-secondary text-sm neon-icon font-bold">bolt</span>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest">High-Performance Recovery</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-primary tracking-tight leading-tight">
+                        Precision <br/>
+<span class="neon-text-gradient">Orthopedic</span> <br/>
+                        Therapy.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Advanced structural optimization and personalized bio-mechanic tuning by Dilsad Igrek. Elevate your baseline performance in Welkenraedt.
+                    </p>
+<div class="flex flex-wrap gap-4 mt-4">
+<button class="bg-primary text-white font-label-md uppercase tracking-wider px-8 py-4 rounded-xl hover:bg-inverse-surface transition-all duration-300 flex items-center gap-3 group">
+<span>Launch Protocol</span>
+<span class="material-symbols-outlined transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="glass-card text-primary font-label-md uppercase tracking-wider px-8 py-4 rounded-xl hover:bg-white/60 transition-all duration-300 border border-outline-variant/50">
+                            System Specs
+                        </button>
+</div>
+</div>
+<div class="relative h-[500px] md:h-[650px] w-full rounded-[2rem] overflow-hidden glass-card p-4 border border-white">
+<div class="relative w-full h-full rounded-[1.5rem] overflow-hidden">
+<!-- Image Placeholders -->
+<img alt="Logo Cabinet Igrek Physiothérapie" class="absolute top-6 right-6 w-32 h-auto object-contain z-20 glass-card p-3 rounded-xl border border-white/60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5fQUC2B2yKWVu8NYikkIdsokHDiYX080-g87Zat4qVMhHG4FioXFrxCpfS-XdO7uskjpY2odU49HcxE6m9o9BjBzx0_7ilepLvLmbDoLZyOUphRqvIzlKT__lxnILbYjuAXrbNYFywlTocCNdGL1ZdQyBSC9Bt5KVTxg20jj8UbJrf3eFWOnPgek1ra-xGFoCWu61PFQmz6wpSskOropITbXL75vSRBI9fDkOchxCGzqYrR0GS460m-ho0SBrkaHtEg"/>
+<div class="absolute inset-0 bg-gradient-to-tr from-secondary/20 to-transparent z-10 pointer-events-none mix-blend-overlay"></div>
+<img class="w-full h-full object-cover filter contrast-125 saturate-50" data-alt="A modern, brightly lit physiotherapy clinic room. The aesthetic is clean, clinical yet warm, with light wood accents and crisp white walls. A high-end adjustable treatment table sits in the center, bathed in soft, natural light streaming through a large window. A physiotherapist in professional, minimalistic attire is demonstrating a precise manual therapy technique on a patient's shoulder. The atmosphere conveys trust, precision, and healing, adhering strictly to a modern light-mode wellness design system with subtle cool blue undertones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtiVsDGxZY6txOnGDzsh1dmAHoiH0QfYow6pwjCZjYhs6C_HlYezyJe6uqagfY4tWb-Gevf1Bz7fxXB7nKn_vm1pkEA1RRj8wouraDC9ogKU0G91U1c20dXFyIfGzOx4pbSIitjG0TLjAO-EtZ6B8Tq2GRrRiqURkTbfzE5keuDyp1srkhnDKh-FFDlurc4wmmxe2RZ6q8wWlpHnYrkMkAi1s3VhJWr1tNxgXbDg5ug_B9klCMQZuY"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Services Section (Bento Grid Style) -->
+<section class="w-full py-xl px-margin-mobile md:px-margin-desktop relative">
+<div class="max-w-7xl mx-auto">
+<div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h2 class="font-display-lg text-display-lg text-primary mb-4 tracking-tight">Core Modules</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl text-lg">Targeted protocols engineered to recalibrate your musculoskeletal system and optimize athletic output.</p>
+</div>
+<button class="w-fit font-label-md uppercase tracking-wider text-secondary flex items-center gap-2 hover:gap-3 transition-all duration-300">
+                    View All Modules <span class="material-symbols-outlined text-sm font-bold">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[320px]">
+<!-- Bento Item 1: Large Span -->
+<div class="md:col-span-2 md:row-span-2 relative glass-card rounded-[2rem] p-8 flex flex-col justify-end overflow-hidden group border border-white/80 hover:border-secondary/50 transition-colors duration-500">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-1000 group-hover:scale-105 filter grayscale group-hover:grayscale-0" data-alt="Close-up of precise manual therapy on a patient's spine in a brightly lit, modern clinical setting. Shallow depth of field focusing on the therapist's hands. Clean white and soft blue tones, emphasizing clinical excellence and precision minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAfuF6oQEvjrjya66skpAVc2_JIXk_rF83Vn_qlqWF0VinL4ImXGlJCBaU_ul90VRVmao02wF8-3XqqdXNY6ML_VDb4-ByTkpYCcm50ob6j83TjR0OYmxC9pWtIXclXcO4MZ33372Yw7Kg2ZdKEMTzLVYCnKBLQfjOczA1-u5E_SDup3XVBnTySL68YQbt2DDWxspvomr_y6e8naKwd4CklZqnohQ57cAYtWJ-hfHPgqKLjgcSFRSy"/>
+<div class="relative z-20 text-white">
+<div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary to-[#003d82] text-white flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(0,88,188,0.5)]">
+<span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg mb-3 tracking-tight">Orthopedic Manual Therapy</h3>
+<p class="font-body-md text-white/80 max-w-lg mb-8 text-lg">High-fidelity assessment and targeted neuro-musculoskeletal intervention based on advanced clinical biomechanics.</p>
+<a class="inline-flex items-center gap-2 text-white font-label-md uppercase tracking-wider hover:text-secondary-fixed transition-colors" href="#">
+                                Initialize Sequence <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Bento Item 2 -->
+<div class="glass-card rounded-[2rem] p-8 border border-white/80 flex flex-col hover:-translate-y-1 transition-transform duration-300 relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div class="w-12 h-12 rounded-xl bg-white text-secondary flex items-center justify-center mb-6 shadow-sm border border-secondary/20">
+<span class="material-symbols-outlined neon-icon text-2xl font-bold">settings_accessibility</span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold text-primary mb-3 tracking-tight">General Tuning</h3>
+<p class="font-body-md text-on-surface-variant flex-grow">Comprehensive protocols for post-operative recovery, chronic friction reduction, and daily output enhancement.</p>
+</div>
+<!-- Bento Item 3 -->
+<div class="glass-card rounded-[2rem] p-8 border border-white/80 flex flex-col hover:-translate-y-1 transition-transform duration-300 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-divider-gold/10 rounded-bl-full -mr-8 -mt-8 transition-transform duration-500 group-hover:scale-150"></div>
+<div class="w-12 h-12 rounded-xl bg-primary text-divider-gold flex items-center justify-center mb-6 shadow-sm">
+<span class="material-symbols-outlined text-2xl font-bold neon-icon-orange">speed</span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold text-primary mb-3 tracking-tight">Athletic Calibration</h3>
+<p class="font-body-md text-on-surface-variant flex-grow">Tailored load-management and performance optimization for rapid return to peak athletic function.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-white w-full px-margin-desktop py-xl flex flex-col md:flex-row justify-between gap-gutter relative overflow-hidden mt-12">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary via-divider-gold to-secondary"></div>
+<div class="flex flex-col gap-4 max-w-sm relative z-10">
+<span class="font-headline-md text-headline-md font-bold text-white tracking-tight uppercase">IGREK<span class="text-secondary-fixed">.TECH</span></span>
+<p class="font-mono text-sm text-white/60">SYSTEM v2.0 © 2024. All sequences reserved. High-Performance Orthopedic Hub: Welkenraedt.</p>
+</div>
+<div class="flex gap-16 flex-wrap relative z-10 mt-8 md:mt-0">
+<div class="flex flex-col gap-3 font-label-md uppercase tracking-wider text-sm">
+<a class="text-divider-gold font-bold hover:text-white transition-colors duration-200" href="#">Modules</a>
+<a class="text-white/60 hover:text-white transition-colors duration-200" href="#">Specs</a>
+<a class="text-white/60 hover:text-white transition-colors duration-200" href="#">Comm Link</a>
+</div>
+<div class="flex flex-col gap-3 font-label-md uppercase tracking-wider text-sm">
+<a class="text-white/60 hover:text-white transition-colors duration-200" href="#">Data Privacy</a>
+<a class="text-white/60 hover:text-white transition-colors duration-200" href="#">TOS</a>
+</div>
+</div>
+<div class="absolute -bottom-32 -right-32 text-[200px] text-white/5 font-bold font-display-lg pointer-events-none select-none">
+    IGREK
+</div>
+</footer>
+</body></html>
