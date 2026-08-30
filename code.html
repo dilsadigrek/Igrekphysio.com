@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-
-<html class="light" lang="fr"><head>
+<html class="light scroll-smooth" lang="fr">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Igrek Physiothérapie - High-Performance Tech</title>
+<title>IGREK Physiothérapie — Dilsad Igrek | Kinésithérapeute TMO Welkenraedt</title>
+<meta name="description" content="Cabinet de kinésithérapie et Thérapie Manuelle Orthopédique (TMO) de Dilsad Igrek à Welkenraedt. Conventionné INAMI (séance à 6,25 € à charge). Prise de RDV rapide."/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
   tailwind.config = {
@@ -11,333 +12,628 @@
     theme: {
       extend: {
         "colors": {
-                "surface-container-highest": "#e1e3e4",
-                "slate-grey": "#4A5568",
-                "on-secondary-container": "#fefcff",
-                "secondary": "#0058bc",
-                "error": "#ba1a1a",
-                "clinical-white": "#FFFFFF",
-                "surface-tint": "#4a5e87",
-                "secondary-fixed": "#d8e2ff",
-                "tertiary-fixed": "#ffdcc4",
-                "primary-fixed": "#d7e2ff",
-                "on-tertiary-fixed-variant": "#6f3800",
-                "surface": "#f8f9fa",
-                "on-secondary-fixed": "#001a41",
-                "surface-container": "#edeeef",
-                "surface-dim": "#d9dadb",
-                "tertiary-container": "#2f1400",
-                "on-secondary": "#ffffff",
-                "primary-container": "#001a3f",
-                "inverse-primary": "#b2c7f5",
-                "on-surface-variant": "#44474e",
-                "tertiary": "#000000",
-                "on-tertiary": "#ffffff",
-                "on-tertiary-container": "#bb7336",
-                "divider-gold": "#F4A261",
-                "primary-fixed-dim": "#b2c7f5",
-                "outline": "#74777f",
-                "on-error-container": "#93000a",
-                "primary": "#000000",
-                "surface-variant": "#e1e3e4",
-                "on-error": "#ffffff",
-                "on-secondary-fixed-variant": "#004493",
-                "tertiary-fixed-dim": "#ffb780",
-                "outline-variant": "#c4c6cf",
-                "on-primary-fixed-variant": "#32476d",
-                "on-background": "#191c1d",
-                "surface-container-high": "#e7e8e9",
-                "on-primary-container": "#6f84ae",
-                "error-container": "#ffdad6",
-                "inverse-surface": "#2e3132",
-                "surface-container-low": "#f3f4f5",
-                "secondary-fixed-dim": "#adc6ff",
-                "on-primary": "#ffffff",
-                "surface-container-lowest": "#ffffff",
-                "background": "#f0f1f2",
-                "secondary-container": "#0070eb",
-                "surface-bright": "#f8f9fa",
-                "on-surface": "#191c1d",
-                "on-tertiary-fixed": "#2f1400",
-                "on-primary-fixed": "#001a3f",
-                "inverse-on-surface": "#f0f1f2"
-        },
-        "borderRadius": {
-                "DEFAULT": "0.125rem",
-                "lg": "0.25rem",
-                "xl": "0.5rem",
-                "full": "0.75rem"
-        },
-        "spacing": {
-                "unit": "8px",
-                "gutter-desktop": "24px",
-                "section-padding": "80px",
-                "margin-mobile": "20px",
-                "margin-desktop": "64px",
-                "base": "8px",
-                "lg": "48px",
-                "md": "24px",
-                "xl": "80px",
-                "xs": "4px",
-                "gutter": "24px",
-                "sm": "12px"
+          "surface-container-highest": "#e1e3e4",
+          "slate-grey": "#4A5568",
+          "on-secondary-container": "#fefcff",
+          "secondary": "#0058bc",
+          "error": "#ba1a1a",
+          "clinical-white": "#FFFFFF",
+          "surface-tint": "#4a5e87",
+          "secondary-fixed": "#d8e2ff",
+          "tertiary-fixed": "#ffdcc4",
+          "primary-fixed": "#d7e2ff",
+          "on-tertiary-fixed-variant": "#6f3800",
+          "surface": "#f8f9fa",
+          "on-secondary-fixed": "#001a41",
+          "surface-container": "#edeeef",
+          "surface-dim": "#d9dadb",
+          "tertiary-container": "#2f1400",
+          "on-secondary": "#ffffff",
+          "primary-container": "#001a3f",
+          "inverse-primary": "#b2c7f5",
+          "on-surface-variant": "#44474e",
+          "tertiary": "#000000",
+          "on-tertiary": "#ffffff",
+          "on-tertiary-container": "#bb7336",
+          "divider-gold": "#F4A261",
+          "primary-fixed-dim": "#b2c7f5",
+          "outline": "#74777f",
+          "on-error-container": "#93000a",
+          "primary": "#0a0f1d",
+          "surface-variant": "#e1e3e4",
+          "on-error": "#ffffff",
+          "on-secondary-fixed-variant": "#004493",
+          "tertiary-fixed-dim": "#ffb780",
+          "outline-variant": "#c4c6cf",
+          "on-primary-fixed-variant": "#32476d",
+          "on-background": "#191c1d",
+          "surface-container-high": "#e7e8e9",
+          "on-primary-container": "#6f84ae",
+          "error-container": "#ffdad6",
+          "inverse-surface": "#2e3132",
+          "surface-container-low": "#f3f4f5",
+          "secondary-fixed-dim": "#adc6ff",
+          "on-primary": "#ffffff",
+          "surface-container-lowest": "#ffffff",
+          "background": "#f0f1f2",
+          "secondary-container": "#0070eb",
+          "surface-bright": "#f8f9fa",
+          "on-surface": "#191c1d",
+          "on-tertiary-fixed": "#2f1400",
+          "on-primary-fixed": "#001a3f",
+          "inverse-on-surface": "#f0f1f2"
         },
         "fontFamily": {
-                "display-lg": [
-                        "Space Grotesk", "sans-serif"
-                ],
-                "body-md": [
-                        "Space Grotesk", "sans-serif"
-                ],
-                "label-sm": [
-                        "Space Grotesk", "sans-serif"
-                ],
-                "label-md": [
-                        "Space Grotesk", "sans-serif"
-                ],
-                "headline-lg-mobile": [
-                        "Space Grotesk", "sans-serif"
-                ],
-                "caption": [
-                        "Space Grotesk", "sans-serif"
-                ],
-                "body-lg": [
-                        "Space Grotesk", "sans-serif"
-                ],
-                "headline-md": [
-                        "Space Grotesk", "sans-serif"
-                ],
-                "headline-lg": [
-                        "Space Grotesk", "sans-serif"
-                ]
-        },
-        "fontSize": {
-                "display-lg": [
-                        "56px",
-                        {
-                                "lineHeight": "64px",
-                                "letterSpacing": "-0.03em",
-                                "fontWeight": "700"
-                        }
-                ],
-                "body-md": [
-                        "16px",
-                        {
-                                "lineHeight": "24px",
-                                "fontWeight": "400"
-                        }
-                ],
-                "label-sm": [
-                        "12px",
-                        {
-                                "lineHeight": "16px",
-                                "letterSpacing": "0.1em",
-                                "fontWeight": "600"
-                        }
-                ],
-                "label-md": [
-                        "14px",
-                        {
-                                "lineHeight": "20px",
-                                "letterSpacing": "0.05em",
-                                "fontWeight": "600"
-                        }
-                ],
-                "headline-lg-mobile": [
-                        "32px",
-                        {
-                                "lineHeight": "40px",
-                                "fontWeight": "700"
-                        }
-                ],
-                "caption": [
-                        "12px",
-                        {
-                                "lineHeight": "16px",
-                                "fontWeight": "400"
-                        }
-                ],
-                "body-lg": [
-                        "18px",
-                        {
-                                "lineHeight": "28px",
-                                "fontWeight": "400"
-                        }
-                ],
-                "headline-md": [
-                        "24px",
-                        {
-                                "lineHeight": "32px",
-                                "fontWeight": "600"
-                        }
-                ],
-                "headline-lg": [
-                        "40px",
-                        {
-                                "lineHeight": "48px",
-                                "fontWeight": "700",
-                                "letterSpacing": "-0.02em"
-                        }
-                ]
+          "display": ["Space Grotesk", "sans-serif"],
+          "body": ["Space Grotesk", "sans-serif"]
         }
-},
-    },
+      }
+    }
   }
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@300..700,0..1&amp;display=swap" rel="stylesheet"/>
 <style>
-    .dot-grid {
-        background-color: #f0f1f2;
-        background-image: radial-gradient(#c4c6cf 1px, transparent 1px);
-        background-size: 24px 24px;
-    }
-    .glass-card {
-        background: rgba(255, 255, 255, 0.4);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border: 1px solid rgba(255, 255, 255, 0.8);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
-    }
-    .neon-text-gradient {
-        background: linear-gradient(135deg, #0058bc 0%, #F4A261 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-    .neon-icon {
-        filter: drop-shadow(0 0 6px rgba(0, 88, 188, 0.6));
-    }
-    .neon-icon-orange {
-        filter: drop-shadow(0 0 6px rgba(244, 162, 97, 0.6));
-    }
+  .dot-grid {
+    background-color: #f4f5f7;
+    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 10px 30px -5px rgba(0, 56, 140, 0.06);
+  }
+  .glass-card-dark {
+    background: rgba(10, 15, 29, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .neon-text-gradient {
+    background: linear-gradient(135deg, #0058bc 0%, #F4A261 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .neon-icon {
+    filter: drop-shadow(0 0 8px rgba(0, 88, 188, 0.5));
+  }
+  .neon-icon-gold {
+    filter: drop-shadow(0 0 8px rgba(244, 162, 97, 0.6));
+  }
 </style>
 </head>
-<body class="dot-grid text-on-background font-body-md antialiased overflow-x-hidden min-h-screen">
-<!-- Top Navigation Bar -->
-<nav class="sticky top-4 mx-4 md:mx-auto max-w-7xl z-50 glass-card rounded-2xl px-6 py-4 flex justify-between items-center transition-all duration-300">
-<div class="font-headline-md text-headline-md font-bold tracking-tight uppercase">
-            IGREK<span class="text-secondary">.TECH</span>
+<body class="dot-grid text-on-background font-body antialiased overflow-x-hidden min-h-screen">
+
+<!-- Emergency Alert Top Bar -->
+<div class="bg-gradient-to-r from-primary via-[#002e69] to-primary text-white py-2.5 px-4 text-xs md:text-sm border-b border-secondary/30">
+  <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+    <div class="flex items-center gap-2">
+      <span class="flex h-2 w-2 relative">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-divider-gold opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-divider-gold"></span>
+      </span>
+      <span class="font-bold text-divider-gold uppercase tracking-wider">Créneaux d'urgence :</span>
+      <span>Lumbago brutal, torticolis ou entorse aiguë ? Plages prioritaires réservées chaque jour.</span>
+    </div>
+    <a href="#contact" class="inline-flex items-center gap-1 font-bold text-divider-gold hover:underline">
+      Prendre contact direct <span>→</span>
+    </a>
+  </div>
 </div>
-<div class="hidden md:flex items-center gap-8">
-<a class="text-secondary border-b-2 border-secondary pb-1 font-label-md uppercase tracking-widest hover:text-primary transition-colors duration-200" href="#">Services</a>
-<a class="text-on-surface-variant hover:text-primary font-label-md uppercase tracking-widest transition-colors duration-200" href="#">About</a>
-<a class="text-on-surface-variant hover:text-primary font-label-md uppercase tracking-widest transition-colors duration-200" href="#">Contact</a>
-</div>
-<button class="bg-gradient-to-r from-secondary to-[#0070eb] text-white font-label-md uppercase tracking-wider px-6 py-3 rounded-xl hover:shadow-[0_0_15px_rgba(0,88,188,0.5)] transition-all duration-300 transform hover:-translate-y-0.5">
-            Initialize Appt
-        </button>
+
+<!-- Top Sticky Navigation Bar -->
+<nav class="sticky top-3 mx-4 md:mx-auto max-w-7xl z-50 glass-card rounded-2xl px-6 py-3.5 flex justify-between items-center transition-all duration-300 shadow-md">
+  <a href="#" class="flex items-center gap-2">
+    <div class="w-9 h-9 rounded-xl bg-primary text-white flex items-center justify-center font-bold text-lg shadow-sm border border-secondary/30">
+      Ψ
+    </div>
+    <div class="text-xl font-bold tracking-tight uppercase">
+      IGREK<span class="text-secondary">.PHYSIO</span>
+    </div>
+  </a>
+
+  <div class="hidden lg:flex items-center gap-7">
+    <a class="text-slate-700 hover:text-secondary text-sm font-semibold tracking-wider transition-colors" href="#expertises">Expertises</a>
+    <a class="text-slate-700 hover:text-secondary text-sm font-semibold tracking-wider transition-colors" href="#pathologies">Pathologies</a>
+    <a class="text-slate-700 hover:text-secondary text-sm font-semibold tracking-wider transition-colors" href="#tarifs">Tarifs INAMI</a>
+    <a class="text-slate-700 hover:text-secondary text-sm font-semibold tracking-wider transition-colors" href="#prescripteurs">Espace Médecins</a>
+    <a class="text-slate-700 hover:text-secondary text-sm font-semibold tracking-wider transition-colors" href="#faq">FAQ</a>
+    <a class="text-slate-700 hover:text-secondary text-sm font-semibold tracking-wider transition-colors" href="#contact">Contact</a>
+  </div>
+
+  <a href="#contact" class="bg-gradient-to-r from-secondary to-[#0070eb] text-white text-xs md:text-sm font-bold uppercase tracking-wider px-5 py-2.5 rounded-xl hover:shadow-[0_0_15px_rgba(0,88,188,0.5)] transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2">
+    <span class="material-symbols-outlined text-sm">calendar_month</span>
+    <span>Prendre RDV</span>
+  </a>
 </nav>
+
 <main>
-<!-- Hero Section -->
-<section class="relative w-full min-h-[90vh] flex items-center overflow-hidden py-xl px-margin-mobile md:px-margin-desktop">
-<!-- Vibrant Background Accents -->
-<div class="absolute top-1/4 -left-32 w-96 h-96 bg-secondary/20 rounded-full blur-[100px] pointer-events-none"></div>
-<div class="absolute bottom-1/4 -right-32 w-96 h-96 bg-divider-gold/20 rounded-full blur-[100px] pointer-events-none"></div>
-<div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-10 mt-12">
-<div class="flex flex-col gap-8 max-w-2xl">
-<div class="inline-flex items-center gap-2 glass-card px-4 py-2 rounded-full w-fit border border-secondary/20">
-<span class="material-symbols-outlined text-secondary text-sm neon-icon font-bold">bolt</span>
-<span class="font-label-md text-label-md text-secondary uppercase tracking-widest">High-Performance Recovery</span>
-</div>
-<h1 class="font-display-lg text-display-lg text-primary tracking-tight leading-tight">
-                        Precision <br/>
-<span class="neon-text-gradient">Orthopedic</span> <br/>
-                        Therapy.
-                    </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
-                        Advanced structural optimization and personalized bio-mechanic tuning by Dilsad Igrek. Elevate your baseline performance in Welkenraedt.
-                    </p>
-<div class="flex flex-wrap gap-4 mt-4">
-<button class="bg-primary text-white font-label-md uppercase tracking-wider px-8 py-4 rounded-xl hover:bg-inverse-surface transition-all duration-300 flex items-center gap-3 group">
-<span>Launch Protocol</span>
-<span class="material-symbols-outlined transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</button>
-<button class="glass-card text-primary font-label-md uppercase tracking-wider px-8 py-4 rounded-xl hover:bg-white/60 transition-all duration-300 border border-outline-variant/50">
-                            System Specs
-                        </button>
-</div>
-</div>
-<div class="relative h-[500px] md:h-[650px] w-full rounded-[2rem] overflow-hidden glass-card p-4 border border-white">
-<div class="relative w-full h-full rounded-[1.5rem] overflow-hidden">
-<!-- Image Placeholders -->
-<img alt="Logo Cabinet Igrek Physiothérapie" class="absolute top-6 right-6 w-32 h-auto object-contain z-20 glass-card p-3 rounded-xl border border-white/60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5fQUC2B2yKWVu8NYikkIdsokHDiYX080-g87Zat4qVMhHG4FioXFrxCpfS-XdO7uskjpY2odU49HcxE6m9o9BjBzx0_7ilepLvLmbDoLZyOUphRqvIzlKT__lxnILbYjuAXrbNYFywlTocCNdGL1ZdQyBSC9Bt5KVTxg20jj8UbJrf3eFWOnPgek1ra-xGFoCWu61PFQmz6wpSskOropITbXL75vSRBI9fDkOchxCGzqYrR0GS460m-ho0SBrkaHtEg"/>
-<div class="absolute inset-0 bg-gradient-to-tr from-secondary/20 to-transparent z-10 pointer-events-none mix-blend-overlay"></div>
-<img class="w-full h-full object-cover filter contrast-125 saturate-50" data-alt="A modern, brightly lit physiotherapy clinic room. The aesthetic is clean, clinical yet warm, with light wood accents and crisp white walls. A high-end adjustable treatment table sits in the center, bathed in soft, natural light streaming through a large window. A physiotherapist in professional, minimalistic attire is demonstrating a precise manual therapy technique on a patient's shoulder. The atmosphere conveys trust, precision, and healing, adhering strictly to a modern light-mode wellness design system with subtle cool blue undertones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtiVsDGxZY6txOnGDzsh1dmAHoiH0QfYow6pwjCZjYhs6C_HlYezyJe6uqagfY4tWb-Gevf1Bz7fxXB7nKn_vm1pkEA1RRj8wouraDC9ogKU0G91U1c20dXFyIfGzOx4pbSIitjG0TLjAO-EtZ6B8Tq2GRrRiqURkTbfzE5keuDyp1srkhnDKh-FFDlurc4wmmxe2RZ6q8wWlpHnYrkMkAi1s3VhJWr1tNxgXbDg5ug_B9klCMQZuY"/>
-</div>
-</div>
-</div>
-</section>
-<!-- Core Services Section (Bento Grid Style) -->
-<section class="w-full py-xl px-margin-mobile md:px-margin-desktop relative">
-<div class="max-w-7xl mx-auto">
-<div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
-<div>
-<h2 class="font-display-lg text-display-lg text-primary mb-4 tracking-tight">Core Modules</h2>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl text-lg">Targeted protocols engineered to recalibrate your musculoskeletal system and optimize athletic output.</p>
-</div>
-<button class="w-fit font-label-md uppercase tracking-wider text-secondary flex items-center gap-2 hover:gap-3 transition-all duration-300">
-                    View All Modules <span class="material-symbols-outlined text-sm font-bold">arrow_forward</span>
-</button>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[320px]">
-<!-- Bento Item 1: Large Span -->
-<div class="md:col-span-2 md:row-span-2 relative glass-card rounded-[2rem] p-8 flex flex-col justify-end overflow-hidden group border border-white/80 hover:border-secondary/50 transition-colors duration-500">
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-10"></div>
-<img class="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-1000 group-hover:scale-105 filter grayscale group-hover:grayscale-0" data-alt="Close-up of precise manual therapy on a patient's spine in a brightly lit, modern clinical setting. Shallow depth of field focusing on the therapist's hands. Clean white and soft blue tones, emphasizing clinical excellence and precision minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAfuF6oQEvjrjya66skpAVc2_JIXk_rF83Vn_qlqWF0VinL4ImXGlJCBaU_ul90VRVmao02wF8-3XqqdXNY6ML_VDb4-ByTkpYCcm50ob6j83TjR0OYmxC9pWtIXclXcO4MZ33372Yw7Kg2ZdKEMTzLVYCnKBLQfjOczA1-u5E_SDup3XVBnTySL68YQbt2DDWxspvomr_y6e8naKwd4CklZqnohQ57cAYtWJ-hfHPgqKLjgcSFRSy"/>
-<div class="relative z-20 text-white">
-<div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary to-[#003d82] text-white flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(0,88,188,0.5)]">
-<span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
-</div>
-<h3 class="font-headline-lg text-headline-lg mb-3 tracking-tight">Orthopedic Manual Therapy</h3>
-<p class="font-body-md text-white/80 max-w-lg mb-8 text-lg">High-fidelity assessment and targeted neuro-musculoskeletal intervention based on advanced clinical biomechanics.</p>
-<a class="inline-flex items-center gap-2 text-white font-label-md uppercase tracking-wider hover:text-secondary-fixed transition-colors" href="#">
-                                Initialize Sequence <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-</div>
-<!-- Bento Item 2 -->
-<div class="glass-card rounded-[2rem] p-8 border border-white/80 flex flex-col hover:-translate-y-1 transition-transform duration-300 relative overflow-hidden group">
-<div class="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-<div class="w-12 h-12 rounded-xl bg-white text-secondary flex items-center justify-center mb-6 shadow-sm border border-secondary/20">
-<span class="material-symbols-outlined neon-icon text-2xl font-bold">settings_accessibility</span>
-</div>
-<h3 class="font-headline-md text-2xl font-bold text-primary mb-3 tracking-tight">General Tuning</h3>
-<p class="font-body-md text-on-surface-variant flex-grow">Comprehensive protocols for post-operative recovery, chronic friction reduction, and daily output enhancement.</p>
-</div>
-<!-- Bento Item 3 -->
-<div class="glass-card rounded-[2rem] p-8 border border-white/80 flex flex-col hover:-translate-y-1 transition-transform duration-300 relative overflow-hidden group">
-<div class="absolute top-0 right-0 w-32 h-32 bg-divider-gold/10 rounded-bl-full -mr-8 -mt-8 transition-transform duration-500 group-hover:scale-150"></div>
-<div class="w-12 h-12 rounded-xl bg-primary text-divider-gold flex items-center justify-center mb-6 shadow-sm">
-<span class="material-symbols-outlined text-2xl font-bold neon-icon-orange">speed</span>
-</div>
-<h3 class="font-headline-md text-2xl font-bold text-primary mb-3 tracking-tight">Athletic Calibration</h3>
-<p class="font-body-md text-on-surface-variant flex-grow">Tailored load-management and performance optimization for rapid return to peak athletic function.</p>
-</div>
-</div>
-</div>
-</section>
+  <!-- Hero Section -->
+  <section class="relative w-full min-h-[85vh] flex items-center overflow-hidden py-12 md:py-20 px-5 md:px-12">
+    <div class="absolute top-1/4 -left-32 w-96 h-96 bg-secondary/15 rounded-full blur-[110px] pointer-events-none"></div>
+    <div class="absolute bottom-1/4 -right-32 w-96 h-96 bg-divider-gold/15 rounded-full blur-[110px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center z-10">
+      <div class="lg:col-span-7 flex flex-col gap-6">
+        
+        <!-- Trust Badges Chips -->
+        <div class="flex flex-wrap items-center gap-2">
+          <div class="inline-flex items-center gap-1.5 glass-card px-3.5 py-1.5 rounded-full border border-secondary/30 text-secondary text-xs font-bold uppercase tracking-wider">
+            <span class="material-symbols-outlined text-sm neon-icon">verified</span>
+            <span>Conventionné INAMI (6,25 € reste à charge)</span>
+          </div>
+          <div class="inline-flex items-center gap-1.5 glass-card px-3.5 py-1.5 rounded-full border border-divider-gold/40 text-slate-800 text-xs font-bold uppercase tracking-wider">
+            <span class="material-symbols-outlined text-sm text-divider-gold neon-icon-gold">workspace_premium</span>
+            <span>Certifié IFOMPT & MATHERA</span>
+          </div>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary tracking-tight leading-tight">
+          Soulager vos douleurs, <br/>
+          <span class="neon-text-gradient">retrouver votre liberté</span> <br/>
+          de mouvement.
+        </h1>
+
+        <p class="text-lg text-slate-600 max-w-2xl leading-relaxed">
+          Prise en charge attentive du <strong>mal de dos, de la nuque, des épaules et des blessures du sport</strong> par <strong>Dilsad Igrek</strong> à Welkenraedt. Des soins individuels, bienveillants et scientifiquement éprouvés (EBP / KCE).
+        </p>
+
+        <!-- Trust Points Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-2 gap-3 pt-2">
+          <div class="flex items-center gap-2.5 text-sm text-slate-700 font-medium">
+            <span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+            <span>Séance 100% individuelle</span>
+          </div>
+          <div class="flex items-center gap-2.5 text-sm text-slate-700 font-medium">
+            <span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+            <span>45-60 min au 1er bilan</span>
+          </div>
+          <div class="flex items-center gap-2.5 text-sm text-slate-700 font-medium">
+            <span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+            <span>Parking facile & gratuit</span>
+          </div>
+          <div class="flex items-center gap-2.5 text-sm text-slate-700 font-medium">
+            <span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+            <span>Plages d'urgences le jour même</span>
+          </div>
+        </div>
+
+        <!-- Action CTAs -->
+        <div class="flex flex-wrap gap-4 pt-4">
+          <a href="#contact" class="bg-primary text-white text-sm font-bold uppercase tracking-wider px-8 py-4 rounded-xl hover:bg-slate-800 transition-all duration-300 flex items-center gap-3 shadow-lg group">
+            <span>Prendre un Rendez-vous</span>
+            <span class="material-symbols-outlined transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
+          <a href="#tarifs" class="glass-card text-primary text-sm font-bold uppercase tracking-wider px-7 py-4 rounded-xl hover:bg-white transition-all duration-300 border border-slate-300 flex items-center gap-2">
+            <span class="material-symbols-outlined text-secondary">payments</span>
+            <span>Tarifs & Remboursements</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Visual Card -->
+      <div class="lg:col-span-5 relative">
+        <div class="relative rounded-3xl overflow-hidden glass-card p-4 border border-white shadow-2xl">
+          <div class="relative w-full h-[420px] md:h-[480px] rounded-2xl overflow-hidden bg-slate-900">
+            <img class="w-full h-full object-cover filter contrast-110 saturate-75 opacity-90" alt="Cabinet de Kinésithérapie Dilsad Igrek" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtiVsDGxZY6txOnGDzsh1dmAHoiH0QfYow6pwjCZjYhs6C_HlYezyJe6uqagfY4tWb-Gevf1Bz7fxXB7nKn_vm1pkEA1RRj8wouraDC9ogKU0G91U1c20dXFyIfGzOx4pbSIitjG0TLjAO-EtZ6B8Tq2GRrRiqURkTbfzE5keuDyp1srkhnDKh-FFDlurc4wmmxe2RZ6q8wWlpHnYrkMkAi1s3VhJWr1tNxgXbDg5ug_B9klCMQZuY"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent"></div>
+            
+            <div class="absolute bottom-6 left-6 right-6 text-white">
+              <div class="inline-block bg-secondary/80 backdrop-blur-md px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider mb-2">
+                Welkenraedt (Liège)
+              </div>
+              <h3 class="text-xl font-bold text-white mb-1">Cabinet IGREK Physiothérapie</h3>
+              <p class="text-xs text-white/80">Boulevard Hector Grosjean 52a, 4840 Welkenraedt</p>
+              <div class="mt-3 flex items-center justify-between text-xs border-t border-white/20 pt-3">
+                <span class="text-divider-gold font-bold">Du Lundi au Vendredi</span>
+                <span class="font-mono text-white/90">8h00 — 19h00 (sur RDV)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Services & Modules Section (Bento Grid) -->
+  <section id="expertises" class="w-full py-16 px-5 md:px-12 relative">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div>
+          <div class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Domaines d'Expertise</div>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Soins Ciblés & Protocoles Avancés</h2>
+          <p class="text-slate-600 max-w-2xl text-base mt-2">Une approche thérapeutique personnalisée combinant techniques manuelles et rééducation active basée sur les preuves scientifiques.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Bento 1: Thérapie Manuelle -->
+        <div class="md:col-span-2 relative glass-card rounded-3xl p-8 flex flex-col justify-between overflow-hidden group border border-white hover:border-secondary/50 transition-all duration-300">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary to-[#003d82] text-white flex items-center justify-center mb-6 shadow-md">
+            <span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
+          </div>
+          <div>
+            <span class="text-xs font-bold text-secondary uppercase tracking-wider">Spécialisation Universitaire (IFOMPT)</span>
+            <h3 class="text-2xl md:text-3xl font-bold text-primary mb-3 mt-1 tracking-tight">Thérapie Manuelle Orthopédique (TMO)</h3>
+            <p class="text-slate-600 text-base leading-relaxed mb-6">
+              Évaluation neuro-musculo-squelettique de haute précision pour identifier la cause profonde de vos blocages. Utilisation de mobilisations articulaires douces, levées de tension musculaire et réentraînement moteur personnalisé (Hands-On / Hands-Off).
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-200">
+            <span class="bg-secondary/10 text-secondary text-xs font-bold px-3 py-1 rounded-lg">Mobilisations précises</span>
+            <span class="bg-secondary/10 text-secondary text-xs font-bold px-3 py-1 rounded-lg">Neurodynamique</span>
+            <span class="bg-secondary/10 text-secondary text-xs font-bold px-3 py-1 rounded-lg">Contrôle Moteur</span>
+          </div>
+        </div>
+
+        <!-- Bento 2: Kiné du Sport -->
+        <div class="glass-card rounded-3xl p-8 flex flex-col justify-between border border-white hover:border-secondary/50 transition-all duration-300">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-primary text-divider-gold flex items-center justify-center mb-6 shadow-sm">
+              <span class="material-symbols-outlined text-2xl font-bold neon-icon-gold">speed</span>
+            </div>
+            <span class="text-xs font-bold text-divider-gold uppercase tracking-wider">Performance & Athlètes</span>
+            <h3 class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Kinésithérapie du Sport</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Prise en charge des entorses, lésions musculaires et tendinopathies. Tests fonctionnels et protocole de « Return to Play » pour une reprise sportive optimale et sécurisée.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-200">
+            <span class="text-xs text-slate-500 font-medium">Course, football, vélo, sports de contact</span>
+          </div>
+        </div>
+
+        <!-- Bento 3: Post-Opératoire -->
+        <div class="glass-card rounded-3xl p-8 flex flex-col justify-between border border-white hover:border-secondary/50 transition-all duration-300">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-white text-secondary flex items-center justify-center mb-6 shadow-sm border border-secondary/20">
+              <span class="material-symbols-outlined neon-icon text-2xl font-bold">medical_services</span>
+            </div>
+            <span class="text-xs font-bold text-secondary uppercase tracking-wider">Chirurgie & Traumato</span>
+            <h3 class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Rééducation Post-Opératoire</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Suivi rigoureux après chirurgie orthopédique : prothèse totale de hanche ou de genou, reconstruction ligamentaire (LCA), chirurgie de l'épaule et du rachis.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-200">
+            <span class="text-xs text-slate-500 font-medium">Récupération des amplitudes & renforcement</span>
+          </div>
+        </div>
+
+        <!-- Bento 4: Troubles ATM / Mâchoire -->
+        <div class="md:col-span-2 glass-card rounded-3xl p-8 flex flex-col justify-between border border-white hover:border-secondary/50 transition-all duration-300">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-secondary/15 text-secondary flex items-center justify-center mb-6 shadow-sm">
+              <span class="material-symbols-outlined text-2xl font-bold">sentiment_very_satisfied</span>
+            </div>
+            <span class="text-xs font-bold text-secondary uppercase tracking-wider">Spécifique & Complexe</span>
+            <h3 class="text-xl md:text-2xl font-bold text-primary mb-3 mt-1 tracking-tight">Céphalées & Mâchoire (ATM)</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Traitement des dysfonctions temporo-mandibulaires (claquements de mâchoire, bruxisme) et des maux de tête d'origine cervicale (céphalées de tension, névralgies d'Arnold).
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-200">
+            <span class="text-xs text-slate-500 font-medium">Soulagement des tensions crânio-cervicales et musculaires profondes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pathologies Silos Section -->
+  <section id="pathologies" class="w-full py-16 px-5 md:px-12 bg-slate-100/70 border-y border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Motifs de Consultation</div>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Quelle est votre douleur ?</h2>
+        <p class="text-slate-600 text-base mt-2">Nous ciblons la cause mécanique de vos symptômes pour un soulagement durable.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Patho 1 -->
+        <div class="glass-card rounded-2xl p-6 border border-white hover:shadow-lg transition-all">
+          <div class="text-secondary font-bold text-3xl mb-2">01</div>
+          <h4 class="text-lg font-bold text-primary mb-2">Mal de Dos & Lumbago</h4>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Lombalgies aiguës ou chroniques, sciatiques, hernies discales et blocages du bassin. Protocoles validés KCE.
+          </p>
+          <span class="text-xs font-bold text-secondary flex items-center gap-1">Examen biomécanique →</span>
+        </div>
+
+        <!-- Patho 2 -->
+        <div class="glass-card rounded-2xl p-6 border border-white hover:shadow-lg transition-all">
+          <div class="text-secondary font-bold text-3xl mb-2">02</div>
+          <h4 class="text-lg font-bold text-primary mb-2">Cervicales & Nuque</h4>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Torticolis, névralgies cervico-brachiales (NCB), raideurs posturales et tensions trapèzes.
+          </p>
+          <span class="text-xs font-bold text-secondary flex items-center gap-1">Décompression & mobilité →</span>
+        </div>
+
+        <!-- Patho 3 -->
+        <div class="glass-card rounded-2xl p-6 border border-white hover:shadow-lg transition-all">
+          <div class="text-secondary font-bold text-3xl mb-2">03</div>
+          <h4 class="text-lg font-bold text-primary mb-2">Épaule & Bras</h4>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Tendinopathies de la coiffe des rotateurs, conflits sous-acromiaux, capsulites et instabilités.
+          </p>
+          <span class="text-xs font-bold text-secondary flex items-center gap-1">Renforcement ciblé →</span>
+        </div>
+
+        <!-- Patho 4 -->
+        <div class="glass-card rounded-2xl p-6 border border-secondary/30 bg-secondary/5 hover:shadow-lg transition-all">
+          <div class="text-divider-gold font-bold text-3xl mb-2">04</div>
+          <h4 class="text-lg font-bold text-primary mb-2">TMO vs Ostéopathie</h4>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            La TMO est une spécialisation universitaire remboursée INAMI, fondée à 100% sur les preuves médicales (EBP).
+          </p>
+          <span class="text-xs font-bold text-secondary flex items-center gap-1">100% Remboursé INAMI →</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tarifs INAMI Section -->
+  <section id="tarifs" class="w-full py-16 px-5 md:px-12 relative">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-700 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3">
+          <span class="material-symbols-outlined text-sm">verified_user</span>
+          <span>100% Conventionné INAMI • Zéro Dépassement Surprise</span>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Tarifs Officiels & Remboursements Mutuelle</h2>
+        <p class="text-slate-600 text-base mt-2">Dilsad Igrek applique strictement les tarifs de la convention nationale INAMI pour vous garantir le meilleur remboursement possible.</p>
+      </div>
+
+      <!-- Tarifs Grid 4 Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+        <div class="glass-card rounded-3xl p-6 text-center border border-slate-200">
+          <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Tarif Officiel Séance</span>
+          <div class="text-4xl font-extrabold text-primary my-3">31,64 €</div>
+          <p class="text-xs text-slate-500">Tarif conventionné INAMI (2026)</p>
+        </div>
+
+        <div class="glass-card rounded-3xl p-6 text-center border border-emerald-300 bg-emerald-50/50">
+          <span class="text-xs font-bold text-emerald-700 uppercase tracking-wider">Remboursement Mutuelle</span>
+          <div class="text-4xl font-extrabold text-emerald-700 my-3">25,39 €</div>
+          <p class="text-xs text-slate-600">Pris en charge par votre organisme</p>
+        </div>
+
+        <div class="glass-card rounded-3xl p-6 text-center border border-secondary/40 bg-secondary/5">
+          <span class="text-xs font-bold text-secondary uppercase tracking-wider">Votre Reste à Charge</span>
+          <div class="text-4xl font-extrabold text-secondary my-3">6,25 €</div>
+          <p class="text-xs text-slate-600">Ticket modérateur ordinaire</p>
+        </div>
+
+        <div class="glass-card rounded-3xl p-6 text-center border border-divider-gold/40 bg-divider-gold/5">
+          <span class="text-xs font-bold text-divider-gold uppercase tracking-wider">Statut BIM (Reste)</span>
+          <div class="text-4xl font-extrabold text-divider-gold my-3">2,50 €</div>
+          <p class="text-xs text-slate-600">Bénéficiaires de l'intervention majorée</p>
+        </div>
+      </div>
+
+      <!-- Important Prescription Note -->
+      <div class="glass-card rounded-2xl p-6 max-w-3xl mx-auto flex items-start gap-4 border border-secondary/20 bg-blue-50/40">
+        <span class="material-symbols-outlined text-secondary text-2xl">info</span>
+        <div class="text-xs md:text-sm text-slate-700">
+          <strong class="font-bold text-primary">Prescription Médicale :</strong> Pour bénéficier du remboursement par votre mutuelle belge, pensez à apporter votre ordonnance délivrée par votre médecin traitant ou spécialiste dès la première séance.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prescripteurs Section (B2B Confraternel) -->
+  <section id="prescripteurs" class="w-full py-16 px-5 md:px-12 bg-primary text-white relative overflow-hidden rounded-3xl mx-auto max-w-7xl my-12 shadow-2xl">
+    <div class="absolute -top-32 -right-32 w-96 h-96 bg-secondary/30 rounded-full blur-[100px] pointer-events-none"></div>
+    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7">
+        <div class="inline-flex items-center gap-2 bg-white/10 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-divider-gold mb-4 border border-white/10">
+          <span class="material-symbols-outlined text-sm">stethoscope</span>
+          <span>Réseau Médical & Confraternel</span>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-4">Espace Médecins & Prescripteurs</h2>
+        <p class="text-white/80 text-sm md:text-base leading-relaxed mb-6">
+          Nous collaborons étroitement avec les médecins généralistes (WelCare, Maison Médicale Coquelicot) et les spécialistes (CHR Verviers, Centre de Diagnostic Eupen). Chaque patient référé bénéficie d'un bilan clinique rigoureux et d'un rapport de suivi.
+        </p>
+
+        <div class="space-y-3 text-xs md:text-sm text-white/90">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-divider-gold text-base">check</span>
+            <span>Protocoles Evidence-Based Practice (EBP) conformes aux recommandations KCE.</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-divider-gold text-base">check</span>
+            <span>Prise en charge des rachialgies réfractaires, radiculopathies et ATM.</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-divider-gold text-base">check</span>
+            <span>Transmission de compte-rendu d'évaluation et fiches de liaison.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 glass-card-dark p-6 rounded-2xl border border-white/15 text-center">
+        <span class="text-xs font-bold text-divider-gold uppercase tracking-wider">Contact Direct Confraternel</span>
+        <h4 class="text-xl font-bold text-white mt-2 mb-4">Échange Clinique & Référé</h4>
+        <p class="text-xs text-white/70 mb-6">Pour toute question sur un patient, échange d'imagerie ou demande prioritaire.</p>
+        <a href="mailto:info@dilsad.be" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-divider-gold to-[#e76f51] text-primary font-bold text-sm px-6 py-3 rounded-xl hover:opacity-90 transition w-full">
+          <span class="material-symbols-outlined text-sm">mail</span>
+          <span>info@dilsad.be</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="w-full py-16 px-5 md:px-12">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <div class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Aide & Informations</div>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Questions Fréquentes</h2>
+        <p class="text-slate-600 text-sm mt-2">Toutes les réponses simples et transparentes avant votre première consultation.</p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- Q1 -->
+        <details class="glass-card rounded-2xl p-5 border border-slate-200 group cursor-pointer">
+          <summary class="font-bold text-primary flex items-center justify-between text-base">
+            <span>Faut-il une prescription médicale pour être remboursé ?</span>
+            <span class="material-symbols-outlined text-secondary transition group-open:rotate-180">expand_more</span>
+          </summary>
+          <p class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-200 leading-relaxed">
+            Oui. Pour que votre mutuelle prenne en charge la séance au tarif légal, une ordonnance délivrée par votre médecin traitant ou spécialiste est indispensable. Vous pouvez réserver votre rendez-vous dès aujourd'hui et apporter la prescription le jour de la consultation.
+          </p>
+        </details>
+
+        <!-- Q2 -->
+        <details class="glass-card rounded-2xl p-5 border border-slate-200 group cursor-pointer">
+          <summary class="font-bold text-primary flex items-center justify-between text-base">
+            <span>Quelle est la différence entre Thérapie Manuelle (TMO) et Ostéopathie ?</span>
+            <span class="material-symbols-outlined text-secondary transition group-open:rotate-180">expand_more</span>
+          </summary>
+          <p class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-200 leading-relaxed">
+            La Thérapie Manuelle Orthopédique (TMO) est une spécialisation universitaire reconnue de la kinésithérapie (IFOMPT). Elle s'appuie à 100% sur la recherche médicale et est intégralement remboursée par votre mutuelle belge (INAMI). L'ostéopathie est une discipline privée non remboursée par l'assurance obligatoire (tarifs libres de 55 € à 75 €).
+          </p>
+        </details>
+
+        <!-- Q3 -->
+        <details class="glass-card rounded-2xl p-5 border border-slate-200 group cursor-pointer">
+          <summary class="font-bold text-primary flex items-center justify-between text-base">
+            <span>Combien coûte exactement une séance chez Dilsad Igrek ?</span>
+            <span class="material-symbols-outlined text-secondary transition group-open:rotate-180">expand_more</span>
+          </summary>
+          <p class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-200 leading-relaxed">
+            Dilsad Igrek est 100% conventionné INAMI. Le tarif officiel est de 31,64 € par séance. La mutuelle rembourse 25,39 €. Votre reste à charge réel n'est donc que de <strong>6,25 €</strong> (ou <strong>2,50 €</strong> pour les personnes bénéficiant du statut BIM).
+          </p>
+        </details>
+
+        <!-- Q4 -->
+        <details class="glass-card rounded-2xl p-5 border border-slate-200 group cursor-pointer">
+          <summary class="font-bold text-primary flex items-center justify-between text-base">
+            <span>Que signifie l'approche « Hands-On / Hands-Off » ?</span>
+            <span class="material-symbols-outlined text-secondary transition group-open:rotate-180">expand_more</span>
+          </summary>
+          <p class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-200 leading-relaxed">
+            <strong>Hands-On</strong> : le kinésithérapeute utilise des techniques manuelles ciblées (mobilisations douces, travail myofascial) pour soulager la douleur rapidement. <br/>
+            <strong>Hands-Off</strong> : vous apprenez des exercices simples et progressifs de renforcement et de contrôle moteur pour pérenniser les résultats et éviter les récidives.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Access Section -->
+  <section id="contact" class="w-full py-16 px-5 md:px-12 bg-slate-100/70 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Localisation & Prise de Contact</div>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Venir au Cabinet & Prendre RDV</h2>
+        <p class="text-slate-600 text-base mt-2">Cabinet moderne idéalement situé à Welkenraedt, accessible facilement depuis Lontzen, Aubel, Baelen, Eupen et Verviers.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Info Card 1 -->
+        <div class="glass-card rounded-3xl p-8 border border-white flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-secondary text-white flex items-center justify-center mb-6 shadow-sm">
+              <span class="material-symbols-outlined text-2xl">location_on</span>
+            </div>
+            <h4 class="text-lg font-bold text-primary mb-2">Adresse du Cabinet</h4>
+            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+              <strong>IGREK Physiothérapie</strong><br/>
+              Boulevard Hector Grosjean 52a<br/>
+              4840 Welkenraedt (Belgique)
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200 text-xs text-secondary font-bold flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">local_parking</span>
+            <span>Stationnement facile & gratuit sur place</span>
+          </div>
+        </div>
+
+        <!-- Info Card 2 -->
+        <div class="glass-card rounded-3xl p-8 border border-white flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-primary text-divider-gold flex items-center justify-center mb-6 shadow-sm">
+              <span class="material-symbols-outlined text-2xl">schedule</span>
+            </div>
+            <h4 class="text-lg font-bold text-primary mb-2">Horaires de Consultation</h4>
+            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+              <strong>Lundi au Vendredi :</strong><br/>
+              8h00 — 19h00 (sur rendez-vous)<br/>
+              <em>Plages d'urgences quotidiennes réservées</em>
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200 text-xs text-slate-500 font-medium">
+            Fermé le week-end et jours fériés
+          </div>
+        </div>
+
+        <!-- Info Card 3: RDV Action -->
+        <div class="glass-card rounded-3xl p-8 border border-secondary/30 bg-gradient-to-br from-white to-secondary/10 flex flex-col justify-between shadow-lg">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-secondary text-white flex items-center justify-center mb-6 shadow-sm">
+              <span class="material-symbols-outlined text-2xl">calendar_month</span>
+            </div>
+            <h4 class="text-lg font-bold text-primary mb-2">Réservation de Séance</h4>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+              Pour convenir d'un rendez-vous de bilan ou une consultation de suivi, contactez-nous par email ou via le cabinet.
+            </p>
+          </div>
+          <a href="mailto:info@dilsad.be" class="bg-primary hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider py-4 px-6 rounded-xl text-center transition flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-sm">mail</span>
+            <span>Contacter : info@dilsad.be</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
+
 <!-- Footer -->
-<footer class="bg-primary text-white w-full px-margin-desktop py-xl flex flex-col md:flex-row justify-between gap-gutter relative overflow-hidden mt-12">
-<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary via-divider-gold to-secondary"></div>
-<div class="flex flex-col gap-4 max-w-sm relative z-10">
-<span class="font-headline-md text-headline-md font-bold text-white tracking-tight uppercase">IGREK<span class="text-secondary-fixed">.TECH</span></span>
-<p class="font-mono text-sm text-white/60">SYSTEM v2.0 © 2024. All sequences reserved. High-Performance Orthopedic Hub: Welkenraedt.</p>
-</div>
-<div class="flex gap-16 flex-wrap relative z-10 mt-8 md:mt-0">
-<div class="flex flex-col gap-3 font-label-md uppercase tracking-wider text-sm">
-<a class="text-divider-gold font-bold hover:text-white transition-colors duration-200" href="#">Modules</a>
-<a class="text-white/60 hover:text-white transition-colors duration-200" href="#">Specs</a>
-<a class="text-white/60 hover:text-white transition-colors duration-200" href="#">Comm Link</a>
-</div>
-<div class="flex flex-col gap-3 font-label-md uppercase tracking-wider text-sm">
-<a class="text-white/60 hover:text-white transition-colors duration-200" href="#">Data Privacy</a>
-<a class="text-white/60 hover:text-white transition-colors duration-200" href="#">TOS</a>
-</div>
-</div>
-<div class="absolute -bottom-32 -right-32 text-[200px] text-white/5 font-bold font-display-lg pointer-events-none select-none">
-    IGREK
-</div>
+<footer class="bg-primary text-white w-full px-6 md:px-12 py-12 relative overflow-hidden">
+  <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary via-divider-gold to-secondary"></div>
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+    <div class="md:col-span-2">
+      <div class="text-2xl font-bold tracking-tight uppercase text-white mb-3">
+        IGREK<span class="text-secondary-fixed">.PHYSIO</span>
+      </div>
+      <p class="text-xs text-white/70 max-w-sm leading-relaxed mb-4">
+        Cabinet de kinésithérapie spécialisé en Thérapie Manuelle Orthopédique (TMO) à Welkenraedt. Soins bienveillants et individuels, 100% conventionné INAMI, critères d'excellence IFOMPT.
+      </p>
+      <div class="text-xs text-divider-gold font-mono">
+        Praticien Agréé & Conventionné INAMI
+      </div>
+    </div>
+
+    <div>
+      <h5 class="text-xs font-bold uppercase tracking-widest text-divider-gold mb-3">Navigation</h5>
+      <div class="flex flex-col gap-2 text-xs text-white/70">
+        <a href="#expertises" class="hover:text-white transition">Expertises TMO & Sport</a>
+        <a href="#pathologies" class="hover:text-white transition">Pathologies & Douleurs</a>
+        <a href="#tarifs" class="hover:text-white transition">Tarifs INAMI (6,25 €)</a>
+        <a href="#prescripteurs" class="hover:text-white transition">Espace Prescripteurs</a>
+        <a href="#faq" class="hover:text-white transition">Questions Fréquentes</a>
+      </div>
+    </div>
+
+    <div>
+      <h5 class="text-xs font-bold uppercase tracking-widest text-divider-gold mb-3">Coordonnées</h5>
+      <p class="text-xs text-white/70 leading-relaxed">
+        Boulevard Hector Grosjean 52a<br/>
+        4840 Welkenraedt<br/>
+        <a href="mailto:info@dilsad.be" class="text-secondary-fixed hover:underline mt-2 inline-block">info@dilsad.be</a>
+      </p>
+      <div class="mt-4 text-[11px] text-white/50">
+        © 2026 IGREK Physiothérapie. Tous droits réservés.
+      </div>
+    </div>
+  </div>
 </footer>
-</body></html>
+
+</body>
+</html>
