@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>IGREK Physiothérapie — Dilsad Igrek | Kinésithérapeute TMO Welkenraedt</title>
-<meta name="description" content="Cabinet de kinésithérapie et Thérapie Manuelle Orthopédique (TMO) de Dilsad Igrek à Welkenraedt. 100% Conventionné INAMI (séance à 6,25 € à charge). Certifié IFOMPT. Prise de RDV rapide."/>
+<meta name="description" content="Cabinet de kinésithérapie et Thérapie Manuelle Orthopédique (TMO) de Dilsad Igrek à Welkenraedt. 100% Conventionné INAMI (séance à 6,25 € à charge). Certifié IFOMPT. GSM : 0472 93 69 78."/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
   tailwind.config = {
@@ -44,8 +44,8 @@
       "url": "https://dilsad.be",
       "logo": "https://dilsad.be/logo.png",
       "description": "Cabinet spécialisé en Thérapie Manuelle Orthopédique (TMO) et kinésithérapie du sport à Welkenraedt.",
-      "telephone": "+3287000000",
-      "email": "info@dilsad.be",
+      "telephone": "+32472936978",
+      "email": "igrekphysio@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Boulevard Hector Grosjean 52a",
@@ -76,7 +76,9 @@
       "name": "Dilsad Igrek",
       "jobTitle": "Kinésithérapeute — Spécialiste en Thérapie Manuelle Orthopédique (TMO)",
       "worksFor": { "@id": "https://dilsad.be/#clinic" },
-      "knowsLanguage": ["fr", "de", "en"],
+      "telephone": "+32472936978",
+      "email": "igrekphysio@gmail.com",
+      "knowsLanguage": ["fr", "de", "en", "ku"],
       "memberOf": [
         {
           "@type": "Organization",
@@ -109,10 +111,10 @@
         },
         {
           "@type": "Question",
-          "name": "Quelle est la différence entre la TMO et l'ostéopathie ?",
+          "name": "Comment contacter le cabinet en cas d'urgence ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "La TMO est une spécialisation universitaire de la kinésithérapie s'appuyant à 100% sur les preuves médicales et intégralement remboursée par l'INAMI."
+            "text": "Vous pouvez appeler directement le cabinet au 0472 93 69 78 pour obtenir une disponibilité d'urgence du jour même."
           }
         }
       ]
@@ -128,10 +130,10 @@
     background-size: 24px 24px;
   }
   .glass-card {
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.95);
     box-shadow: 0 10px 30px -5px rgba(0, 56, 140, 0.05);
   }
   .glass-card-dark {
@@ -156,21 +158,24 @@
 </head>
 <body class="dot-grid text-slate-800 font-body antialiased overflow-x-hidden min-h-screen">
 
-<!-- Emergency Alert Top Bar for Acute Patients -->
-<aside aria-label="Alerte Urgences" class="bg-gradient-to-r from-primary via-[#002e69] to-primary text-white py-2.5 px-4 text-xs md:text-sm border-b border-secondary/30">
-  <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-    <div class="flex items-center gap-2">
-      <span class="flex h-2 w-2 relative">
+<!-- Emergency Alert Top Bar for Acute Patients with GSM Highlight -->
+<aside aria-label="Alerte Urgences" class="bg-gradient-to-r from-primary via-[#002e69] to-primary text-white py-3 px-4 text-xs md:text-sm border-b border-secondary/30">
+  <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+    <div class="flex items-center gap-2.5 flex-wrap">
+      <span class="flex h-2.5 w-2.5 relative">
         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-divider-gold opacity-75"></span>
-        <span class="relative inline-flex rounded-full h-2 w-2 bg-divider-gold"></span>
+        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-divider-gold"></span>
       </span>
       <span class="font-bold text-divider-gold uppercase tracking-wider">Douleur Aiguë ou Blocage Récent ?</span>
       <span class="text-white/90">Lumbago brutal, torticolis, entorse : des créneaux d'urgence sont réservés chaque jour.</span>
     </div>
-    <div class="flex items-center gap-3">
-      <span class="text-white/60 text-xs hidden sm:inline">Français • Deutsch • English</span>
-      <a href="#contact" class="inline-flex items-center gap-1 font-bold text-divider-gold hover:underline">
-        Disponibilités du jour <span>→</span>
+    
+    <!-- GSM & Emergency CTA Highlight -->
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="text-white/70 text-xs hidden lg:inline font-medium">FR • DE • EN • Kurdî</span>
+      <a href="tel:0472936978" class="inline-flex items-center gap-2 bg-divider-gold hover:bg-divider-gold-dark text-primary font-extrabold px-3.5 py-1.5 rounded-full text-xs sm:text-sm shadow-md transition-all transform hover:scale-105">
+        <span class="material-symbols-outlined text-base">phone_in_talk</span>
+        <span>Disponibilités du jour : <span class="underline decoration-2">0472 93 69 78</span></span>
       </a>
     </div>
   </div>
@@ -178,11 +183,9 @@
 
 <!-- Top Sticky Navigation Bar -->
 <header class="sticky top-3 mx-4 md:mx-auto max-w-7xl z-50 glass-card rounded-2xl px-6 py-3.5 flex justify-between items-center transition-all duration-300 shadow-md">
-  <a href="#" class="flex items-center gap-2 group">
-    <div class="w-9 h-9 rounded-xl bg-primary text-white flex items-center justify-center font-bold text-lg shadow-sm border border-secondary/30 group-hover:border-secondary transition">
-      Ψ
-    </div>
-    <div class="text-xl font-bold tracking-tight uppercase">
+  <a href="#" class="flex items-center gap-3 group">
+    <img src="logo.png" alt="Logo Igrek Physiothérapie" class="h-9 w-auto object-contain"/>
+    <div class="text-lg md:text-xl font-bold tracking-tight uppercase">
       IGREK<span class="text-secondary">.PHYSIO</span>
     </div>
   </a>
@@ -197,10 +200,16 @@
     <a class="text-slate-700 hover:text-secondary text-sm font-semibold tracking-wider transition-colors" href="#contact">Contact & Accès</a>
   </nav>
 
-  <a href="#contact" class="bg-gradient-to-r from-secondary to-[#0070eb] text-white text-xs md:text-sm font-bold uppercase tracking-wider px-5 py-2.5 rounded-xl hover:shadow-[0_0_15px_rgba(0,88,188,0.5)] transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2">
-    <span class="material-symbols-outlined text-sm">calendar_month</span>
-    <span>Prendre RDV</span>
-  </a>
+  <div class="flex items-center gap-2">
+    <a href="tel:0472936978" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 hover:text-secondary px-3 py-2 border border-slate-300 rounded-xl hover:bg-white transition">
+      <span class="material-symbols-outlined text-sm text-secondary">call</span>
+      <span>0472 93 69 78</span>
+    </a>
+    <a href="#contact" class="bg-gradient-to-r from-secondary to-[#0070eb] text-white text-xs md:text-sm font-bold uppercase tracking-wider px-5 py-2.5 rounded-xl hover:shadow-[0_0_15px_rgba(0,88,188,0.5)] transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2">
+      <span class="material-symbols-outlined text-sm">calendar_month</span>
+      <span>Prendre RDV</span>
+    </a>
+  </div>
 </header>
 
 <main>
@@ -249,15 +258,16 @@
             <div><strong>Parking facile & gratuit</strong><br/><span class="text-xs text-slate-500">Directement devant le cabinet (Bd Grosjean 52a)</span></div>
           </div>
           <div class="flex items-start gap-2.5 text-sm text-slate-700 font-medium">
-            <span class="material-symbols-outlined text-secondary text-base mt-0.5">bolt</span>
-            <div><strong>Créneaux d'urgence du jour</strong><br/><span class="text-xs text-slate-500">Prise en charge rapide pour blocages récents</span></div>
+            <span class="material-symbols-outlined text-secondary text-base mt-0.5">translate</span>
+            <div><strong>Consultations en 4 langues</strong><br/><span class="text-xs text-slate-500">Français • Deutsch • English • Kurdî</span></div>
           </div>
         </div>
 
-        <!-- Action CTAs -->
+        <!-- Action CTAs with GSM prominence -->
         <div class="flex flex-wrap gap-4 pt-4">
-          <a href="#contact" class="bg-primary text-white text-sm font-bold uppercase tracking-wider px-8 py-4 rounded-xl hover:bg-slate-800 transition-all duration-300 flex items-center gap-3 shadow-lg group">
-            <span>Prendre un Rendez-vous</span>
+          <a href="tel:0472936978" class="bg-primary text-white text-sm font-bold uppercase tracking-wider px-8 py-4 rounded-xl hover:bg-slate-800 transition-all duration-300 flex items-center gap-3 shadow-lg group">
+            <span class="material-symbols-outlined text-divider-gold">phone_in_talk</span>
+            <span>Appeler : 0472 93 69 78</span>
             <span class="material-symbols-outlined transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </a>
           <a href="#tarifs" class="glass-card text-primary text-sm font-bold uppercase tracking-wider px-7 py-4 rounded-xl hover:bg-white transition-all duration-300 border border-slate-300 flex items-center gap-2">
@@ -267,23 +277,33 @@
         </div>
       </div>
 
-      <!-- Right Visual Clinic Card -->
+      <!-- Right Visual Card featuring the OFFICIAL LOGO -->
       <div class="lg:col-span-5 relative">
-        <div class="relative rounded-3xl overflow-hidden glass-card p-4 border border-white shadow-2xl">
-          <div class="relative w-full h-[420px] md:h-[480px] rounded-2xl overflow-hidden bg-slate-900">
-            <img class="w-full h-full object-cover filter contrast-110 saturate-75 opacity-90" alt="Cabinet de Kinésithérapie Dilsad Igrek à Welkenraedt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtiVsDGxZY6txOnGDzsh1dmAHoiH0QfYow6pwjCZjYhs6C_HlYezyJe6uqagfY4tWb-Gevf1Bz7fxXB7nKn_vm1pkEA1RRj8wouraDC9ogKU0G91U1c20dXFyIfGzOx4pbSIitjG0TLjAO-EtZ6B8Tq2GRrRiqURkTbfzE5keuDyp1srkhnDKh-FFDlurc4wmmxe2RZ6q8wWlpHnYrkMkAi1s3VhJWr1tNxgXbDg5ug_B9klCMQZuY"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent"></div>
+        <div class="relative rounded-3xl overflow-hidden glass-card p-6 border border-white shadow-2xl bg-white/90">
+          <div class="flex flex-col items-center justify-center p-4 bg-gradient-to-b from-slate-50 to-white rounded-2xl border border-slate-100 shadow-inner">
+            <img class="w-full max-h-[340px] object-contain drop-shadow-md transform transition hover:scale-105 duration-500" alt="Logo Officiel IGREK Physiothérapie — Dilsad Igrek Kinésithérapeute TMO" src="logo.png"/>
+          </div>
+
+          <!-- Bottom Clinic Identity Box -->
+          <div class="mt-5 p-4 rounded-2xl bg-primary text-white">
+            <div class="flex items-center justify-between mb-2">
+              <span class="inline-block bg-secondary px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider">
+                Welkenraedt (Liège)
+              </span>
+              <span class="text-divider-gold font-bold text-xs flex items-center gap-1">
+                <span class="material-symbols-outlined text-xs">translate</span>
+                <span>FR • DE • EN • KU</span>
+              </span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-0.5">Cabinet IGREK Physiothérapie</h3>
+            <p class="text-xs text-white/80">Boulevard Hector Grosjean 52a, 4840 Welkenraedt</p>
             
-            <div class="absolute bottom-6 left-6 right-6 text-white">
-              <div class="inline-block bg-secondary/80 backdrop-blur-md px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider mb-2">
-                Welkenraedt • Lontzen • Aubel • Baelen
-              </div>
-              <h3 class="text-xl font-bold text-white mb-1">Cabinet IGREK Physiothérapie</h3>
-              <p class="text-xs text-white/80">Boulevard Hector Grosjean 52a, 4840 Welkenraedt</p>
-              <div class="mt-3 flex items-center justify-between text-xs border-t border-white/20 pt-3">
-                <span class="text-divider-gold font-bold">Du Lundi au Vendredi</span>
-                <span class="font-mono text-white/90">8h00 — 19h00 (sur RDV)</span>
-              </div>
+            <div class="mt-3 flex items-center justify-between text-xs border-t border-white/20 pt-3">
+              <a href="tel:0472936978" class="text-divider-gold font-bold flex items-center gap-1 hover:underline">
+                <span class="material-symbols-outlined text-sm">phone</span>
+                <span>0472 93 69 78</span>
+              </a>
+              <span class="font-mono text-white/90">8h00 — 19h00 (sur RDV)</span>
             </div>
           </div>
         </div>
@@ -314,8 +334,9 @@
             </p>
           </div>
           <div class="pt-4 border-t border-slate-200">
-            <a href="#contact" class="text-xs font-bold text-secondary flex items-center gap-1 hover:underline">
-              Demander un créneau d'urgence <span>→</span>
+            <a href="tel:0472936978" class="text-xs font-bold text-red-600 flex items-center gap-1.5 hover:underline">
+              <span class="material-symbols-outlined text-sm">phone_in_talk</span>
+              <span>Appeler d'urgence : <strong>0472 93 69 78</strong></span>
             </a>
           </div>
         </div>
@@ -352,7 +373,7 @@
             </p>
           </div>
           <div class="pt-4 border-t border-slate-200">
-            <a href="#contact" class="text-xs font-bold text-secondary flex items-center gap-1 hover:underline">
+            <a href="tel:0472936978" class="text-xs font-bold text-secondary flex items-center gap-1 hover:underline">
               Planifier un protocole Return To Play <span>→</span>
             </a>
           </div>
@@ -646,7 +667,7 @@
             <span class="material-symbols-outlined text-secondary transition group-open:rotate-180">expand_more</span>
           </summary>
           <p class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-200 leading-relaxed">
-            Oui. Pour que votre mutuelle prenne en charge la séance au tarif légal, une ordonnance délivrée par votre médecin traitant ou spécialiste est indispensable. Vous pouvez réserver votre rendez-vous dès aujourd'hui et apporter la prescription le jour de votre première séance.
+            Oui. Pour que votre mutuelle prenne en charge la séance au tarif légal, une ordonnance délivrée par votre médecin traitant ou spécialiste est indispensable. Vous pouvez réserver votre rendez-vous dès aujourd'hui par téléphone (<a href="tel:0472936978" class="text-secondary font-bold underline">0472 93 69 78</a>) ou email et apporter la prescription le jour de votre première séance.
           </p>
         </details>
 
@@ -686,18 +707,18 @@
         <!-- Q5 -->
         <details class="glass-card rounded-2xl p-5 border border-slate-200 group cursor-pointer">
           <summary class="font-bold text-primary flex items-center justify-between text-base">
-            <span>Que faire en cas d'empêchement ou d'annulation ?</span>
+            <span>Quelles sont les langues parlées lors des consultations ?</span>
             <span class="material-symbols-outlined text-secondary transition group-open:rotate-180">expand_more</span>
           </summary>
           <p class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-200 leading-relaxed">
-            Merci de prévenir le cabinet au moins 24 heures à l'avance en cas d'empêchement afin de libérer le créneau pour un patient en urgence.
+            Les consultations peuvent être menées couramment en <strong>Français</strong>, en <strong>Allemand (Deutsch)</strong>, en <strong>Anglais (English)</strong> et en <strong>Kurde (Kurdî)</strong>, garantissant un accueil chaleureux pour tous les résidents de la région frontalière et locale.
           </p>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- Contact & Access Section -->
+  <!-- Contact & Access Section with GSM & Email -->
   <section id="contact" class="w-full py-16 px-5 md:px-12 bg-slate-100/80 border-t border-slate-200">
     <div class="max-w-7xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-12">
@@ -732,33 +753,45 @@
             <div class="w-12 h-12 rounded-xl bg-primary text-divider-gold flex items-center justify-center mb-6 shadow-sm">
               <span class="material-symbols-outlined text-2xl">schedule</span>
             </div>
-            <h4 class="text-lg font-bold text-primary mb-2">Horaires de Consultation</h4>
+            <h4 class="text-lg font-bold text-primary mb-2">Horaires & Langues</h4>
             <p class="text-sm text-slate-600 leading-relaxed mb-4">
               <strong>Du Lundi au Vendredi :</strong><br/>
               8h00 — 19h00 (sur rendez-vous)<br/>
-              <em>Plages prioritaires d'urgences chaque jour</em>
+              <span class="text-xs text-divider-gold-dark font-bold">Plages d'urgences réservées chaque jour</span>
             </p>
           </div>
-          <div class="pt-4 border-t border-slate-200 text-xs text-slate-500 font-medium flex items-center gap-1.5">
-            <span class="material-symbols-outlined text-sm">translate</span>
-            <span>Consultations : FR • DE • EN</span>
+          <div class="pt-4 border-t border-slate-200 text-xs text-slate-700 font-semibold flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-sm text-secondary">translate</span>
+            <span>Français • Deutsch • English • Kurdî</span>
           </div>
         </div>
 
-        <!-- Card 3: Réservation Directe -->
-        <div class="glass-card rounded-3xl p-8 border border-secondary/40 bg-gradient-to-br from-white to-secondary/10 flex flex-col justify-between shadow-lg">
+        <!-- Card 3: Réservation & Contact Direct GSM / Email -->
+        <div class="glass-card rounded-3xl p-8 border border-secondary/40 bg-gradient-to-br from-white via-blue-50/40 to-secondary/10 flex flex-col justify-between shadow-lg">
           <div>
             <div class="w-12 h-12 rounded-xl bg-secondary text-white flex items-center justify-center mb-6 shadow-sm">
-              <span class="material-symbols-outlined text-2xl">calendar_month</span>
+              <span class="material-symbols-outlined text-2xl">contact_phone</span>
             </div>
-            <h4 class="text-lg font-bold text-primary mb-2">Réservation de Séance</h4>
-            <p class="text-xs text-slate-600 leading-relaxed mb-6">
-              Contactez directement le cabinet pour planifier votre premier bilan de Thérapie Manuelle ou votre séance de suivi.
+            <h4 class="text-lg font-bold text-primary mb-2">Contact & Rendez-vous</h4>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              Pour réserver une séance de bilan ou pour une urgence du jour, contactez Dilsad Igrek directement par GSM ou email :
             </p>
+            
+            <div class="space-y-2 mb-6">
+              <a href="tel:0472936978" class="flex items-center gap-2 text-sm font-extrabold text-primary hover:text-secondary transition bg-white/80 p-2.5 rounded-xl border border-slate-200 shadow-xs">
+                <span class="material-symbols-outlined text-secondary">call</span>
+                <span>GSM : 0472 93 69 78</span>
+              </a>
+              <a href="mailto:igrekphysio@gmail.com" class="flex items-center gap-2 text-xs font-bold text-slate-700 hover:text-secondary transition bg-white/80 p-2.5 rounded-xl border border-slate-200 shadow-xs">
+                <span class="material-symbols-outlined text-secondary text-sm">mail</span>
+                <span>igrekphysio@gmail.com</span>
+              </a>
+            </div>
           </div>
-          <a href="mailto:info@dilsad.be" class="bg-primary hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider py-4 px-6 rounded-xl text-center transition flex items-center justify-center gap-2 shadow-md">
-            <span class="material-symbols-outlined text-sm">mail</span>
-            <span>Contacter : info@dilsad.be</span>
+
+          <a href="tel:0472936978" class="bg-gradient-to-r from-secondary to-[#0070eb] hover:opacity-95 text-white font-bold text-xs uppercase tracking-wider py-4 px-6 rounded-xl text-center transition flex items-center justify-center gap-2 shadow-md">
+            <span class="material-symbols-outlined text-sm">phone_in_talk</span>
+            <span>Appeler le 0472 93 69 78</span>
           </a>
         </div>
       </div>
@@ -771,14 +804,17 @@
   <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary via-divider-gold to-secondary"></div>
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
     <div class="md:col-span-2">
-      <div class="text-2xl font-bold tracking-tight uppercase text-white mb-3">
-        IGREK<span class="text-secondary-fixed text-secondary">.PHYSIO</span>
+      <div class="flex items-center gap-2.5 mb-3">
+        <img src="logo.png" alt="Logo Igrek Physiothérapie" class="h-8 w-auto object-contain bg-white rounded-md p-0.5"/>
+        <div class="text-2xl font-bold tracking-tight uppercase text-white">
+          IGREK<span class="text-secondary-fixed text-secondary">.PHYSIO</span>
+        </div>
       </div>
       <p class="text-xs text-white/70 max-w-sm leading-relaxed mb-4">
         Cabinet de kinésithérapie spécialisé en Thérapie Manuelle Orthopédique (TMO) et kinésithérapie du sport à Welkenraedt. Soins bienveillants et 100% individuels, conventionné INAMI, critères d'excellence IFOMPT / MATHERA.
       </p>
       <div class="text-xs text-divider-gold font-mono">
-        Praticien Agréé & Conventionné INAMI
+        Praticien Agréé & Conventionné INAMI • GSM : 0472 93 69 78
       </div>
     </div>
 
@@ -795,11 +831,13 @@
     </div>
 
     <div>
-      <h5 class="text-xs font-bold uppercase tracking-widest text-divider-gold mb-3">Coordonnées</h5>
+      <h5 class="text-xs font-bold uppercase tracking-widest text-divider-gold mb-3">Coordonnées & RDV</h5>
       <p class="text-xs text-white/70 leading-relaxed">
         Boulevard Hector Grosjean 52a<br/>
         4840 Welkenraedt (Belgique)<br/>
-        <a href="mailto:info@dilsad.be" class="text-secondary hover:underline mt-2 inline-block font-semibold">info@dilsad.be</a>
+        <a href="tel:0472936978" class="text-divider-gold hover:underline font-bold block mt-1">GSM : 0472 93 69 78</a>
+        <a href="mailto:igrekphysio@gmail.com" class="text-secondary hover:underline block font-semibold">igrekphysio@gmail.com</a>
+        <span class="text-[11px] text-white/60 block mt-1">Consultations : FR • DE • EN • Kurdî</span>
       </p>
       <div class="mt-4 text-[11px] text-white/50">
         © 2026 IGREK Physiothérapie — Dilsad Igrek. Tous droits réservés.
