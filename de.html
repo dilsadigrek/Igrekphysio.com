@@ -193,35 +193,55 @@
 </aside>
 
 <!-- Top Sticky Navigation Bar -->
-<header class="sticky top-3 mx-4 md:mx-auto max-w-7xl z-50 glass-card rounded-2xl px-5 sm:px-8 py-3.5 flex justify-between items-center transition-all duration-300 shadow-md">
-  <a href="#" class="flex items-center gap-3 group shrink-0 mr-4 xl:mr-10">
+<header class="sticky top-3 mx-4 md:mx-auto max-w-7xl z-50 glass-card rounded-2xl px-5 sm:px-8 py-3 flex items-center justify-between transition-all duration-300 shadow-md">
+  <!-- Logo firmly anchored on the far left -->
+  <a href="#" class="flex items-center gap-3 group shrink-0 mr-auto lg:mr-8 xl:mr-12">
     <img src="logo.png" alt="Logo Igrek Physiothérapie" class="h-9 sm:h-10 w-auto object-contain"/>
     <div class="text-base sm:text-lg md:text-xl font-bold tracking-tight uppercase whitespace-nowrap">
       IGREK<span class="text-secondary">.PHYSIO</span>
     </div>
   </a>
 
-  <nav class="hidden lg:flex items-center gap-3 xl:gap-6 shrink-0">
-    <a data-i18n="nav.needs" class="text-slate-700 hover:text-secondary text-xs xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#soins-adaptes">Vos Besoins</a>
-    <a data-i18n="nav.method" class="text-slate-700 hover:text-secondary text-xs xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#methode">Méthode Hands-On</a>
-    <a data-i18n="nav.expertises" class="text-slate-700 hover:text-secondary text-xs xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#expertises">Expertises</a>
-    <a data-i18n="nav.osteo" class="text-slate-700 hover:text-secondary text-xs xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#osteo-vs-tmo">TMO vs Ostéo</a>
-    <a data-i18n="nav.tarifs" class="text-slate-700 hover:text-secondary text-xs xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#tarifs">Tarifs INAMI</a>
-    <a data-i18n="nav.faq" class="text-slate-700 hover:text-secondary text-xs xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#faq">FAQ</a>
-    <a data-i18n="nav.contact" class="text-slate-700 hover:text-secondary text-xs xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#contact">Contact & Accès</a>
+  <!-- Desktop Navigation Menu (xl+ screens only, preventing any collision) -->
+  <nav class="hidden xl:flex items-center gap-5 2xl:gap-7 shrink-0 mr-6">
+    <a data-i18n="nav.needs" class="text-slate-700 hover:text-secondary text-xs 2xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#soins-adaptes">Vos Besoins</a>
+    <a data-i18n="nav.method" class="text-slate-700 hover:text-secondary text-xs 2xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#methode">Méthode Hands-On</a>
+    <a data-i18n="nav.expertises" class="text-slate-700 hover:text-secondary text-xs 2xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#expertises">Expertises</a>
+    <a data-i18n="nav.osteo" class="text-slate-700 hover:text-secondary text-xs 2xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#osteo-vs-tmo">TMO vs Ostéo</a>
+    <a data-i18n="nav.tarifs" class="text-slate-700 hover:text-secondary text-xs 2xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#tarifs">Tarifs INAMI</a>
+    <a data-i18n="nav.faq" class="text-slate-700 hover:text-secondary text-xs 2xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#faq">FAQ</a>
+    <a data-i18n="nav.contact" class="text-slate-700 hover:text-secondary text-xs 2xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#contact">Contact & Accès</a>
   </nav>
 
-  <div class="flex items-center gap-2">
-    <a href="tel:0472936978" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 hover:text-secondary px-3 py-2 border border-slate-300 rounded-xl hover:bg-white transition">
+  <!-- Right Actions: Phone + CTA + Mobile Hamburger -->
+  <div class="flex items-center gap-2 shrink-0">
+    <a href="tel:0472936978" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 hover:text-secondary px-3 py-2 border border-slate-300 rounded-xl hover:bg-white transition whitespace-nowrap">
       <span class="material-symbols-outlined text-sm text-secondary">call</span>
       <span>0472 93 69 78</span>
     </a>
-    <a href="#contact" class="bg-gradient-to-r from-secondary to-[#0070eb] text-white text-xs md:text-sm font-bold uppercase tracking-wider px-5 py-2.5 rounded-xl hover:shadow-[0_0_15px_rgba(0,88,188,0.5)] transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2">
+    <a href="#contact" class="bg-gradient-to-r from-secondary to-[#0070eb] text-white text-xs md:text-sm font-bold uppercase tracking-wider px-4 sm:px-5 py-2.5 rounded-xl hover:shadow-[0_0_15px_rgba(0,88,188,0.5)] transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2 whitespace-nowrap">
       <span class="material-symbols-outlined text-sm">calendar_month</span>
       <span data-i18n="nav.book">Prendre RDV</span>
     </a>
+    <!-- Mobile Hamburger Toggle button -->
+    <button onclick="toggleMobileMenu()" class="xl:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 border border-slate-200 flex items-center justify-center" aria-label="Menu">
+      <span class="material-symbols-outlined text-2xl">menu</span>
+    </button>
   </div>
 </header>
+
+<!-- Mobile Navigation Drawer -->
+<div id="mobile-menu" class="hidden xl:hidden mx-4 my-2 glass-card rounded-2xl p-5 border border-slate-200 shadow-xl transition-all">
+  <div class="flex flex-col gap-3.5 text-sm font-semibold text-slate-700">
+    <a data-i18n="nav.needs" onclick="toggleMobileMenu()" class="hover:text-secondary py-1 border-b border-slate-100" href="#soins-adaptes">Vos Besoins</a>
+    <a data-i18n="nav.method" onclick="toggleMobileMenu()" class="hover:text-secondary py-1 border-b border-slate-100" href="#methode">Méthode Hands-On</a>
+    <a data-i18n="nav.expertises" onclick="toggleMobileMenu()" class="hover:text-secondary py-1 border-b border-slate-100" href="#expertises">Expertises</a>
+    <a data-i18n="nav.osteo" onclick="toggleMobileMenu()" class="hover:text-secondary py-1 border-b border-slate-100" href="#osteo-vs-tmo">TMO vs Ostéo</a>
+    <a data-i18n="nav.tarifs" onclick="toggleMobileMenu()" class="hover:text-secondary py-1 border-b border-slate-100" href="#tarifs">Tarifs INAMI</a>
+    <a data-i18n="nav.faq" onclick="toggleMobileMenu()" class="hover:text-secondary py-1 border-b border-slate-100" href="#faq">FAQ</a>
+    <a data-i18n="nav.contact" onclick="toggleMobileMenu()" class="hover:text-secondary py-1" href="#contact">Contact & Accès</a>
+  </div>
+</div>
 
 <main>
   <!-- Hero Section -->
@@ -347,7 +367,7 @@
           <div class="pt-4 border-t border-slate-200">
             <a href="tel:0472936978" class="text-xs font-bold text-red-600 flex items-center gap-1.5 hover:underline">
               <span class="material-symbols-outlined text-sm">phone_in_talk</span>
-              <span data-i18n="needs.p1Cta">Appeler d'urgence : <strong>0472 93 69 78</strong></span>
+              <span data-i18n="needs.p1Cta">Appeler d'urgence : 0472 93 69 78</span>
             </a>
           </div>
         </div>
@@ -863,7 +883,7 @@ const translations = {
   fr: {
     "emergency.badge": "Douleur Aiguë ou Blocage Récent ?",
     "emergency.text": "Lumbago brutal, torticolis, entorse : des créneaux d'urgence sont réservés chaque jour.",
-    "emergency.btn": "Disponibilités du jour : <span class=\"underline decoration-2\">0472 93 69 78</span>",
+    "emergency.btn": "Disponibilités du jour : 0472 93 69 78",
     "nav.needs": "Vos Besoins",
     "nav.method": "Méthode Hands-On",
     "nav.expertises": "Expertises",
@@ -895,7 +915,7 @@ const translations = {
     "needs.p1Badge": "Urgence & Blocage Récent",
     "needs.p1Title": "Lumbago, Torticolis ou Entorse Récente",
     "needs.p1Desc": "Vous êtes bloqué, chaque mouvement est douloureux et vous devez être soulagé au plus vite. Nous mettons en œuvre des techniques manuelles de décompression et des conseils immédiats pour calmer l'inflammation.",
-    "needs.p1Cta": "Appeler d'urgence : <strong>0472 93 69 78</strong>",
+    "needs.p1Cta": "Appeler d'urgence : 0472 93 69 78",
     "needs.p2Badge": "Douleur Persistante & Récidivante",
     "needs.p2Title": "Mal de Dos Chronique ou Échec Antérieur",
     "needs.p2Desc": "Vous avez déjà testé plusieurs traitements ou machines sans amélioration durable ? La TMO analyse précisément l'origine biomécanique et nerveuse du problème pour briser le cercle vicieux de la douleur.",
@@ -1008,7 +1028,7 @@ const translations = {
   de: {
     "emergency.badge": "Akute Schmerzen oder Blockade?",
     "emergency.text": "Hexenschuss, steifer Nacken, Verstauchung: Tägliche Notfalltermine für schnelle Hilfe reserviert.",
-    "emergency.btn": "Termine heute: <span class=\"underline decoration-2\">0472 93 69 78</span>",
+    "emergency.btn": "Termine heute : 0472 93 69 78",
     "nav.needs": "Ihre Situation",
     "nav.method": "Hands-On Methode",
     "nav.expertises": "Fachbereiche",
@@ -1040,7 +1060,7 @@ const translations = {
     "needs.p1Badge": "Akutfall & Schnelle Hilfe",
     "needs.p1Title": "Hexenschuss, Tortikollis oder akute Verstauchung",
     "needs.p1Desc": "Sie haben starke Schmerzen und jede Bewegung fällt schwer? Durch gezielte manuelle Entlastungstechniken und Sofortmaßnahmen beruhigen wir die Entzündung rasch.",
-    "needs.p1Cta": "Notfall anrufen: <strong>0472 93 69 78</strong>",
+    "needs.p1Cta": "Notfall anrufen : 0472 93 69 78",
     "needs.p2Badge": "Chronische Beschwerden",
     "needs.p2Title": "Dauerhafte Rückenschmerzen oder bisherige Fehlversuche",
     "needs.p2Desc": "Haben Sie bereits verschiedene Behandlungen oder passive Geräte ohne dauerhaften Erfolg probiert? Die OMT analysiert biomechanische und nervale Ursachen, um den Schmerzkreislauf zu durchbrechen.",
@@ -1153,7 +1173,7 @@ const translations = {
   en: {
     "emergency.badge": "Acute Pain or Recent Blockage?",
     "emergency.text": "Severe lumbago, stiff neck, acute sprain: Emergency slots reserved daily for quick relief.",
-    "emergency.btn": "Today's availability: <span class=\"underline decoration-2\">0472 93 69 78</span>",
+    "emergency.btn": "Today's availability : 0472 93 69 78",
     "nav.needs": "Your Needs",
     "nav.method": "Hands-On Method",
     "nav.expertises": "Expertise",
@@ -1185,7 +1205,7 @@ const translations = {
     "needs.p1Badge": "Emergency & Acute Issue",
     "needs.p1Title": "Severe Back Pain, Stiff Neck or Recent Sprain",
     "needs.p1Desc": "Locked up and every movement hurts? We apply targeted manual decompression techniques and immediate guidance to rapidly calm inflammation.",
-    "needs.p1Cta": "Emergency Call: <strong>0472 93 69 78</strong>",
+    "needs.p1Cta": "Emergency Call : 0472 93 69 78",
     "needs.p2Badge": "Chronic & Recurrent Pain",
     "needs.p2Title": "Long-standing Back Pain or Past Treatment Failure",
     "needs.p2Desc": "Have you tried passive machines or generic treatments without lasting results? OMT pinpoints biomechanical and neural drivers to resolve recurring pain.",
@@ -1298,7 +1318,7 @@ const translations = {
   ku: {
     "emergency.badge": "Êşa Giran an Xitbûna Nû?",
     "emergency.text": "Lumbago ya giran, stûxwarbûn, werimîna lebatê: Her roj ji bo rewşên lezgîn dorên taybet veqetandî ne.",
-    "emergency.btn": "Dora îro: <span class=\"underline decoration-2\">0472 93 69 78</span>",
+    "emergency.btn": "Dora îro : 0472 93 69 78",
     "nav.needs": "Pêdiviyên We",
     "nav.method": "Rêbaza Hands-On",
     "nav.expertises": "Pisporî",
@@ -1330,7 +1350,7 @@ const translations = {
     "needs.p1Badge": "Rewşa Lezgîn & Xitbûn",
     "needs.p1Title": "Lumbago, Stûxwarbûn an Werimîna Lebatê ya Nû",
     "needs.p1Desc": "Hûn xit bûne û her tevger dibe sedema êşê? Bi rêbazên destî yên nerm û şîretên rasterast, em êş û iltîhabê di cih de kêm dikin.",
-    "needs.p1Cta": "Ji bo lezgîniyê bigerin: <strong>0472 93 69 78</strong>",
+    "needs.p1Cta": "Ji bo lezgîniyê bigerin : 0472 93 69 78",
     "needs.p2Badge": "Êşa Berdewam û Dubarebûyî",
     "needs.p2Title": "Êşa Piştê ya Kronîk an Bêencambûna Tedawiyên Berê",
     "needs.p2Desc": "We gelek derman an amûrên pasîf ceribandine lê encamek mayînde negirtiye? TMO sedema bingehîn a biomekanîk û damaran dibîne da ku zincîra êşê bişkîne.",
@@ -1440,6 +1460,11 @@ const translations = {
     "footer.rights": "© 2026 IGREK Fîzyoterapî — Dilsad Igrek. Hemû maf parastî ne."
   }
 };
+
+function toggleMobileMenu() {
+  const m = document.getElementById("mobile-menu");
+  if (m) m.classList.toggle("hidden");
+}
 
 function setLanguage(lang) {
   if (!translations[lang]) lang = 'fr';
