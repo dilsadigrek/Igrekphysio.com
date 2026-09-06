@@ -1,16 +1,32 @@
 {
   "version": 2,
-  "framework": null,
-  "buildCommand": "echo 'Deploying static site'",
-  "outputDirectory": ".",
   "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/fr",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/de",
+      "destination": "/de.html"
+    },
+    {
+      "source": "/en",
+      "destination": "/en.html"
+    },
+    {
+      "source": "/ku",
+      "destination": "/ku.html"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
+          "value": "public, max-age=0, must-revalidate"
         }
       ]
     }

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html class="light scroll-smooth" lang="fr">
+<html class="light scroll-smooth" lang="ku">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>IGREK Physiothérapie — Dilsad Igrek | Kinésithérapeute TMO Welkenraedt</title>
-<meta name="description" content="Cabinet de kinésithérapie et Thérapie Manuelle Orthopédique (TMO) de Dilsad Igrek à Welkenraedt. Prise en charge générale, respiratoire, traumatologie et sportive. 100% Conventionné INAMI (séance à 6,25 € à charge). Certifié IFOMPT. GSM : 0472 93 69 78."/>
+<title>IGREK Fîzyoterapî — Dilsad Igrek | Fîzyoterapîstê TMO Welkenraedt</title>
+<meta name="description" content="Klînîka fîzyoterapiya giştî, ya nefesê, travmatolojî û Terapiya Destî ya Ortobedîk (TMO) ji aliyê Dilsad Igrek ve li Welkenraedt. 100% Peymandarê INAMI (6,25 €). Sertîfîkayên IFOMPT & MATHERA. GSM : 0472 93 69 78."/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
   tailwind.config = {
@@ -43,7 +43,7 @@
       "name": "IGREK Physiothérapie — Cabinet Dilsad Igrek",
       "url": "https://dilsad.be",
       "logo": "https://dilsad.be/logo.png",
-      "description": "Cabinet de kinésithérapie générale, respiratoire, traumatologie et spécialisé en Thérapie Manuelle Orthopédique (TMO) à Welkenraedt.",
+      "description": "Cabinet de kinésithérapie générale, respiratoire, traumatologie et Thérapie Manuelle Orthopédique (TMO) à Welkenraedt.",
       "telephone": "+32472936978",
       "email": "igrekphysio@gmail.com",
       "address": {
@@ -136,12 +136,6 @@
     border: 1px solid rgba(255, 255, 255, 0.95);
     box-shadow: 0 10px 30px -5px rgba(0, 56, 140, 0.05);
   }
-  .glass-card-dark {
-    background: rgba(10, 15, 29, 0.94);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-  }
   .neon-text-gradient {
     background: linear-gradient(135deg, #0058bc 0%, #F4A261 100%);
     -webkit-background-clip: text;
@@ -154,16 +148,11 @@
   .neon-icon-gold {
     filter: drop-shadow(0 0 8px rgba(244, 162, 97, 0.6));
   }
-  .lang-btn.active {
-    background-color: #0058bc;
-    color: #ffffff;
-    font-weight: 700;
-  }
 </style>
 </head>
 <body class="dot-grid text-slate-800 font-body antialiased overflow-x-hidden min-h-screen">
 
-<!-- Emergency Alert Top Bar with Language Selector & GSM Highlight -->
+<!-- Emergency Alert Top Bar with Prominent 4-Language Switcher & GSM Highlight -->
 <aside aria-label="Alerte Urgences" class="bg-gradient-to-r from-primary via-[#002e69] to-primary text-white py-2.5 px-4 text-xs md:text-sm border-b border-secondary/30">
   <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
     <div class="flex items-center gap-2.5 flex-wrap">
@@ -171,22 +160,22 @@
         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-divider-gold opacity-75"></span>
         <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-divider-gold"></span>
       </span>
-      <span data-i18n="emergency.badge" class="font-bold text-divider-gold uppercase tracking-wider">Douleur Aiguë ou Blocage Récent ?</span>
-      <span data-i18n="emergency.text" class="text-white/90">Lumbago brutal, torticolis, entorse : des créneaux d'urgence sont réservés chaque jour.</span>
+      <span data-i18n="emergency.badge" class="font-bold text-divider-gold uppercase tracking-wider">Êşa Giran an Xitbûna Nû?</span>
+      <span data-i18n="emergency.text" class="text-white/90">Lumbago ya giran, stûxwarbûn, werimîna lebatê: Her roj ji bo rewşên lezgîn dorên taybet veqetandî ne.</span>
     </div>
     
     <div class="flex items-center gap-3 flex-wrap">
-      <!-- Language Selector in Top Bar -->
-      <div class="inline-flex items-center bg-white/10 p-1 rounded-lg border border-white/20 text-xs">
-        <button onclick="setLanguage('fr')" id="btn-fr" class="lang-btn active px-2 py-0.5 rounded transition">FR</button>
-        <button onclick="setLanguage('de')" id="btn-de" class="lang-btn px-2 py-0.5 rounded transition">DE</button>
-        <button onclick="setLanguage('en')" id="btn-en" class="lang-btn px-2 py-0.5 rounded transition">EN</button>
-        <button onclick="setLanguage('ku')" id="btn-ku" class="lang-btn px-2 py-0.5 rounded transition">KU</button>
+      <!-- Top Bar 4-Language Pill Switcher -->
+      <div class="inline-flex items-center bg-black/40 p-1 rounded-xl border border-white/20 text-xs font-semibold shadow-inner">
+        <button onclick="setLanguage('fr')" id="top-btn-fr" class="lang-btn text-slate-300 hover:text-white px-2.5 py-1 rounded-md transition hover:bg-white/10">🇫🇷 FR</button>
+        <button onclick="setLanguage('de')" id="top-btn-de" class="lang-btn text-slate-300 hover:text-white px-2.5 py-1 rounded-md transition hover:bg-white/10">🇩🇪 DE</button>
+        <button onclick="setLanguage('en')" id="top-btn-en" class="lang-btn text-slate-300 hover:text-white px-2.5 py-1 rounded-md transition hover:bg-white/10">🇬🇧 EN</button>
+        <button onclick="setLanguage('ku')" id="top-btn-ku" class="lang-btn active bg-[#0058bc] text-white font-bold px-2.5 py-1 rounded-md transition shadow-xs">☀️ KU</button>
       </div>
 
       <a href="tel:0472936978" class="inline-flex items-center gap-1.5 bg-divider-gold hover:bg-divider-gold-dark text-primary font-extrabold px-3.5 py-1.5 rounded-full text-xs sm:text-sm shadow-md transition-all transform hover:scale-105">
         <span class="material-symbols-outlined text-base">phone_in_talk</span>
-        <span data-i18n="emergency.btn">Disponibilités du jour : 0472 93 69 78</span>
+        <span data-i18n="emergency.btn">Dora îro : 0472 93 69 78</span>
       </a>
     </div>
   </div>
@@ -195,7 +184,7 @@
 <!-- Top Sticky Navigation Bar -->
 <header class="sticky top-3 mx-4 md:mx-auto max-w-7xl z-50 glass-card rounded-2xl px-5 sm:px-8 py-3 flex items-center justify-between transition-all duration-300 shadow-md">
   <!-- Logo firmly anchored on the far left -->
-  <a href="#" class="flex items-center gap-3 group shrink-0 mr-auto lg:mr-8 xl:mr-12">
+  <a href="#" class="flex items-center gap-3 group shrink-0 mr-auto lg:mr-6 xl:mr-10">
     <img src="logo.png" alt="Logo Igrek Physiothérapie" class="h-9 sm:h-10 w-auto object-contain"/>
     <div class="text-base sm:text-lg md:text-xl font-bold tracking-tight uppercase whitespace-nowrap">
       IGREK<span class="text-secondary">.PHYSIO</span>
@@ -203,25 +192,35 @@
   </a>
 
   <!-- Desktop Navigation Menu -->
-  <nav class="hidden xl:flex items-center gap-5 2xl:gap-7 shrink-0 mr-6">
-    <a data-i18n="nav.needs" class="text-slate-700 hover:text-secondary text-xs 2xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#soins-adaptes">Vos Besoins</a>
-    <a data-i18n="nav.method" class="text-slate-700 hover:text-secondary text-xs 2xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#methode">Méthode Hands-On</a>
-    <a data-i18n="nav.expertises" class="text-slate-700 hover:text-secondary text-xs 2xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#expertises">Expertises</a>
-    <a data-i18n="nav.tarifs" class="text-slate-700 hover:text-secondary text-xs 2xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#tarifs">Tarifs INAMI</a>
-    <a data-i18n="nav.faq" class="text-slate-700 hover:text-secondary text-xs 2xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#faq">FAQ</a>
-    <a data-i18n="nav.contact" class="text-slate-700 hover:text-secondary text-xs 2xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#contact">Contact & Accès</a>
+  <nav class="hidden xl:flex items-center gap-5 2xl:gap-6 shrink-0 mr-4">
+    <a data-i18n="nav.needs" class="text-slate-700 hover:text-secondary text-xs 2xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#soins-adaptes">Pêdiviyên We</a>
+    <a data-i18n="nav.method" class="text-slate-700 hover:text-secondary text-xs 2xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#methode">Rêbaza Hands-On</a>
+    <a data-i18n="nav.expertises" class="text-slate-700 hover:text-secondary text-xs 2xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#expertises">Pisporî</a>
+    <a data-i18n="nav.tarifs" class="text-slate-700 hover:text-secondary text-xs 2xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#tarifs">Biha & Vegerandin</a>
+    <a data-i18n="nav.faq" class="text-slate-700 hover:text-secondary text-xs 2xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#faq">Pirsên Pir Pirsyar</a>
+    <a data-i18n="nav.contact" class="text-slate-700 hover:text-secondary text-xs 2xl:text-sm font-semibold tracking-wider transition-colors whitespace-nowrap" href="#contact">Têkilî & Navnîşan</a>
   </nav>
 
-  <!-- Right Actions: Phone + CTA + Mobile Hamburger -->
-  <div class="flex items-center gap-2 shrink-0">
-    <a href="tel:0472936978" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 hover:text-secondary px-3 py-2 border border-slate-300 rounded-xl hover:bg-white transition whitespace-nowrap">
+  <!-- Right Actions: Language Selector + Phone + CTA + Mobile Hamburger -->
+  <div class="flex items-center gap-2.5 shrink-0">
+    <!-- Navbar Language Switcher (Desktop & Tablet) -->
+    <div class="hidden sm:inline-flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs shadow-inner">
+      <button onclick="setLanguage('fr')" id="nav-btn-fr" class="lang-nav-btn text-slate-600 hover:text-secondary hover:bg-slate-100 px-2 py-1 rounded-lg text-xs transition font-semibold">FR</button>
+      <button onclick="setLanguage('de')" id="nav-btn-de" class="lang-nav-btn text-slate-600 hover:text-secondary hover:bg-slate-100 px-2 py-1 rounded-lg text-xs transition font-semibold">DE</button>
+      <button onclick="setLanguage('en')" id="nav-btn-en" class="lang-nav-btn text-slate-600 hover:text-secondary hover:bg-slate-100 px-2 py-1 rounded-lg text-xs transition font-semibold">EN</button>
+      <button onclick="setLanguage('ku')" id="nav-btn-ku" class="lang-nav-btn active bg-secondary text-white font-bold px-2 py-1 rounded-lg text-xs transition">KU</button>
+    </div>
+
+    <a href="tel:0472936978" class="hidden md:inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 hover:text-secondary px-3 py-2 border border-slate-300 rounded-xl hover:bg-white transition whitespace-nowrap">
       <span class="material-symbols-outlined text-sm text-secondary">call</span>
       <span>0472 93 69 78</span>
     </a>
+    
     <a href="#contact" class="bg-gradient-to-r from-secondary to-[#0070eb] text-white text-xs md:text-sm font-bold uppercase tracking-wider px-4 sm:px-5 py-2.5 rounded-xl hover:shadow-[0_0_15px_rgba(0,88,188,0.5)] transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2 whitespace-nowrap">
       <span class="material-symbols-outlined text-sm">calendar_month</span>
-      <span data-i18n="nav.book">Prendre RDV</span>
+      <span data-i18n="nav.book">Dora Xwe Bigirin</span>
     </a>
+    
     <!-- Mobile Hamburger Toggle button -->
     <button onclick="toggleMobileMenu()" class="xl:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 border border-slate-200 flex items-center justify-center" aria-label="Menu">
       <span class="material-symbols-outlined text-2xl">menu</span>
@@ -229,15 +228,37 @@
   </div>
 </header>
 
-<!-- Mobile Navigation Drawer -->
+<!-- Mobile Navigation Drawer with Large Language Selector -->
 <div id="mobile-menu" class="hidden xl:hidden mx-4 my-2 glass-card rounded-2xl p-5 border border-slate-200 shadow-xl transition-all">
+  <!-- Mobile 4-Language Switcher Grid -->
+  <div class="mb-4 pb-4 border-b border-slate-200">
+    <div class="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-2 flex items-center gap-1.5">
+      <span class="material-symbols-outlined text-sm text-secondary">translate</span>
+      <span>Choisir la langue / Select language :</span>
+    </div>
+    <div class="grid grid-cols-2 gap-2">
+      <button onclick="setLanguage('fr')" id="drawer-btn-fr" class="lang-drawer-btn bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold px-3 py-2 rounded-xl text-xs flex items-center justify-center gap-1.5 transition">
+        <span class="text-base">🇫🇷</span> <span>Français</span>
+      </button>
+      <button onclick="setLanguage('de')" id="drawer-btn-de" class="lang-drawer-btn bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold px-3 py-2 rounded-xl text-xs flex items-center justify-center gap-1.5 transition">
+        <span class="text-base">🇩🇪</span> <span>Deutsch</span>
+      </button>
+      <button onclick="setLanguage('en')" id="drawer-btn-en" class="lang-drawer-btn bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold px-3 py-2 rounded-xl text-xs flex items-center justify-center gap-1.5 transition">
+        <span class="text-base">🇬🇧</span> <span>English</span>
+      </button>
+      <button onclick="setLanguage('ku')" id="drawer-btn-ku" class="lang-drawer-btn active bg-secondary text-white font-bold px-3 py-2 rounded-xl text-xs flex items-center justify-center gap-1.5 shadow-sm">
+        <span class="text-base">☀️</span> <span>Kurdî</span>
+      </button>
+    </div>
+  </div>
+
   <div class="flex flex-col gap-3.5 text-sm font-semibold text-slate-700">
-    <a data-i18n="nav.needs" onclick="toggleMobileMenu()" class="hover:text-secondary py-1 border-b border-slate-100" href="#soins-adaptes">Vos Besoins</a>
-    <a data-i18n="nav.method" onclick="toggleMobileMenu()" class="hover:text-secondary py-1 border-b border-slate-100" href="#methode">Méthode Hands-On</a>
-    <a data-i18n="nav.expertises" onclick="toggleMobileMenu()" class="hover:text-secondary py-1 border-b border-slate-100" href="#expertises">Expertises</a>
-    <a data-i18n="nav.tarifs" onclick="toggleMobileMenu()" class="hover:text-secondary py-1 border-b border-slate-100" href="#tarifs">Tarifs INAMI</a>
-    <a data-i18n="nav.faq" onclick="toggleMobileMenu()" class="hover:text-secondary py-1 border-b border-slate-100" href="#faq">FAQ</a>
-    <a data-i18n="nav.contact" onclick="toggleMobileMenu()" class="hover:text-secondary py-1" href="#contact">Contact & Accès</a>
+    <a data-i18n="nav.needs" onclick="toggleMobileMenu()" class="hover:text-secondary py-1 border-b border-slate-100" href="#soins-adaptes">Pêdiviyên We</a>
+    <a data-i18n="nav.method" onclick="toggleMobileMenu()" class="hover:text-secondary py-1 border-b border-slate-100" href="#methode">Rêbaza Hands-On</a>
+    <a data-i18n="nav.expertises" onclick="toggleMobileMenu()" class="hover:text-secondary py-1 border-b border-slate-100" href="#expertises">Pisporî</a>
+    <a data-i18n="nav.tarifs" onclick="toggleMobileMenu()" class="hover:text-secondary py-1 border-b border-slate-100" href="#tarifs">Biha & Vegerandin</a>
+    <a data-i18n="nav.faq" onclick="toggleMobileMenu()" class="hover:text-secondary py-1 border-b border-slate-100" href="#faq">Pirsên Pir Pirsyar</a>
+    <a data-i18n="nav.contact" onclick="toggleMobileMenu()" class="hover:text-secondary py-1" href="#contact">Têkilî & Navnîşan</a>
   </div>
 </div>
 
@@ -254,41 +275,39 @@
         <div class="flex flex-wrap items-center gap-2">
           <div class="inline-flex items-center gap-1.5 glass-card px-3.5 py-1.5 rounded-full border border-secondary/30 text-secondary text-xs font-bold uppercase tracking-wider">
             <span class="material-symbols-outlined text-sm neon-icon">verified</span>
-            <span data-i18n="hero.badgeInami">100% Conventionné INAMI (Reste : 6,25 €)</span>
+            <span data-i18n="hero.badgeInami">100% Peymandarê INAMI (Para we: 6,25 €)</span>
           </div>
           <div class="inline-flex items-center gap-1.5 glass-card px-3.5 py-1.5 rounded-full border border-divider-gold/40 text-slate-800 text-xs font-bold uppercase tracking-wider">
             <span class="material-symbols-outlined text-sm text-divider-gold neon-icon-gold">workspace_premium</span>
-            <span data-i18n="hero.badgeIfompt">Certifié IFOMPT & MATHERA</span>
+            <span data-i18n="hero.badgeIfompt">Sertîfîkayên IFOMPT & MATHERA</span>
           </div>
         </div>
 
         <h1 data-i18n-html="hero.title" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary tracking-tight leading-tight">
-          Soulager vos douleurs, <br/>
-          <span class="neon-text-gradient">retrouver votre liberté</span> <br/>
-          de mouvement.
+          Êşa xwe kêm bikin, <br/><span class="neon-text-gradient">sedema wê fam bikin,</span> <br/>azadiya tevgera xwe bistînin.
         </h1>
 
         <p data-i18n-html="hero.subtitle" class="text-lg text-slate-600 max-w-2xl leading-relaxed">
-          Prise en charge attentive du <strong>mal de dos, de la nuque, des épaules et des blessures sportives</strong> par <strong>Dilsad Igrek</strong> à Welkenraedt. Des soins individuels, bienveillants et scientifiquement éprouvés (Evidence-Based Practice / KCE) pour en finir avec la douleur et les traitements passifs inefficaces.
+          Tedawiya baldar a <strong>êşa piştê, stû, mil û birîndariyên werzişê</strong> ji aliyê <strong>Dilsad Igrek</strong> ve li Welkenraedt. Xizmetek takekesî, bi rûmet û li gorî pîvanên zanistî (EBP / KCE) ji bo bidawîanîna êşê.
         </p>
 
         <!-- 4 Patient Guarantees -->
         <div class="grid grid-cols-2 sm:grid-cols-2 gap-3.5 pt-2">
           <div class="flex items-start gap-2.5 text-sm text-slate-700 font-medium">
             <span class="material-symbols-outlined text-secondary text-base mt-0.5">person</span>
-            <div><strong data-i18n="hero.g1Title">Séance 100% individuelle</strong><br/><span data-i18n="hero.g1Desc" class="text-xs text-slate-500">Un thérapeute dédié sans patients simultanés</span></div>
+            <div><strong data-i18n="hero.g1Title">100% Rûniştina Takekesî</strong><br/><span data-i18n="hero.g1Desc" class="text-xs text-slate-500">Fîzyoterapîstek tenê ji bo we, bêyî nexweşên hevdem</span></div>
           </div>
           <div class="flex items-start gap-2.5 text-sm text-slate-700 font-medium">
             <span class="material-symbols-outlined text-secondary text-base mt-0.5">schedule</span>
-            <div><strong data-i18n="hero.g2Title">45 à 60 min au bilan initial</strong><br/><span data-i18n="hero.g2Desc" class="text-xs text-slate-500">Écoute attentive & diagnostic approfondi</span></div>
+            <div><strong data-i18n="hero.g2Title">45 heta 60 xulek muayeneya yekem</strong><br/><span data-i18n="hero.g2Desc" class="text-xs text-slate-500">Guhdariya baldar û teşhîsa kûr a mekanîkî</span></div>
           </div>
           <div class="flex items-start gap-2.5 text-sm text-slate-700 font-medium">
             <span class="material-symbols-outlined text-secondary text-base mt-0.5">local_parking</span>
-            <div><strong data-i18n="hero.g3Title">Parking facile & gratuit</strong><br/><span data-i18n="hero.g3Desc" class="text-xs text-slate-500">Directement devant le cabinet (Bd Grosjean 52a)</span></div>
+            <div><strong data-i18n="hero.g3Title">Otoparka hêsan û belaş</strong><br/><span data-i18n="hero.g3Desc" class="text-xs text-slate-500">Rast li ber klînîkê (Bd Grosjean 52a)</span></div>
           </div>
           <div class="flex items-start gap-2.5 text-sm text-slate-700 font-medium">
             <span class="material-symbols-outlined text-secondary text-base mt-0.5">translate</span>
-            <div><strong data-i18n="hero.g4Title">Consultations en 4 langues</strong><br/><span data-i18n="hero.g4Desc" class="text-xs text-slate-500">Français • Deutsch • English • Kurdî</span></div>
+            <div><strong data-i18n="hero.g4Title">Şêwirmendî bi 4 zimanan</strong><br/><span data-i18n="hero.g4Desc" class="text-xs text-slate-500">Kurdî • Français • Deutsch • English</span></div>
           </div>
         </div>
 
@@ -296,12 +315,12 @@
         <div class="flex flex-wrap gap-4 pt-4">
           <a href="tel:0472936978" class="bg-primary text-white text-sm font-bold uppercase tracking-wider px-8 py-4 rounded-xl hover:bg-slate-800 transition-all duration-300 flex items-center gap-3 shadow-lg group">
             <span class="material-symbols-outlined text-divider-gold">phone_in_talk</span>
-            <span data-i18n="hero.ctaCall">Appeler : 0472 93 69 78</span>
+            <span data-i18n="hero.ctaCall">Telefon: 0472 93 69 78</span>
             <span class="material-symbols-outlined transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </a>
           <a href="#tarifs" class="glass-card text-primary text-sm font-bold uppercase tracking-wider px-7 py-4 rounded-xl hover:bg-white transition-all duration-300 border border-slate-300 flex items-center gap-2">
             <span class="material-symbols-outlined text-secondary">payments</span>
-            <span data-i18n="hero.ctaTarifs">Tarifs INAMI (6,25 € à charge)</span>
+            <span data-i18n="hero.ctaTarifs">Bihayên INAMI (Para we: 6,25 €)</span>
           </a>
         </div>
       </div>
@@ -317,14 +336,14 @@
           <div class="mt-5 p-4 rounded-2xl bg-primary text-white">
             <div class="flex items-center justify-between mb-2">
               <span data-i18n="hero.clinicCity" class="inline-block bg-secondary px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider">
-                Welkenraedt (Liège)
+                Welkenraedt • Herêma Liège
               </span>
               <span class="text-divider-gold font-bold text-xs flex items-center gap-1">
                 <span class="material-symbols-outlined text-xs">translate</span>
                 <span>FR • DE • EN • KU</span>
               </span>
             </div>
-            <h3 data-i18n="hero.clinicTitle" class="text-base font-bold text-white mb-0.5">Cabinet IGREK Physiothérapie</h3>
+            <h3 data-i18n="hero.clinicTitle" class="text-base font-bold text-white mb-0.5">Klînîka IGREK Fîzyoterapî</h3>
             <p class="text-xs text-white/80">Boulevard Hector Grosjean 52a, 4840 Welkenraedt</p>
             
             <div class="mt-3 flex items-center justify-between text-xs border-t border-white/20 pt-3">
@@ -332,7 +351,7 @@
                 <span class="material-symbols-outlined text-sm">phone</span>
                 <span>0472 93 69 78</span>
               </a>
-              <span data-i18n="hero.clinicHours" class="font-mono text-white/90">8h00 — 19h00 (sur RDV)</span>
+              <span data-i18n="hero.clinicHours" class="font-mono text-white/90">8:00 — 19:00 (bi randevû)</span>
             </div>
           </div>
         </div>
@@ -344,9 +363,9 @@
   <section id="soins-adaptes" class="w-full py-16 px-5 md:px-12 bg-slate-100/80 border-y border-slate-200">
     <div class="max-w-7xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-12">
-        <div data-i18n="needs.badge" class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Une Réponse Précise à Chaque Situation</div>
-        <h2 data-i18n="needs.title" class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Quelle est votre situation actuelle ?</h2>
-        <p data-i18n="needs.subtitle" class="text-slate-600 text-base mt-2">Que vous soyez bloqué depuis ce matin, en souffrance depuis des mois ou sportif en reprise, nous adaptons notre prise en charge.</p>
+        <div data-i18n="needs.badge" class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Ji bo Her Rewşê Bersivek Taybet</div>
+        <h2 data-i18n="needs.title" class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Rewşa we ya niha çi ye?</h2>
+        <p data-i18n="needs.subtitle" class="text-slate-600 text-base mt-2">Hûn îro serê sibê xit bûbin, bi mehan e êşê dikişînin an jî werzişvanek in ku vedigere meydanê, em dermankirina we li gorî pêdiviya we saz dikin.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -356,16 +375,16 @@
             <div class="w-12 h-12 rounded-xl bg-red-100 text-red-600 flex items-center justify-center mb-6 font-bold text-xl">
               ⚡
             </div>
-            <span data-i18n="needs.p1Badge" class="text-xs font-bold text-red-600 uppercase tracking-wider">Urgence & Blocage Récent</span>
-            <h3 data-i18n="needs.p1Title" class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Lumbago, Torticolis ou Entorse Récente</h3>
+            <span data-i18n="needs.p1Badge" class="text-xs font-bold text-red-600 uppercase tracking-wider">Rewşa Lezgîn & Xitbûn</span>
+            <h3 data-i18n="needs.p1Title" class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Lumbago, Stûxwarbûn an Werimîna Lebatê ya Nû</h3>
             <p data-i18n="needs.p1Desc" class="text-slate-600 text-sm leading-relaxed mb-6">
-              Vous êtes bloqué, chaque mouvement est douloureux et vous devez être soulagé au plus vite. Nous mettons en œuvre des techniques manuelles de décompression et des conseils immédiats pour calmer l'inflammation.
+              Hûn xit bûne û her tevger dibe sedema êşê? Bi rêbazên destî yên nerm û şîretên rasterast, em êş û iltîhabê di cih de kêm dikin.
             </p>
           </div>
           <div class="pt-4 border-t border-slate-200">
             <a href="tel:0472936978" class="text-xs font-bold text-red-600 flex items-center gap-1.5 hover:underline">
               <span class="material-symbols-outlined text-sm">phone_in_talk</span>
-              <span data-i18n="needs.p1Cta">Appeler d'urgence : 0472 93 69 78</span>
+              <span data-i18n="needs.p1Cta">Ji bo lezgîniyê bigerin : 0472 93 69 78</span>
             </a>
           </div>
         </div>
@@ -376,15 +395,15 @@
             <div class="w-12 h-12 rounded-xl bg-blue-100 text-secondary flex items-center justify-center mb-6 font-bold text-xl">
               🔄
             </div>
-            <span data-i18n="needs.p2Badge" class="text-xs font-bold text-secondary uppercase tracking-wider">Douleur Persistante & Récidivante</span>
-            <h3 data-i18n="needs.p2Title" class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Mal de Dos Chronique ou Échec Antérieur</h3>
+            <span data-i18n="needs.p2Badge" class="text-xs font-bold text-secondary uppercase tracking-wider">Êşa Berdewam û Dubarebûyî</span>
+            <h3 data-i18n="needs.p2Title" class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Êşa Piştê ya Kronîk an Bêencambûna Tedawiyên Berê</h3>
             <p data-i18n="needs.p2Desc" class="text-slate-600 text-sm leading-relaxed mb-6">
-              Vous avez déjà testé plusieurs traitements ou machines sans amélioration durable ? La TMO analyse précisément l'origine biomécanique et nerveuse du problème pour briser le cercle vicieux de la douleur.
+              We gelek derman an amûrên pasîf ceribandine lê encamek mayînde negirtiye? TMO sedema bingehîn a biomekanîk û damaran dibîne da ku zincîra êşê bişkîne.
             </p>
           </div>
           <div class="pt-4 border-t border-slate-200">
             <a href="#expertises" class="text-xs font-bold text-secondary flex items-center gap-1 hover:underline">
-              <span data-i18n="needs.p2Cta">Comprendre la méthode TMO →</span>
+              <span data-i18n="needs.p2Cta">Rêbaza TMO fam bikin →</span>
             </a>
           </div>
         </div>
@@ -395,15 +414,15 @@
             <div class="w-12 h-12 rounded-xl bg-amber-100 text-divider-gold flex items-center justify-center mb-6 font-bold text-xl">
               🏃
             </div>
-            <span data-i18n="needs.p3Badge" class="text-xs font-bold text-divider-gold uppercase tracking-wider">Sportifs & Clubs Locaux</span>
-            <h3 data-i18n="needs.p3Title" class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Rééducation & Reprise Sécurisée (RTP)</h3>
+            <span data-i18n="needs.p3Badge" class="text-xs font-bold text-divider-gold uppercase tracking-wider">Werzişvan & Yaneyên Herêmî</span>
+            <h3 data-i18n="needs.p3Title" class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Rehabîlîtasyon & Vegera Ewle bo Werzişê (RTP)</h3>
             <p data-i18n="needs.p3Desc" class="text-slate-600 text-sm leading-relaxed mb-6">
-              Lésions musculaires, ligament croisé (LCA), tendinopathies (F.C. Welkenraedt, Gym La Concorde, coureurs). Tests fonctionnels et gestion de charge pour reprendre à 100% sans récidive.
+              Birîndariyên masûlkeyan, çirandina bejna xaçerêk (LCA), tendînopatî (F.C. Welkenraedt, Gym La Concorde, bazdan). Testên fonksiyonel ji bo vegera 100% ewle.
             </p>
           </div>
           <div class="pt-4 border-t border-slate-200">
             <a href="tel:0472936978" class="text-xs font-bold text-secondary flex items-center gap-1 hover:underline">
-              <span data-i18n="needs.p3Cta">Planifier un protocole Return To Play →</span>
+              <span data-i18n="needs.p3Cta">Protokola Return To Play dest pê bikin →</span>
             </a>
           </div>
         </div>
@@ -415,9 +434,9 @@
   <section id="methode" class="w-full py-16 px-5 md:px-12 relative">
     <div class="max-w-7xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-12">
-        <div data-i18n="method.badge" class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Notre Philosophie Thérapeutique</div>
-        <h2 data-i18n="method.title" class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Le Concept « Hands-On / Hands-Off »</h2>
-        <p data-i18n="method.subtitle" class="text-slate-600 text-base mt-2">Conformément aux recommandations officielles du KCE : pas de machines passives isolées, mais une alliance entre soins manuels experts et autonomisation active.</p>
+        <div data-i18n="method.badge" class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Felsefeya Me ya Tedawiyê</div>
+        <h2 data-i18n="method.title" class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Konsepta « Hands-On / Hands-Off »</h2>
+        <p data-i18n="method.subtitle" class="text-slate-600 text-base mt-2">Li gorî rênimayên fermî yên KCE: Bêyî amûrên pasîf ên tenêkirî, hevgirtina destwerdana bi destan û çalakiya nexweş bixwe.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -428,25 +447,25 @@
               👐
             </div>
             <div>
-              <span data-i18n="method.step1Badge" class="text-xs font-bold text-secondary uppercase tracking-wider">Phase 1 • Au Cabinet</span>
-              <h3 data-i18n="method.step1Title" class="text-2xl font-bold text-primary">1. Hands-On : Le Soulagement Manuel</h3>
+              <span data-i18n="method.step1Badge" class="text-xs font-bold text-secondary uppercase tracking-wider">Qonaxa 1 • Li Klînîkê</span>
+              <h3 data-i18n="method.step1Title" class="text-2xl font-bold text-primary">1. Hands-On: Rehetkirina bi Destan</h3>
             </div>
           </div>
           <p data-i18n="method.step1Desc" class="text-slate-600 text-base leading-relaxed mb-4">
-            Le thérapeute utilise ses mains avec une grande précision clinique :
+            Pispor bi destên xwe bi hûrbîniyek klînîkî tevdigere:
           </p>
           <ul class="space-y-2.5 text-sm text-slate-700">
             <li class="flex items-center gap-2">
               <span class="material-symbols-outlined text-secondary text-base">check_circle</span>
-              <span data-i18n-html="method.step1Item1"><strong>Mobilisations articulaires douces</strong> pour libérer les blocages.</span>
+              <span data-i18n-html="method.step1Item1"><strong>Mobilîzasyona nerm a lebat û movikan</strong> bo vekirina xitbûnan.</span>
             </li>
             <li class="flex items-center gap-2">
               <span class="material-symbols-outlined text-secondary text-base">check_circle</span>
-              <span data-i18n-html="method.step1Item2"><strong>Travail myofascial ciblé</strong> pour relâcher les contractures profondes.</span>
+              <span data-i18n-html="method.step1Item2"><strong>Xebata mîyofasyal a taybet</strong> bo nermkirina masûlkeyên girjbûyî.</span>
             </li>
             <li class="flex items-center gap-2">
               <span class="material-symbols-outlined text-secondary text-base">check_circle</span>
-              <span data-i18n-html="method.step1Item3"><strong>Techniques neurodynamiques</strong> pour libérer les trajets nerveux irrités.</span>
+              <span data-i18n-html="method.step1Item3"><strong>Teknîkên neurodînamîk</strong> bo rihetkirina rêyên damaran.</span>
             </li>
           </ul>
         </div>
@@ -458,25 +477,25 @@
               🎯
             </div>
             <div>
-              <span data-i18n="method.step2Badge" class="text-xs font-bold text-divider-gold uppercase tracking-wider">Phase 2 • Votre Autonomie</span>
-              <h3 data-i18n="method.step2Title" class="text-2xl font-bold text-primary">2. Hands-Off : La Prévention Durable</h3>
+              <span data-i18n="method.step2Badge" class="text-xs font-bold text-divider-gold uppercase tracking-wider">Qonaxa 2 • Xwebawerî & Pêşîlêgirtin</span>
+              <h3 data-i18n="method.step2Title" class="text-2xl font-bold text-primary">2. Hands-Off: Parastina Mayînde</h3>
             </div>
           </div>
           <p data-i18n="method.step2Desc" class="text-slate-600 text-base leading-relaxed mb-4">
-            Nous vous donnons les clés pour consolider vos progrès à la maison :
+            Em rêyên başbûnê didin destê we da ku êş careke din venegere:
           </p>
           <ul class="space-y-2.5 text-sm text-slate-700">
             <li class="flex items-center gap-2">
               <span class="material-symbols-outlined text-divider-gold text-base">check_circle</span>
-              <span data-i18n-html="method.step2Item1"><strong>Exercices thérapeutiques simples et progressifs</strong> faciles à réaliser chez soi.</span>
+              <span data-i18n-html="method.step2Item1"><strong>Tevgerên dermankirinê yên hêsan û pêşverû</strong> ku li malê tên kirin.</span>
             </li>
             <li class="flex items-center gap-2">
               <span class="material-symbols-outlined text-divider-gold text-base">check_circle</span>
-              <span data-i18n-html="method.step2Item2"><strong>Déconstruction des peurs liées au mouvement</strong> (recommandé KCE).</span>
+              <span data-i18n-html="method.step2Item2"><strong>Rakirina tirsên ji tevgerê</strong> (li gorî pêşniyara KCE).</span>
             </li>
             <li class="flex items-center gap-2">
               <span class="material-symbols-outlined text-divider-gold text-base">check_circle</span>
-              <span data-i18n-html="method.step2Item3"><strong>Programme personnalisé d'auto-gestion</strong> pour éviter toute rechute.</span>
+              <span data-i18n-html="method.step2Item3"><strong>Bernameyek taybet a xwe-rêvebirinê</strong> bo parastina mayînde.</span>
             </li>
           </ul>
         </div>
@@ -489,9 +508,9 @@
     <div class="max-w-7xl mx-auto">
       <div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
-          <div data-i18n="expertises.badge" class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Prise en Charge Complète & Spécialisation</div>
-          <h2 data-i18n="expertises.title" class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Domaines de Prise en Charge</h2>
-          <p data-i18n="expertises.subtitle" class="text-slate-600 max-w-2xl text-base mt-2">Kinésithérapie générale, respiratoire, traumatologie et rééducation avancée, avec une spécialisation universitaire en Thérapie Manuelle Orthopédique (TMO / IFOMPT).</p>
+          <div data-i18n="expertises.badge" class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Lênêrîna Berfireh & Pisporî</div>
+          <h2 data-i18n="expertises.title" class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Qadên Tedawiyê</h2>
+          <p data-i18n="expertises.subtitle" class="text-slate-600 max-w-2xl text-base mt-2">Fîzyoterapiya giştî, nefesê, birîndariyên travmatîk û rehabîlîtasyon bi pisporiya zanîngehê ya di Terapiya Destî ya Ortobedîk de (TMO / IFOMPT).</p>
         </div>
       </div>
 
@@ -502,15 +521,15 @@
             <span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
           </div>
           <div>
-            <span data-i18n="expertises.tmoBadge" class="text-xs font-bold text-secondary uppercase tracking-wider">Spécialisation Phare (IFOMPT & MATHERA)</span>
-            <h3 data-i18n="expertises.tmoTitle" class="text-2xl md:text-3xl font-bold text-primary mb-3 mt-1 tracking-tight">Thérapie Manuelle Orthopédique (TMO)</h3>
+            <span data-i18n="expertises.tmoBadge" class="text-xs font-bold text-secondary uppercase tracking-wider">Pisporiya Sereke (IFOMPT & MATHERA)</span>
+            <h3 data-i18n="expertises.tmoTitle" class="text-2xl md:text-3xl font-bold text-primary mb-3 mt-1 tracking-tight">Terapiya Destî ya Ortobedîk (TMO)</h3>
             <p data-i18n="expertises.tmoDesc" class="text-slate-600 text-base leading-relaxed mb-6">
-              Évaluation neuro-musculo-squelettique de haute précision pour traiter les blocages et douleurs du dos, du cou et des articulations. Mobilisations articulaires douces, levées de tension musculaire et exercices d'autonomisation basés sur les preuves (EBP / KCE).
+              Nirxandina kûr a neuro-muskuloskeletî ji bo dermankirina êşa piştê, stû û movikan. Mobilîzasyona nerm, rehetkirina masûlkeyan û fêrkirina tevgerên çalak li ser bingeha delîlên zanistî (EBP / KCE).
             </p>
           </div>
           <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-200">
-            <span data-i18n="expertises.tmoTag1" class="bg-secondary/10 text-secondary text-xs font-bold px-3 py-1 rounded-lg">Raisonnement clinique</span>
-            <span data-i18n="expertises.tmoTag2" class="bg-secondary/10 text-secondary text-xs font-bold px-3 py-1 rounded-lg">Mobilisations douces</span>
+            <span data-i18n="expertises.tmoTag1" class="bg-secondary/10 text-secondary text-xs font-bold px-3 py-1 rounded-lg">Ramana klînîkî</span>
+            <span data-i18n="expertises.tmoTag2" class="bg-secondary/10 text-secondary text-xs font-bold px-3 py-1 rounded-lg">Mobilîzasyona nerm</span>
             <span data-i18n="expertises.tmoTag3" class="bg-secondary/10 text-secondary text-xs font-bold px-3 py-1 rounded-lg">Hands-On / Hands-Off</span>
           </div>
         </div>
@@ -521,14 +540,14 @@
             <div class="w-12 h-12 rounded-xl bg-blue-100 text-secondary flex items-center justify-center mb-6 shadow-sm">
               <span class="material-symbols-outlined text-2xl font-bold">air</span>
             </div>
-            <span data-i18n="expertises.respBadge" class="text-xs font-bold text-secondary uppercase tracking-wider">Prise en Charge Générale</span>
-            <h3 data-i18n="expertises.respTitle" class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Kiné Générale & Respiratoire</h3>
+            <span data-i18n="expertises.respBadge" class="text-xs font-bold text-secondary uppercase tracking-wider">Lênêrîna Giştî</span>
+            <h3 data-i18n="expertises.respTitle" class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Fîzyoterapiya Giştî & ya Nefesê</h3>
             <p data-i18n="expertises.respDesc" class="text-slate-600 text-sm leading-relaxed">
-              Désencombrement bronchique, réadaptation à l'effort, prise en charge des affections respiratoires aiguës ou chroniques et soins de kinésithérapie générale.
+              Paqijkirina rêyên henaseyê, rahênana ji nû ve ya nefesê, tedawiya nexweşiyên nefesê yên tûj û kronîk û fîzyoterapiya giştî.
             </p>
           </div>
           <div class="pt-4 mt-4 border-t border-slate-200">
-            <span data-i18n="expertises.respSub" class="text-xs text-slate-500 font-medium">Adultes & enfants • Réentraînement respiratoire</span>
+            <span data-i18n="expertises.respSub" class="text-xs text-slate-500 font-medium">Mezin & zarok • Rahênana nefesê</span>
           </div>
         </div>
 
@@ -538,14 +557,14 @@
             <div class="w-12 h-12 rounded-xl bg-primary text-divider-gold flex items-center justify-center mb-6 shadow-sm">
               <span class="material-symbols-outlined text-2xl font-bold neon-icon-gold">healing</span>
             </div>
-            <span data-i18n="expertises.traumaBadge" class="text-xs font-bold text-divider-gold uppercase tracking-wider">Accidents & Traumatismes</span>
-            <h3 data-i18n="expertises.traumaTitle" class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Traumatologie & Blessures</h3>
+            <span data-i18n="expertises.traumaBadge" class="text-xs font-bold text-divider-gold uppercase tracking-wider">Qeza & Travmatolojî</span>
+            <h3 data-i18n="expertises.traumaTitle" class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Travmatolojî & Birîndarî</h3>
             <p data-i18n="expertises.traumaDesc" class="text-slate-600 text-sm leading-relaxed">
-              Prise en charge post-traumatique : fractures, entorses aiguës, luxations, déchirures musculaires et lésions tendineuses pour une récupération fonctionnelle optimale.
+              Rehabîlîtasyona piştî qezayan: şikestin, werimîna lebatê, ji cih derketin, çirîna masûlkeyan û birîndariyên rîhan bo vegera saxlem.
             </p>
           </div>
           <div class="pt-4 mt-4 border-t border-slate-200">
-            <span data-i18n="expertises.traumaSub" class="text-xs text-slate-500 font-medium">Mobilisation précoce & renforcement fonctionnel</span>
+            <span data-i18n="expertises.traumaSub" class="text-xs text-slate-500 font-medium">Tevgera zû & xurtkirina fonksiyonel</span>
           </div>
         </div>
 
@@ -555,14 +574,14 @@
             <div class="w-12 h-12 rounded-xl bg-primary text-divider-gold flex items-center justify-center mb-6 shadow-sm">
               <span class="material-symbols-outlined text-2xl font-bold neon-icon-gold">speed</span>
             </div>
-            <span data-i18n="expertises.sportBadge" class="text-xs font-bold text-divider-gold uppercase tracking-wider">Athlètes & Clubs</span>
-            <h3 data-i18n="expertises.sportTitle" class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Kinésithérapie du Sport</h3>
+            <span data-i18n="expertises.sportBadge" class="text-xs font-bold text-divider-gold uppercase tracking-wider">Yane & Werzişvan</span>
+            <h3 data-i18n="expertises.sportTitle" class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Kînesîterapiya Werzişê</h3>
             <p data-i18n="expertises.sportDesc" class="text-slate-600 text-sm leading-relaxed">
-              Suivi des sportifs locaux (football, gymnastique, course, vélo). Gestion de charge tissulaire, tests fonctionnels et protocole de Return To Play sécurisé.
+              Şopandina werzişvanên herêmî (futbol, jîmnastîk, bez, bîsîklet). Rêvebirina bargiraniyê, testên fonksiyonel û protokola Return To Play.
             </p>
           </div>
           <div class="pt-4 mt-4 border-t border-slate-200">
-            <span data-i18n="expertises.sportSub" class="text-xs text-slate-500 font-medium">F.C. Welkenraedt, Gym La Concorde, coureurs</span>
+            <span data-i18n="expertises.sportSub" class="text-xs text-slate-500 font-medium">F.C. Welkenraedt, Gym La Concorde, bezvan</span>
           </div>
         </div>
 
@@ -572,14 +591,14 @@
             <div class="w-12 h-12 rounded-xl bg-white text-secondary flex items-center justify-center mb-6 shadow-sm border border-secondary/20">
               <span class="material-symbols-outlined neon-icon text-2xl font-bold">medical_services</span>
             </div>
-            <span data-i18n="expertises.postopBadge" class="text-xs font-bold text-secondary uppercase tracking-wider">Chirurgie & Maxillo-Facial</span>
-            <h3 data-i18n="expertises.postopTitle" class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Post-Opératoire & Mâchoire (ATM)</h3>
+            <span data-i18n="expertises.postopBadge" class="text-xs font-bold text-secondary uppercase tracking-wider">Emeliyat & Çene (ATM)</span>
+            <h3 data-i18n="expertises.postopTitle" class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Piştî Emeliyatê & Çene (ATM)</h3>
             <p data-i18n="expertises.postopDesc" class="text-slate-600 text-sm leading-relaxed">
-              Suivi après prothèses (PTH/PTG), ligamentoplastie (LCA), chirurgie rachidienne, ainsi que les troubles de l'articulation temporo-mandibulaire (ATM / bruxisme).
+              Şopandina piştî proteza qorik/çongê, bejna xaçerêk (LCA), emeliyata piştê, her wiha pirsgirêkên çenê (ATM) û dirandina diranan.
             </p>
           </div>
           <div class="pt-4 mt-4 border-t border-slate-200">
-            <span data-i18n="expertises.postopSub" class="text-xs text-slate-500 font-medium">Récupération des amplitudes, force & confort cranio-facial</span>
+            <span data-i18n="expertises.postopSub" class="text-xs text-slate-500 font-medium">Vegera hêz, tevger & rehetkirina rû</span>
           </div>
         </div>
       </div>
@@ -592,36 +611,36 @@
       <div class="text-center max-w-3xl mx-auto mb-12">
         <div class="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-700 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3">
           <span class="material-symbols-outlined text-sm">verified_user</span>
-          <span data-i18n="tarifs.badge">100% Conventionné INAMI • Aucun Dépassement Surprise</span>
+          <span data-i18n="tarifs.badge">100% Li gorî Peymana INAMI • Bêyî Mesrefên Veşartî</span>
         </div>
-        <h2 data-i18n="tarifs.title" class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Tarifs Officiels & Remboursement Mutuelle</h2>
-        <p data-i18n="tarifs.subtitle" class="text-slate-600 text-base mt-2">Dilsad Igrek applique rigoureusement les tarifs de la convention nationale belge 2026 pour vous faire bénéficier du meilleur remboursement.</p>
+        <h2 data-i18n="tarifs.title" class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Bihayên Fermî & Vegerandina Sîgortayê</h2>
+        <p data-i18n="tarifs.subtitle" class="text-slate-600 text-base mt-2">Dilsad Igrek bi awayekî tund bihayên fermî yên peymana neteweyî ya Belçîkayê ya sala 2026-an bi kar tîne.</p>
       </div>
 
       <!-- 4 Price Metrics Cards -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
         <div class="glass-card rounded-3xl p-6 text-center border border-slate-200">
-          <span data-i18n="tarifs.card1Title" class="text-xs font-bold text-slate-500 uppercase tracking-wider">Tarif Officiel Séance</span>
+          <span data-i18n="tarifs.card1Title" class="text-xs font-bold text-slate-500 uppercase tracking-wider">Bihayê Fermî yê Rûniştinê</span>
           <div class="text-4xl font-extrabold text-primary my-3">31,64 €</div>
-          <p data-i18n="tarifs.card1Sub" class="text-xs text-slate-500">Tarif conventionné INAMI (2026)</p>
+          <p data-i18n="tarifs.card1Sub" class="text-xs text-slate-500">Bihayê peymandarê INAMI (2026)</p>
         </div>
 
         <div class="glass-card rounded-3xl p-6 text-center border border-emerald-300 bg-emerald-50/60">
-          <span data-i18n="tarifs.card2Title" class="text-xs font-bold text-emerald-700 uppercase tracking-wider">Remboursement Mutuelle</span>
+          <span data-i18n="tarifs.card2Title" class="text-xs font-bold text-emerald-700 uppercase tracking-wider">Vegerandina Mutuelle</span>
           <div class="text-4xl font-extrabold text-emerald-700 my-3">25,39 €</div>
-          <p data-i18n="tarifs.card2Sub" class="text-xs text-slate-600">Pris en charge par votre mutuelle</p>
+          <p data-i18n="tarifs.card2Sub" class="text-xs text-slate-600">Ji aliyê sîgortaya we ve tê dayîn</p>
         </div>
 
         <div class="glass-card rounded-3xl p-6 text-center border border-secondary/40 bg-secondary/5">
-          <span data-i18n="tarifs.card3Title" class="text-xs font-bold text-secondary uppercase tracking-wider">Votre Reste à Charge</span>
+          <span data-i18n="tarifs.card3Title" class="text-xs font-bold text-secondary uppercase tracking-wider">Para We ya Mayî</span>
           <div class="text-4xl font-extrabold text-secondary my-3">6,25 €</div>
-          <p data-i18n="tarifs.card3Sub" class="text-xs text-slate-600">Ticket modérateur ordinaire</p>
+          <p data-i18n="tarifs.card3Sub" class="text-xs text-slate-600">Heqdestê asayî yê nexweş</p>
         </div>
 
         <div class="glass-card rounded-3xl p-6 text-center border border-divider-gold/40 bg-divider-gold/5">
-          <span data-i18n="tarifs.card4Title" class="text-xs font-bold text-divider-gold uppercase tracking-wider">Statut BIM (Reste)</span>
+          <span data-i18n="tarifs.card4Title" class="text-xs font-bold text-divider-gold uppercase tracking-wider">Statûya BIM (Para We)</span>
           <div class="text-4xl font-extrabold text-divider-gold my-3">2,50 €</div>
-          <p data-i18n="tarifs.card4Sub" class="text-xs text-slate-600">Intervention majorée (BIM)</p>
+          <p data-i18n="tarifs.card4Sub" class="text-xs text-slate-600">Ji bo kesên xwedî mafê zêdekirî</p>
         </div>
       </div>
 
@@ -629,20 +648,20 @@
       <div class="glass-card rounded-3xl p-8 max-w-4xl mx-auto border border-secondary/20 bg-blue-50/40">
         <h4 class="text-lg font-bold text-primary mb-3 flex items-center gap-2">
           <span class="material-symbols-outlined text-secondary">checklist</span>
-          <span data-i18n="tarifs.checkTitle">Pour votre première consultation, pensez à apporter :</span>
+          <span data-i18n="tarifs.checkTitle">Ji kerema xwe ji bo rûniştina yekem bi xwe re bînin:</span>
         </h4>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs md:text-sm text-slate-700">
           <div class="flex items-center gap-2">
             <span class="text-secondary font-bold">1.</span>
-            <span data-i18n="tarifs.check1">Votre prescription médicale (ordonnance)</span>
+            <span data-i18n="tarifs.check1">Reçeteya xwe ya bijîşkî (ordonnance)</span>
           </div>
           <div class="flex items-center gap-2">
             <span class="text-secondary font-bold">2.</span>
-            <span data-i18n="tarifs.check2">Une vignette de votre mutuelle belge</span>
+            <span data-i18n="tarifs.check2">Vînyeta mutuelle ya Belçîkayê</span>
           </div>
           <div class="flex items-center gap-2">
             <span class="text-secondary font-bold">3.</span>
-            <span data-i18n="tarifs.check3">Vos éventuels examens (Radio, IRM, Écho)</span>
+            <span data-i18n="tarifs.check3">Raporên muayeneyê hebin (Radyo, IRM, Eko)</span>
           </div>
         </div>
       </div>
@@ -653,64 +672,64 @@
   <section id="faq" class="w-full py-16 px-5 md:px-12">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-12">
-        <div data-i18n="faq.badge" class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Aide & Réponses</div>
-        <h2 data-i18n="faq.title" class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Questions Fréquentes des Patients</h2>
-        <p data-i18n="faq.subtitle" class="text-slate-600 text-sm mt-2">Toutes les informations utiles et pratiques avant votre visite au cabinet.</p>
+        <div data-i18n="faq.badge" class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Alîkarî & Bersiv</div>
+        <h2 data-i18n="faq.title" class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Pirsên Pir Pirsyar ên Nexweşan</h2>
+        <p data-i18n="faq.subtitle" class="text-slate-600 text-sm mt-2">Hemû agahiyên girîng û pêwîst berî serdana we ya klînîkê.</p>
       </div>
 
       <div class="space-y-4">
         <!-- Q1 -->
         <details class="glass-card rounded-2xl p-5 border border-slate-200 group cursor-pointer" open>
           <summary class="font-bold text-primary flex items-center justify-between text-base">
-            <span data-i18n="faq.q1">Faut-il une prescription médicale pour être remboursé ?</span>
+            <span data-i18n="faq.q1">Gelo ji bo vegerandina drav reçeteya bijîşk hewce ye?</span>
             <span class="material-symbols-outlined text-secondary transition group-open:rotate-180">expand_more</span>
           </summary>
           <p data-i18n-html="faq.a1" class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-200 leading-relaxed">
-            Oui. Pour que votre mutuelle prenne en charge la séance au tarif légal, une ordonnance délivrée par votre médecin traitant ou spécialiste est indispensable. Vous pouvez réserver votre rendez-vous dès aujourd'hui par téléphone (<a href="tel:0472936978" class="text-secondary font-bold underline">0472 93 69 78</a>) ou email et apporter la prescription le jour de votre première séance.
+            Belê. Ji bo ku sîgorta heqê rûniştinê vegerîne, reçeteyek ji bijîşkê we pêwîst e. Hûn dikarin îro bi rêya telefonê (<a href="tel:0472936978" class="text-secondary font-bold underline">0472 93 69 78</a>) an emailê randevû bigirin û reçeteyê roja rûniştinê bînin.
           </p>
         </details>
 
         <!-- Q2 -->
         <details class="glass-card rounded-2xl p-5 border border-slate-200 group cursor-pointer">
           <summary class="font-bold text-primary flex items-center justify-between text-base">
-            <span data-i18n="faq.q2">Comment se déroule la première consultation ?</span>
+            <span data-i18n="faq.q2">Muayeneya yekem çawa derbas dibe?</span>
             <span class="material-symbols-outlined text-secondary transition group-open:rotate-180">expand_more</span>
           </summary>
           <p data-i18n-html="faq.a2" class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-200 leading-relaxed">
-            La première séance dure entre <strong>45 et 60 minutes</strong>. Elle débute par une écoute détaillée de votre historique de santé, suivie d'un examen biomécanique approfondi pour poser un diagnostic précis. Nous réalisons les premiers gestes manuels de soulagement et définissons ensemble votre plan de soins.
+            Rûniştina yekem di navbera <strong>45 û 60 xulekan</strong> de didome. Ew bi guhdarîkirina dîroka tenduristiya we dest pê dike, bi muayeneyek mekanîkî ya kûr didome, û gava yekem a tedawiyê tê avêtin.
           </p>
         </details>
 
         <!-- Q3 -->
         <details class="glass-card rounded-2xl p-5 border border-slate-200 group cursor-pointer">
           <summary class="font-bold text-primary flex items-center justify-between text-base">
-            <span data-i18n="faq.q3">Combien de séances seront nécessaires ?</span>
+            <span data-i18n="faq.q3">Çend rûniştin pêwîst in?</span>
             <span class="material-symbols-outlined text-secondary transition group-open:rotate-180">expand_more</span>
           </summary>
           <p data-i18n="faq.a3" class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-200 leading-relaxed">
-            Notre objectif est de vous rendre autonome le plus rapidement possible sans séances inutiles. Dès le bilan initial, nous estimons ensemble le nombre de séances nécessaires. Grâce aux exercices d'autonomisation (Hands-Off), la plupart des patients constatent une amélioration durable en quelques séances.
+            Armanca me ew e ku hûn di demek herî kin de baş bibin bêyî rûniştinên zêde. Bi saya tevgerên Hands-Off, piraniya nexweşan di çend rûniştinan de encamek baş dibînin.
           </p>
         </details>
 
         <!-- Q4 -->
         <details class="glass-card rounded-2xl p-5 border border-slate-200 group cursor-pointer">
           <summary class="font-bold text-primary flex items-center justify-between text-base">
-            <span data-i18n="faq.q4">Quels vêtements porter lors de la séance ?</span>
+            <span data-i18n="faq.q4">Divê di dema tedawiyê de çi cil li xwe bikim?</span>
             <span class="material-symbols-outlined text-secondary transition group-open:rotate-180">expand_more</span>
           </summary>
           <p data-i18n="faq.a4" class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-200 leading-relaxed">
-            Privilégiez une tenue confortable ou de sport (short, t-shirt, legging) permettant un accès facile à la zone douloureuse et facilitant les mouvements lors des tests et exercices actifs.
+            Cilên rehet an werzişê (şort, t-shirt, tayt) li xwe bikin da ku herêmên bi êş bi hêsanî werin kontrolkirin û hûn bikaribin bi hêsanî tevbigerin.
           </p>
         </details>
 
         <!-- Q5 -->
         <details class="glass-card rounded-2xl p-5 border border-slate-200 group cursor-pointer">
           <summary class="font-bold text-primary flex items-center justify-between text-base">
-            <span data-i18n="faq.q5">Quelles sont les langues parlées lors des consultations ?</span>
+            <span data-i18n="faq.q5">Tedawî bi kîjan zimanan tê meşandin?</span>
             <span class="material-symbols-outlined text-secondary transition group-open:rotate-180">expand_more</span>
           </summary>
           <p data-i18n-html="faq.a5" class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-200 leading-relaxed">
-            Les consultations peuvent être menées couramment en <strong>Français</strong>, en <strong>Allemand (Deutsch)</strong>, en <strong>Anglais (English)</strong> et en <strong>Kurde (Kurdî)</strong>, garantissant un accueil chaleureux pour tous les résidents de la région frontalière et locale.
+            Şêwirmendî û tedawî bi rehetî bi zimanên <strong>Kurdî</strong>, <strong>Fransî</strong>, <strong>Almanî</strong> û <strong>Îngilîzî</strong> tên kirin.
           </p>
         </details>
       </div>
@@ -721,9 +740,9 @@
   <section id="contact" class="w-full py-16 px-5 md:px-12 bg-slate-100/80 border-t border-slate-200">
     <div class="max-w-7xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-12">
-        <div data-i18n="contact.badge" class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Localisation & Prise de Rendez-vous</div>
-        <h2 data-i18n="contact.title" class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Venir au Cabinet IGREK Physiothérapie</h2>
-        <p data-i18n="contact.subtitle" class="text-slate-600 text-base mt-2">Idéalement situé à Welkenraedt, facilement accessible depuis Lontzen, Aubel, Baelen, Henri-Chapelle, Eupen et Verviers.</p>
+        <div data-i18n="contact.badge" class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Navnîşan & Randevû</div>
+        <h2 data-i18n="contact.title" class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Serdana Klînîka IGREK Fîzyoterapî</h2>
+        <p data-i18n="contact.subtitle" class="text-slate-600 text-base mt-2">Navendek nûjen li Welkenraedt, bi hêsanî ji Eupen, Lontzen, Baelen, Henri-Chapelle û derdorê tê gihîştin.</p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -733,7 +752,7 @@
             <div class="w-12 h-12 rounded-xl bg-secondary text-white flex items-center justify-center mb-6 shadow-sm">
               <span class="material-symbols-outlined text-2xl">location_on</span>
             </div>
-            <h4 data-i18n="contact.addrTitle" class="text-lg font-bold text-primary mb-2">Adresse du Cabinet</h4>
+            <h4 data-i18n="contact.addrTitle" class="text-lg font-bold text-primary mb-2">Navnîşana Klînîkê</h4>
             <p class="text-sm text-slate-600 leading-relaxed mb-4">
               <strong>IGREK Physiothérapie</strong><br/>
               Boulevard Hector Grosjean 52a<br/>
@@ -742,7 +761,7 @@
           </div>
           <div class="pt-4 border-t border-slate-200 text-xs text-secondary font-bold flex items-center gap-1.5">
             <span class="material-symbols-outlined text-sm">local_parking</span>
-            <span data-i18n="contact.addrParking">Parking gratuit & facile directement sur place</span>
+            <span data-i18n="contact.addrParking">Otoparka belaş û hêsan rast li ber derî heye</span>
           </div>
         </div>
 
@@ -752,16 +771,16 @@
             <div class="w-12 h-12 rounded-xl bg-primary text-divider-gold flex items-center justify-center mb-6 shadow-sm">
               <span class="material-symbols-outlined text-2xl">schedule</span>
             </div>
-            <h4 data-i18n="contact.hoursTitle" class="text-lg font-bold text-primary mb-2">Horaires & Langues</h4>
+            <h4 data-i18n="contact.hoursTitle" class="text-lg font-bold text-primary mb-2">Demjimêr & Ziman</h4>
             <p class="text-sm text-slate-600 leading-relaxed mb-4">
-              <strong data-i18n="contact.hoursDays">Du Lundi au Vendredi :</strong><br/>
+              <strong data-i18n="contact.hoursDays">Duşem heta Înê:</strong><br/>
               8h00 — 19h00 (sur rendez-vous)<br/>
-              <span data-i18n="contact.hoursUrgent" class="text-xs text-divider-gold-dark font-bold">Plages d'urgences réservées chaque jour</span>
+              <span data-i18n="contact.hoursUrgent" class="text-xs text-divider-gold-dark font-bold">Ji bo rewşên lezgîn her roj dem hene</span>
             </p>
           </div>
           <div class="pt-4 border-t border-slate-200 text-xs text-slate-700 font-semibold flex items-center gap-1.5">
             <span class="material-symbols-outlined text-sm text-secondary">translate</span>
-            <span data-i18n="contact.langLabel">Français • Deutsch • English • Kurdî</span>
+            <span data-i18n="contact.langLabel">Kurdî • Français • Deutsch • English</span>
           </div>
         </div>
 
@@ -771,9 +790,9 @@
             <div class="w-12 h-12 rounded-xl bg-secondary text-white flex items-center justify-center mb-6 shadow-sm">
               <span class="material-symbols-outlined text-2xl">contact_phone</span>
             </div>
-            <h4 data-i18n="contact.cardTitle" class="text-lg font-bold text-primary mb-2">Contact & Rendez-vous</h4>
+            <h4 data-i18n="contact.cardTitle" class="text-lg font-bold text-primary mb-2">Têkilî & Randevû</h4>
             <p data-i18n="contact.cardDesc" class="text-xs text-slate-600 leading-relaxed mb-4">
-              Pour réserver une séance de bilan ou pour une urgence du jour, contactez Dilsad Igrek directement par GSM ou email :
+              Ji bo tomarkirina randevûyê an ji bo lezgîniyê, rasterast bi telefon an emailê têkevin têkiliyê:
             </p>
             
             <div class="space-y-2 mb-6">
@@ -790,7 +809,7 @@
 
           <a href="tel:0472936978" class="bg-gradient-to-r from-secondary to-[#0070eb] hover:opacity-95 text-white font-bold text-xs uppercase tracking-wider py-4 px-6 rounded-xl text-center transition flex items-center justify-center gap-2 shadow-md">
             <span class="material-symbols-outlined text-sm">phone_in_talk</span>
-            <span data-i18n="contact.btnCall">Appeler le 0472 93 69 78</span>
+            <span data-i18n="contact.btnCall">Telefon: 0472 93 69 78</span>
           </a>
         </div>
       </div>
@@ -802,34 +821,53 @@
 <footer class="bg-primary text-white w-full px-6 md:px-12 py-12 relative overflow-hidden">
   <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary via-divider-gold to-secondary"></div>
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
-    <div class="md:col-span-2">
+    <div class="md:col-span-1">
       <div class="flex items-center gap-2.5 mb-3">
         <img src="logo.png" alt="Logo Igrek Physiothérapie" class="h-8 w-auto object-contain bg-white rounded-md p-0.5"/>
         <div class="text-2xl font-bold tracking-tight uppercase text-white">
           IGREK<span class="text-secondary-fixed text-secondary">.PHYSIO</span>
         </div>
       </div>
-      <p data-i18n="footer.desc" class="text-xs text-white/70 max-w-sm leading-relaxed mb-4">
-        Cabinet de kinésithérapie générale, respiratoire, traumatologie et spécialisé en Thérapie Manuelle Orthopédique (TMO) à Welkenraedt. Soins 100% individuels, conventionné INAMI, critères d'excellence IFOMPT / MATHERA.
+      <p data-i18n="footer.desc" class="text-xs text-white/70 leading-relaxed mb-4">
+        Klînîka fîzyoterapiyê ya giştî, nefesê, travmatolojî û pispor di Terapiya Destî ya Ortobedîk (TMO) de li Welkenraedt. Xizmeta takekesî, peymandarê INAMI, standardên bilind ên IFOMPT / MATHERA.
       </p>
       <div data-i18n="footer.inamiBadge" class="text-xs text-divider-gold font-mono">
-        Praticien Agréé & Conventionné INAMI • GSM : 0472 93 69 78
+        Fîzyoterapîstê Peymandarê INAMI • GSM: 0472 93 69 78
       </div>
     </div>
 
     <div>
-      <h5 data-i18n="footer.navTitle" class="text-xs font-bold uppercase tracking-widest text-divider-gold mb-3">Navigation Rapide</h5>
+      <h5 data-i18n="footer.navTitle" class="text-xs font-bold uppercase tracking-widest text-divider-gold mb-3">Rêberiya Bilez</h5>
       <div class="flex flex-col gap-2 text-xs text-white/70">
-        <a data-i18n="nav.needs" href="#soins-adaptes" class="hover:text-white transition">Vos Besoins</a>
-        <a data-i18n="nav.method" href="#methode" class="hover:text-white transition">Méthode Hands-On / Off</a>
-        <a data-i18n="nav.expertises" href="#expertises" class="hover:text-white transition">Expertises Cliniques</a>
-        <a data-i18n="nav.tarifs" href="#tarifs" class="hover:text-white transition">Tarifs INAMI (6,25 €)</a>
-        <a data-i18n="nav.faq" href="#faq" class="hover:text-white transition">FAQ Patients</a>
+        <a data-i18n="nav.needs" href="#soins-adaptes" class="hover:text-white transition">Pêdiviyên We</a>
+        <a data-i18n="nav.method" href="#methode" class="hover:text-white transition">Rêbaza Hands-On</a>
+        <a data-i18n="nav.expertises" href="#expertises" class="hover:text-white transition">Pisporî</a>
+        <a data-i18n="nav.tarifs" href="#tarifs" class="hover:text-white transition">Biha & Vegerandin</a>
+        <a data-i18n="nav.faq" href="#faq" class="hover:text-white transition">Pirsên Pir Pirsyar</a>
+      </div>
+    </div>
+
+    <!-- Footer Language Switcher -->
+    <div>
+      <h5 data-i18n="footer.langTitle" class="text-xs font-bold uppercase tracking-widest text-divider-gold mb-3">Zimanên Malperê</h5>
+      <div class="flex flex-col gap-2 text-xs">
+        <button onclick="setLanguage('fr')" class="text-left text-white/80 hover:text-divider-gold transition flex items-center gap-2">
+          <span>🇫🇷</span> <span>Français (Site FR)</span>
+        </button>
+        <button onclick="setLanguage('de')" class="text-left text-white/80 hover:text-divider-gold transition flex items-center gap-2">
+          <span>🇩🇪</span> <span>Deutsch (Site DE)</span>
+        </button>
+        <button onclick="setLanguage('en')" class="text-left text-white/80 hover:text-divider-gold transition flex items-center gap-2">
+          <span>🇬🇧</span> <span>English (Site EN)</span>
+        </button>
+        <button onclick="setLanguage('ku')" class="text-left text-white/80 hover:text-divider-gold transition flex items-center gap-2">
+          <span>☀️</span> <span>Kurdî (Malper KU)</span>
+        </button>
       </div>
     </div>
 
     <div>
-      <h5 data-i18n="footer.coordTitle" class="text-xs font-bold uppercase tracking-widest text-divider-gold mb-3">Coordonnées & RDV</h5>
+      <h5 data-i18n="footer.coordTitle" class="text-xs font-bold uppercase tracking-widest text-divider-gold mb-3">Têkilî & Randevû</h5>
       <p class="text-xs text-white/70 leading-relaxed">
         Boulevard Hector Grosjean 52a<br/>
         4840 Welkenraedt (Belgique)<br/>
@@ -838,7 +876,7 @@
         <span class="text-[11px] text-white/60 block mt-1">Consultations : FR • DE • EN • Kurdî</span>
       </p>
       <div data-i18n="footer.rights" class="mt-4 text-[11px] text-white/50">
-        © 2026 IGREK Physiothérapie — Dilsad Igrek. Tous droits réservés.
+        © 2026 IGREK Fîzyoterapî — Dilsad Igrek. Hemû maf parastî ne.
       </div>
     </div>
   </div>
@@ -847,7 +885,9 @@
 <!-- Multilingual Translation Engine JavaScript -->
 <script>
 const translations = {
-  fr: {
+  "fr": {
+    "page.title": "IGREK Physiothérapie — Dilsad Igrek | Kinésithérapeute TMO Welkenraedt",
+    "page.description": "Cabinet de kinésithérapie générale, respiratoire, traumatologie et Thérapie Manuelle Orthopédique (TMO) de Dilsad Igrek à Welkenraedt. 100% Conventionné INAMI (séance à 6,25 € à charge). Certifié IFOMPT. GSM : 0472 93 69 78.",
     "emergency.badge": "Douleur Aiguë ou Blocage Récent ?",
     "emergency.text": "Lumbago brutal, torticolis, entorse : des créneaux d'urgence sont réservés chaque jour.",
     "emergency.btn": "Disponibilités du jour : 0472 93 69 78",
@@ -860,7 +900,7 @@ const translations = {
     "nav.book": "Prendre RDV",
     "hero.badgeInami": "100% Conventionné INAMI (Reste : 6,25 €)",
     "hero.badgeIfompt": "Certifié IFOMPT & MATHERA",
-    "hero.title": "Soulager vos douleurs, <br/><span class="neon-text-gradient">retrouver votre liberté</span> <br/>de mouvement.",
+    "hero.title": "Soulager vos douleurs, <br/><span class=\"neon-text-gradient\">retrouver votre liberté</span> <br/>de mouvement.",
     "hero.subtitle": "Prise en charge attentive du <strong>mal de dos, de la nuque, des épaules et des blessures sportives</strong> par <strong>Dilsad Igrek</strong> à Welkenraedt. Des soins individuels, bienveillants et scientifiquement éprouvés (Evidence-Based Practice / KCE) pour en finir avec la douleur et les traitements passifs inefficaces.",
     "hero.g1Title": "Séance 100% individuelle",
     "hero.g1Desc": "Un thérapeute dédié sans patients simultanés",
@@ -949,7 +989,7 @@ const translations = {
     "faq.title": "Questions Fréquentes des Patients",
     "faq.subtitle": "Toutes les informations utiles et pratiques avant votre visite au cabinet.",
     "faq.q1": "Faut-il une prescription médicale pour être remboursé ?",
-    "faq.a1": "Oui. Pour que votre mutuelle prenne en charge la séance au tarif légal, une ordonnance délivrée par votre médecin traitant ou spécialiste est indispensable. Vous pouvez réserver votre rendez-vous dès aujourd'hui par téléphone (<a href="tel:0472936978" class="text-secondary font-bold underline">0472 93 69 78</a>) ou email et apporter la prescription le jour de votre première séance.",
+    "faq.a1": "Oui. Pour que votre mutuelle prenne en charge la séance au tarif légal, une ordonnance délivrée par votre médecin traitant ou spécialiste est indispensable. Vous pouvez réserver votre rendez-vous dès aujourd'hui par téléphone (<a href=\"tel:0472936978\" class=\"text-secondary font-bold underline\">0472 93 69 78</a>) ou email et apporter la prescription le jour de votre première séance.",
     "faq.q2": "Comment se déroule la première consultation ?",
     "faq.a2": "La première séance dure entre <strong>45 et 60 minutes</strong>. Elle débute par une écoute détaillée de votre historique de santé, suivie d'un examen biomécanique approfondi pour poser un diagnostic précis. Nous réalisons les premiers gestes manuels de soulagement et définissons ensemble votre plan de soins.",
     "faq.q3": "Combien de séances seront nécessaires ?",
@@ -974,10 +1014,12 @@ const translations = {
     "footer.inamiBadge": "Praticien Agréé & Conventionné INAMI • GSM : 0472 93 69 78",
     "footer.navTitle": "Navigation Rapide",
     "footer.coordTitle": "Coordonnées & RDV",
+    "footer.langTitle": "Langues du Site",
     "footer.rights": "© 2026 IGREK Physiothérapie — Dilsad Igrek. Tous droits réservés."
   },
-
-  de: {
+  "de": {
+    "page.title": "IGREK Physiotherapie — Dilsad Igrek | OMT-Physiotherapeut Welkenraedt & Eupen",
+    "page.description": "Praxis für allgemeine Physiotherapie, Atemphysiotherapie, Traumatologie und Orthopädische Manuelle Therapie (OMT) von Dilsad Igrek in Welkenraedt. 100% LIKIV-konventioniert (6,25 € Eigenanteil). IFOMPT-zertifiziert. Tel: 0472 93 69 78.",
     "emergency.badge": "Akute Schmerzen oder Blockade?",
     "emergency.text": "Hexenschuss, steifer Nacken, Verstauchung: Tägliche Notfalltermine für schnelle Hilfe reserviert.",
     "emergency.btn": "Termine heute : 0472 93 69 78",
@@ -990,7 +1032,7 @@ const translations = {
     "nav.book": "Termin vereinbaren",
     "hero.badgeInami": "100% LIKIV / INAMI-Konventioniert (Eigenanteil: 6,25 €)",
     "hero.badgeIfompt": "IFOMPT & MATHERA Zertifiziert",
-    "hero.title": "Schmerzen lindern, <br/><span class="neon-text-gradient">Ursachen verstehen,</span> <br/>Bewegungsfreiheit gewinnen.",
+    "hero.title": "Schmerzen lindern, <br/><span class=\"neon-text-gradient\">Ursachen verstehen,</span> <br/>Bewegungsfreiheit gewinnen.",
     "hero.subtitle": "Gezielte Behandlung von <strong>Rückenschmerzen, Nacken, Schultern und Sportverletzungen</strong> durch <strong>Dilsad Igrek</strong> in Welkenraedt. Individuelle, evidenzbasierte Therapie (KCE Guidelines) ohne passive Dauerschleifen.",
     "hero.g1Title": "100% Einzelbehandlung",
     "hero.g1Desc": "Ein Therapeut ganz für Sie allein ohne Parallelpatienten",
@@ -1079,7 +1121,7 @@ const translations = {
     "faq.title": "Häufig gestellte Fragen von Patienten",
     "faq.subtitle": "Alle wichtigen praktischen Informationen vor Ihrem ersten Praxisbesuch.",
     "faq.q1": "Benötige ich ein ärztliches Rezept für die Erstattung?",
-    "faq.a1": "Ja. Damit Ihre Krankenkasse die Kosten übernimmt, ist eine ärztliche Verordnung Ihres Haus- oder Facharztes erforderlich. Sie können Ihren Termin bereits heute telefonisch (<a href="tel:0472936978" class="text-secondary font-bold underline">0472 93 69 78</a>) vereinbaren und das Rezept zum Termin mitbringen.",
+    "faq.a1": "Ja. Damit Ihre Krankenkasse die Kosten übernimmt, ist eine ärztliche Verordnung Ihres Haus- oder Facharztes erforderlich. Sie können Ihren Termin bereits heute telefonisch (<a href=\"tel:0472936978\" class=\"text-secondary font-bold underline\">0472 93 69 78</a>) vereinbaren und das Rezept zum Termin mitbringen.",
     "faq.q2": "Wie läuft die Erstuntersuchung ab?",
     "faq.a2": "Der Ersttermin dauert zwischen <strong>45 und 60 Minuten</strong>. Er beginnt mit einem ausführlichen Gespräch über Ihre Beschwerden, gefolgt von einer präzisen klinischen Untersuchung. Anschließend erfolgen erste lindernde Maßnahmen und ein gemeinsamer Behandlungsplan.",
     "faq.q3": "Wie viele Sitzungen sind erforderlich?",
@@ -1104,10 +1146,12 @@ const translations = {
     "footer.inamiBadge": "Anerkannter LIKIV-Therapeut • GSM: 0472 93 69 78",
     "footer.navTitle": "Schnellnavigation",
     "footer.coordTitle": "Kontakt & Termine",
+    "footer.langTitle": "Webseiten-Sprachen",
     "footer.rights": "© 2026 IGREK Physiotherapie — Dilsad Igrek. Alle Rechte vorbehalten."
   },
-
-  en: {
+  "en": {
+    "page.title": "IGREK Physiotherapy — Dilsad Igrek | OMT Physical Therapist Welkenraedt",
+    "page.description": "General physiotherapy, respiratory care, traumatology, and Orthopedic Manual Therapy (OMT) clinic by Dilsad Igrek in Welkenraedt. 100% INAMI registered (€6.25 patient copay). IFOMPT certified. Phone: 0472 93 69 78.",
     "emergency.badge": "Acute Pain or Recent Blockage?",
     "emergency.text": "Severe lumbago, stiff neck, acute sprain: Emergency slots reserved daily for quick relief.",
     "emergency.btn": "Today's availability : 0472 93 69 78",
@@ -1120,7 +1164,7 @@ const translations = {
     "nav.book": "Book Appointment",
     "hero.badgeInami": "100% INAMI Registered (€6.25 patient copay)",
     "hero.badgeIfompt": "IFOMPT & MATHERA Certified",
-    "hero.title": "Relieve your pain, <br/><span class="neon-text-gradient">understand its root cause,</span> <br/>regain freedom of movement.",
+    "hero.title": "Relieve your pain, <br/><span class=\"neon-text-gradient\">understand its root cause,</span> <br/>regain freedom of movement.",
     "hero.subtitle": "Attentive care for <strong>back pain, neck stiffness, shoulder issues, and sports injuries</strong> by <strong>Dilsad Igrek</strong> in Welkenraedt. One-on-one, evidence-based physiotherapy (KCE guidelines) designed to break the cycle of recurring pain.",
     "hero.g1Title": "100% One-on-One Sessions",
     "hero.g1Desc": "A dedicated practitioner focused entirely on you with no simultaneous patients",
@@ -1209,7 +1253,7 @@ const translations = {
     "faq.title": "Frequently Asked Questions",
     "faq.subtitle": "Everything you need to know before visiting the clinic.",
     "faq.q1": "Do I need a doctor's prescription for reimbursement?",
-    "faq.a1": "Yes. A prescription issued by your general practitioner or specialist is required to claim official reimbursement from your Belgian mutuelle. You can book your appointment today by phone (<a href="tel:0472936978" class="text-secondary font-bold underline">0472 93 69 78</a>) or email and bring the prescription on your first visit.",
+    "faq.a1": "Yes. A prescription issued by your general practitioner or specialist is required to claim official reimbursement from your Belgian mutuelle. You can book your appointment today by phone (<a href=\"tel:0472936978\" class=\"text-secondary font-bold underline\">0472 93 69 78</a>) or email and bring the prescription on your first visit.",
     "faq.q2": "What happens during the initial consultation?",
     "faq.a2": "The initial assessment lasts <strong>45 to 60 minutes</strong>. It includes an in-depth conversation about your symptoms, a comprehensive clinical exam, initial hands-on treatment, and a clear personalized recovery plan.",
     "faq.q3": "How many sessions will I need?",
@@ -1234,10 +1278,12 @@ const translations = {
     "footer.inamiBadge": "INAMI Registered Practitioner • GSM: 0472 93 69 78",
     "footer.navTitle": "Quick Navigation",
     "footer.coordTitle": "Contact & Booking",
+    "footer.langTitle": "Website Languages",
     "footer.rights": "© 2026 IGREK Physiotherapy — Dilsad Igrek. All rights reserved."
   },
-
-  ku: {
+  "ku": {
+    "page.title": "IGREK Fîzyoterapî — Dilsad Igrek | Fîzyoterapîstê TMO Welkenraedt",
+    "page.description": "Klînîka fîzyoterapiya giştî, ya nefesê, travmatolojî û Terapiya Destî ya Ortobedîk (TMO) ji aliyê Dilsad Igrek ve li Welkenraedt. 100% Peymandarê INAMI (6,25 €). Sertîfîkayên IFOMPT & MATHERA. GSM : 0472 93 69 78.",
     "emergency.badge": "Êşa Giran an Xitbûna Nû?",
     "emergency.text": "Lumbago ya giran, stûxwarbûn, werimîna lebatê: Her roj ji bo rewşên lezgîn dorên taybet veqetandî ne.",
     "emergency.btn": "Dora îro : 0472 93 69 78",
@@ -1250,7 +1296,7 @@ const translations = {
     "nav.book": "Dora Xwe Bigirin",
     "hero.badgeInami": "100% Peymandarê INAMI (Para we: 6,25 €)",
     "hero.badgeIfompt": "Sertîfîkayên IFOMPT & MATHERA",
-    "hero.title": "Êşa xwe kêm bikin, <br/><span class="neon-text-gradient">sedema wê fam bikin,</span> <br/>azadiya tevgera xwe bistînin.",
+    "hero.title": "Êşa xwe kêm bikin, <br/><span class=\"neon-text-gradient\">sedema wê fam bikin,</span> <br/>azadiya tevgera xwe bistînin.",
     "hero.subtitle": "Tedawiya baldar a <strong>êşa piştê, stû, mil û birîndariyên werzişê</strong> ji aliyê <strong>Dilsad Igrek</strong> ve li Welkenraedt. Xizmetek takekesî, bi rûmet û li gorî pîvanên zanistî (EBP / KCE) ji bo bidawîanîna êşê.",
     "hero.g1Title": "100% Rûniştina Takekesî",
     "hero.g1Desc": "Fîzyoterapîstek tenê ji bo we, bêyî nexweşên hevdem",
@@ -1339,7 +1385,7 @@ const translations = {
     "faq.title": "Pirsên Pir Pirsyar ên Nexweşan",
     "faq.subtitle": "Hemû agahiyên girîng û pêwîst berî serdana we ya klînîkê.",
     "faq.q1": "Gelo ji bo vegerandina drav reçeteya bijîşk hewce ye?",
-    "faq.a1": "Belê. Ji bo ku sîgorta heqê rûniştinê vegerîne, reçeteyek ji bijîşkê we pêwîst e. Hûn dikarin îro bi rêya telefonê (<a href="tel:0472936978" class="text-secondary font-bold underline">0472 93 69 78</a>) an emailê randevû bigirin û reçeteyê roja rûniştinê bînin.",
+    "faq.a1": "Belê. Ji bo ku sîgorta heqê rûniştinê vegerîne, reçeteyek ji bijîşkê we pêwîst e. Hûn dikarin îro bi rêya telefonê (<a href=\"tel:0472936978\" class=\"text-secondary font-bold underline\">0472 93 69 78</a>) an emailê randevû bigirin û reçeteyê roja rûniştinê bînin.",
     "faq.q2": "Muayeneya yekem çawa derbas dibe?",
     "faq.a2": "Rûniştina yekem di navbera <strong>45 û 60 xulekan</strong> de didome. Ew bi guhdarîkirina dîroka tenduristiya we dest pê dike, bi muayeneyek mekanîkî ya kûr didome, û gava yekem a tedawiyê tê avêtin.",
     "faq.q3": "Çend rûniştin pêwîst in?",
@@ -1364,6 +1410,7 @@ const translations = {
     "footer.inamiBadge": "Fîzyoterapîstê Peymandarê INAMI • GSM: 0472 93 69 78",
     "footer.navTitle": "Rêberiya Bilez",
     "footer.coordTitle": "Têkilî & Randevû",
+    "footer.langTitle": "Zimanên Malperê",
     "footer.rights": "© 2026 IGREK Fîzyoterapî — Dilsad Igrek. Hemû maf parastî ne."
   }
 };
@@ -1373,20 +1420,49 @@ function toggleMobileMenu() {
   if (m) m.classList.toggle("hidden");
 }
 
-function setLanguage(lang) {
+function setLanguage(lang, syncUrl = true) {
   if (!translations[lang]) lang = 'fr';
   
   document.documentElement.lang = lang;
   localStorage.setItem('igrek_lang', lang);
 
-  // Update active state of language buttons
+  // Update Page Title and Meta Description
+  if (translations[lang]['page.title']) {
+    document.title = translations[lang]['page.title'];
+  }
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc && translations[lang]['page.description']) {
+    metaDesc.setAttribute('content', translations[lang]['page.description']);
+  }
+
+  // Update Top Bar buttons
   ['fr', 'de', 'en', 'ku'].forEach(l => {
-    const btn = document.getElementById('btn-' + l);
-    if (btn) {
+    const topBtn = document.getElementById('top-btn-' + l);
+    if (topBtn) {
       if (l === lang) {
-        btn.classList.add('active');
+        topBtn.className = 'lang-btn active bg-[#0058bc] text-white font-bold px-2.5 py-1 rounded-md transition shadow-xs';
       } else {
-        btn.classList.remove('active');
+        topBtn.className = 'lang-btn text-slate-300 hover:text-white px-2.5 py-1 rounded-md transition hover:bg-white/10';
+      }
+    }
+
+    // Update Nav bar buttons
+    const navBtn = document.getElementById('nav-btn-' + l);
+    if (navBtn) {
+      if (l === lang) {
+        navBtn.className = 'lang-nav-btn active bg-secondary text-white font-bold px-2 py-1 rounded-lg text-xs transition';
+      } else {
+        navBtn.className = 'lang-nav-btn text-slate-600 hover:text-secondary hover:bg-slate-100 px-2 py-1 rounded-lg text-xs transition font-semibold';
+      }
+    }
+
+    // Update Mobile Drawer buttons
+    const drawerBtn = document.getElementById('drawer-btn-' + l);
+    if (drawerBtn) {
+      if (l === lang) {
+        drawerBtn.className = 'lang-drawer-btn active bg-secondary text-white font-bold px-3 py-2 rounded-xl text-xs flex items-center justify-center gap-1.5 shadow-sm';
+      } else {
+        drawerBtn.className = 'lang-drawer-btn bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold px-3 py-2 rounded-xl text-xs flex items-center justify-center gap-1.5 transition';
       }
     }
   });
@@ -1406,6 +1482,13 @@ function setLanguage(lang) {
       el.innerHTML = translations[lang][key];
     }
   });
+
+  // Optionally sync query param in address bar
+  if (syncUrl && window.history && window.history.replaceState) {
+    const url = new URL(window.location);
+    url.searchParams.set('lang', lang);
+    window.history.replaceState(null, '', url);
+  }
 }
 
 // Auto-detect language on load
@@ -1415,7 +1498,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const hashLang = window.location.hash ? window.location.hash.substring(1).toLowerCase() : null;
   const savedLang = localStorage.getItem('igrek_lang');
   
-  let targetLang = 'fr';
+  let targetLang = 'ku';
   if (['fr', 'de', 'en', 'ku'].includes(paramLang)) {
     targetLang = paramLang;
   } else if (['fr', 'de', 'en', 'ku'].includes(hashLang)) {
@@ -1423,15 +1506,13 @@ document.addEventListener('DOMContentLoaded', () => {
   } else if (savedLang && ['fr', 'de', 'en', 'ku'].includes(savedLang)) {
     targetLang = savedLang;
   } else {
-    // Check browser languages
     const browserLang = (navigator.language || navigator.userLanguage || '').substring(0, 2).toLowerCase();
     if (browserLang === 'de') targetLang = 'de';
     else if (browserLang === 'en') targetLang = 'en';
     else if (browserLang === 'ku') targetLang = 'ku';
-    else targetLang = 'fr';
   }
 
-  setLanguage(targetLang === 'fr' ? 'ku' : targetLang);
+  setLanguage(targetLang, false);
 });
 </script>
 
