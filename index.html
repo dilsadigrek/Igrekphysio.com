@@ -154,28 +154,39 @@
   .neon-icon-gold {
     filter: drop-shadow(0 0 8px rgba(244, 162, 97, 0.6));
   }
+  .lang-btn.active {
+    background-color: #0058bc;
+    color: #ffffff;
+    font-weight: 700;
+  }
 </style>
 </head>
 <body class="dot-grid text-slate-800 font-body antialiased overflow-x-hidden min-h-screen">
 
-<!-- Emergency Alert Top Bar for Acute Patients with GSM Highlight -->
-<aside aria-label="Alerte Urgences" class="bg-gradient-to-r from-primary via-[#002e69] to-primary text-white py-3 px-4 text-xs md:text-sm border-b border-secondary/30">
+<!-- Emergency Alert Top Bar with Language Selector & GSM Highlight -->
+<aside aria-label="Alerte Urgences" class="bg-gradient-to-r from-primary via-[#002e69] to-primary text-white py-2.5 px-4 text-xs md:text-sm border-b border-secondary/30">
   <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
     <div class="flex items-center gap-2.5 flex-wrap">
       <span class="flex h-2.5 w-2.5 relative">
         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-divider-gold opacity-75"></span>
         <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-divider-gold"></span>
       </span>
-      <span class="font-bold text-divider-gold uppercase tracking-wider">Douleur Aiguë ou Blocage Récent ?</span>
-      <span class="text-white/90">Lumbago brutal, torticolis, entorse : des créneaux d'urgence sont réservés chaque jour.</span>
+      <span data-i18n="emergency.badge" class="font-bold text-divider-gold uppercase tracking-wider">Douleur Aiguë ou Blocage Récent ?</span>
+      <span data-i18n="emergency.text" class="text-white/90">Lumbago brutal, torticolis, entorse : des créneaux d'urgence sont réservés chaque jour.</span>
     </div>
     
-    <!-- GSM & Emergency CTA Highlight -->
     <div class="flex items-center gap-3 flex-wrap">
-      <span class="text-white/70 text-xs hidden lg:inline font-medium">FR • DE • EN • Kurdî</span>
-      <a href="tel:0472936978" class="inline-flex items-center gap-2 bg-divider-gold hover:bg-divider-gold-dark text-primary font-extrabold px-3.5 py-1.5 rounded-full text-xs sm:text-sm shadow-md transition-all transform hover:scale-105">
+      <!-- Language Selector in Top Bar -->
+      <div class="inline-flex items-center bg-white/10 p-1 rounded-lg border border-white/20 text-xs">
+        <button onclick="setLanguage('fr')" id="btn-fr" class="lang-btn active px-2 py-0.5 rounded transition">FR</button>
+        <button onclick="setLanguage('de')" id="btn-de" class="lang-btn px-2 py-0.5 rounded transition">DE</button>
+        <button onclick="setLanguage('en')" id="btn-en" class="lang-btn px-2 py-0.5 rounded transition">EN</button>
+        <button onclick="setLanguage('ku')" id="btn-ku" class="lang-btn px-2 py-0.5 rounded transition">KU</button>
+      </div>
+
+      <a href="tel:0472936978" class="inline-flex items-center gap-1.5 bg-divider-gold hover:bg-divider-gold-dark text-primary font-extrabold px-3.5 py-1.5 rounded-full text-xs sm:text-sm shadow-md transition-all transform hover:scale-105">
         <span class="material-symbols-outlined text-base">phone_in_talk</span>
-        <span>Disponibilités du jour : <span class="underline decoration-2">0472 93 69 78</span></span>
+        <span data-i18n="emergency.btn">Disponibilités du jour : <span class="underline decoration-2">0472 93 69 78</span></span>
       </a>
     </div>
   </div>
@@ -191,13 +202,13 @@
   </a>
 
   <nav class="hidden lg:flex items-center gap-6">
-    <a class="text-slate-700 hover:text-secondary text-sm font-semibold tracking-wider transition-colors" href="#soins-adaptes">Vos Besoins</a>
-    <a class="text-slate-700 hover:text-secondary text-sm font-semibold tracking-wider transition-colors" href="#methode">Méthode Hands-On</a>
-    <a class="text-slate-700 hover:text-secondary text-sm font-semibold tracking-wider transition-colors" href="#expertises">Expertises</a>
-    <a class="text-slate-700 hover:text-secondary text-sm font-semibold tracking-wider transition-colors" href="#osteo-vs-tmo">TMO vs Ostéo</a>
-    <a class="text-slate-700 hover:text-secondary text-sm font-semibold tracking-wider transition-colors" href="#tarifs">Tarifs INAMI</a>
-    <a class="text-slate-700 hover:text-secondary text-sm font-semibold tracking-wider transition-colors" href="#faq">FAQ</a>
-    <a class="text-slate-700 hover:text-secondary text-sm font-semibold tracking-wider transition-colors" href="#contact">Contact & Accès</a>
+    <a data-i18n="nav.needs" class="text-slate-700 hover:text-secondary text-sm font-semibold tracking-wider transition-colors" href="#soins-adaptes">Vos Besoins</a>
+    <a data-i18n="nav.method" class="text-slate-700 hover:text-secondary text-sm font-semibold tracking-wider transition-colors" href="#methode">Méthode Hands-On</a>
+    <a data-i18n="nav.expertises" class="text-slate-700 hover:text-secondary text-sm font-semibold tracking-wider transition-colors" href="#expertises">Expertises</a>
+    <a data-i18n="nav.osteo" class="text-slate-700 hover:text-secondary text-sm font-semibold tracking-wider transition-colors" href="#osteo-vs-tmo">TMO vs Ostéo</a>
+    <a data-i18n="nav.tarifs" class="text-slate-700 hover:text-secondary text-sm font-semibold tracking-wider transition-colors" href="#tarifs">Tarifs INAMI</a>
+    <a data-i18n="nav.faq" class="text-slate-700 hover:text-secondary text-sm font-semibold tracking-wider transition-colors" href="#faq">FAQ</a>
+    <a data-i18n="nav.contact" class="text-slate-700 hover:text-secondary text-sm font-semibold tracking-wider transition-colors" href="#contact">Contact & Accès</a>
   </nav>
 
   <div class="flex items-center gap-2">
@@ -207,7 +218,7 @@
     </a>
     <a href="#contact" class="bg-gradient-to-r from-secondary to-[#0070eb] text-white text-xs md:text-sm font-bold uppercase tracking-wider px-5 py-2.5 rounded-xl hover:shadow-[0_0_15px_rgba(0,88,188,0.5)] transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2">
       <span class="material-symbols-outlined text-sm">calendar_month</span>
-      <span>Prendre RDV</span>
+      <span data-i18n="nav.book">Prendre RDV</span>
     </a>
   </div>
 </header>
@@ -225,21 +236,21 @@
         <div class="flex flex-wrap items-center gap-2">
           <div class="inline-flex items-center gap-1.5 glass-card px-3.5 py-1.5 rounded-full border border-secondary/30 text-secondary text-xs font-bold uppercase tracking-wider">
             <span class="material-symbols-outlined text-sm neon-icon">verified</span>
-            <span>100% Conventionné INAMI (Reste : 6,25 €)</span>
+            <span data-i18n="hero.badgeInami">100% Conventionné INAMI (Reste : 6,25 €)</span>
           </div>
           <div class="inline-flex items-center gap-1.5 glass-card px-3.5 py-1.5 rounded-full border border-divider-gold/40 text-slate-800 text-xs font-bold uppercase tracking-wider">
             <span class="material-symbols-outlined text-sm text-divider-gold neon-icon-gold">workspace_premium</span>
-            <span>Certifié IFOMPT & MATHERA</span>
+            <span data-i18n="hero.badgeIfompt">Certifié IFOMPT & MATHERA</span>
           </div>
         </div>
 
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary tracking-tight leading-tight">
+        <h1 data-i18n-html="hero.title" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary tracking-tight leading-tight">
           Soulager vos douleurs, <br/>
           <span class="neon-text-gradient">retrouver votre liberté</span> <br/>
           de mouvement.
         </h1>
 
-        <p class="text-lg text-slate-600 max-w-2xl leading-relaxed">
+        <p data-i18n-html="hero.subtitle" class="text-lg text-slate-600 max-w-2xl leading-relaxed">
           Prise en charge attentive du <strong>mal de dos, de la nuque, des épaules et des blessures sportives</strong> par <strong>Dilsad Igrek</strong> à Welkenraedt. Des soins individuels, bienveillants et scientifiquement éprouvés (Evidence-Based Practice / KCE) pour en finir avec la douleur et les traitements passifs inefficaces.
         </p>
 
@@ -247,19 +258,19 @@
         <div class="grid grid-cols-2 sm:grid-cols-2 gap-3.5 pt-2">
           <div class="flex items-start gap-2.5 text-sm text-slate-700 font-medium">
             <span class="material-symbols-outlined text-secondary text-base mt-0.5">person</span>
-            <div><strong>Séance 100% individuelle</strong><br/><span class="text-xs text-slate-500">Un thérapeute dédié sans patients simultanés</span></div>
+            <div><strong data-i18n="hero.g1Title">Séance 100% individuelle</strong><br/><span data-i18n="hero.g1Desc" class="text-xs text-slate-500">Un thérapeute dédié sans patients simultanés</span></div>
           </div>
           <div class="flex items-start gap-2.5 text-sm text-slate-700 font-medium">
             <span class="material-symbols-outlined text-secondary text-base mt-0.5">schedule</span>
-            <div><strong>45 à 60 min au bilan initial</strong><br/><span class="text-xs text-slate-500">Écoute attentive & diagnostic approfondi</span></div>
+            <div><strong data-i18n="hero.g2Title">45 à 60 min au bilan initial</strong><br/><span data-i18n="hero.g2Desc" class="text-xs text-slate-500">Écoute attentive & diagnostic approfondi</span></div>
           </div>
           <div class="flex items-start gap-2.5 text-sm text-slate-700 font-medium">
             <span class="material-symbols-outlined text-secondary text-base mt-0.5">local_parking</span>
-            <div><strong>Parking facile & gratuit</strong><br/><span class="text-xs text-slate-500">Directement devant le cabinet (Bd Grosjean 52a)</span></div>
+            <div><strong data-i18n="hero.g3Title">Parking facile & gratuit</strong><br/><span data-i18n="hero.g3Desc" class="text-xs text-slate-500">Directement devant le cabinet (Bd Grosjean 52a)</span></div>
           </div>
           <div class="flex items-start gap-2.5 text-sm text-slate-700 font-medium">
             <span class="material-symbols-outlined text-secondary text-base mt-0.5">translate</span>
-            <div><strong>Consultations en 4 langues</strong><br/><span class="text-xs text-slate-500">Français • Deutsch • English • Kurdî</span></div>
+            <div><strong data-i18n="hero.g4Title">Consultations en 4 langues</strong><br/><span data-i18n="hero.g4Desc" class="text-xs text-slate-500">Français • Deutsch • English • Kurdî</span></div>
           </div>
         </div>
 
@@ -267,12 +278,12 @@
         <div class="flex flex-wrap gap-4 pt-4">
           <a href="tel:0472936978" class="bg-primary text-white text-sm font-bold uppercase tracking-wider px-8 py-4 rounded-xl hover:bg-slate-800 transition-all duration-300 flex items-center gap-3 shadow-lg group">
             <span class="material-symbols-outlined text-divider-gold">phone_in_talk</span>
-            <span>Appeler : 0472 93 69 78</span>
+            <span data-i18n="hero.ctaCall">Appeler : 0472 93 69 78</span>
             <span class="material-symbols-outlined transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </a>
           <a href="#tarifs" class="glass-card text-primary text-sm font-bold uppercase tracking-wider px-7 py-4 rounded-xl hover:bg-white transition-all duration-300 border border-slate-300 flex items-center gap-2">
             <span class="material-symbols-outlined text-secondary">payments</span>
-            <span>Tarifs INAMI (6,25 € à charge)</span>
+            <span data-i18n="hero.ctaTarifs">Tarifs INAMI (6,25 € à charge)</span>
           </a>
         </div>
       </div>
@@ -287,7 +298,7 @@
           <!-- Bottom Clinic Identity Box -->
           <div class="mt-5 p-4 rounded-2xl bg-primary text-white">
             <div class="flex items-center justify-between mb-2">
-              <span class="inline-block bg-secondary px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider">
+              <span data-i18n="hero.clinicCity" class="inline-block bg-secondary px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider">
                 Welkenraedt (Liège)
               </span>
               <span class="text-divider-gold font-bold text-xs flex items-center gap-1">
@@ -295,7 +306,7 @@
                 <span>FR • DE • EN • KU</span>
               </span>
             </div>
-            <h3 class="text-base font-bold text-white mb-0.5">Cabinet IGREK Physiothérapie</h3>
+            <h3 data-i18n="hero.clinicTitle" class="text-base font-bold text-white mb-0.5">Cabinet IGREK Physiothérapie</h3>
             <p class="text-xs text-white/80">Boulevard Hector Grosjean 52a, 4840 Welkenraedt</p>
             
             <div class="mt-3 flex items-center justify-between text-xs border-t border-white/20 pt-3">
@@ -303,7 +314,7 @@
                 <span class="material-symbols-outlined text-sm">phone</span>
                 <span>0472 93 69 78</span>
               </a>
-              <span class="font-mono text-white/90">8h00 — 19h00 (sur RDV)</span>
+              <span data-i18n="hero.clinicHours" class="font-mono text-white/90">8h00 — 19h00 (sur RDV)</span>
             </div>
           </div>
         </div>
@@ -315,9 +326,9 @@
   <section id="soins-adaptes" class="w-full py-16 px-5 md:px-12 bg-slate-100/80 border-y border-slate-200">
     <div class="max-w-7xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-12">
-        <div class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Une Réponse Précise à Chaque Situation</div>
-        <h2 class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Quelle est votre situation actuelle ?</h2>
-        <p class="text-slate-600 text-base mt-2">Que vous soyez bloqué depuis ce matin, en souffrance depuis des mois ou sportif en reprise, nous adaptons notre prise en charge.</p>
+        <div data-i18n="needs.badge" class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Une Réponse Précise à Chaque Situation</div>
+        <h2 data-i18n="needs.title" class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Quelle est votre situation actuelle ?</h2>
+        <p data-i18n="needs.subtitle" class="text-slate-600 text-base mt-2">Que vous soyez bloqué depuis ce matin, en souffrance depuis des mois ou sportif en reprise, nous adaptons notre prise en charge.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -327,16 +338,16 @@
             <div class="w-12 h-12 rounded-xl bg-red-100 text-red-600 flex items-center justify-center mb-6 font-bold text-xl">
               ⚡
             </div>
-            <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Urgence & Blocage Récent</span>
-            <h3 class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Lumbago, Torticolis ou Entorse Récente</h3>
-            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            <span data-i18n="needs.p1Badge" class="text-xs font-bold text-red-600 uppercase tracking-wider">Urgence & Blocage Récent</span>
+            <h3 data-i18n="needs.p1Title" class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Lumbago, Torticolis ou Entorse Récente</h3>
+            <p data-i18n="needs.p1Desc" class="text-slate-600 text-sm leading-relaxed mb-6">
               Vous êtes bloqué, chaque mouvement est douloureux et vous devez être soulagé au plus vite. Nous mettons en œuvre des techniques manuelles de décompression et des conseils immédiats pour calmer l'inflammation.
             </p>
           </div>
           <div class="pt-4 border-t border-slate-200">
             <a href="tel:0472936978" class="text-xs font-bold text-red-600 flex items-center gap-1.5 hover:underline">
               <span class="material-symbols-outlined text-sm">phone_in_talk</span>
-              <span>Appeler d'urgence : <strong>0472 93 69 78</strong></span>
+              <span data-i18n="needs.p1Cta">Appeler d'urgence : <strong>0472 93 69 78</strong></span>
             </a>
           </div>
         </div>
@@ -347,15 +358,15 @@
             <div class="w-12 h-12 rounded-xl bg-blue-100 text-secondary flex items-center justify-center mb-6 font-bold text-xl">
               🔄
             </div>
-            <span class="text-xs font-bold text-secondary uppercase tracking-wider">Douleur Persistante & Récidivante</span>
-            <h3 class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Mal de Dos Chronique ou Échec Antérieur</h3>
-            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            <span data-i18n="needs.p2Badge" class="text-xs font-bold text-secondary uppercase tracking-wider">Douleur Persistante & Récidivante</span>
+            <h3 data-i18n="needs.p2Title" class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Mal de Dos Chronique ou Échec Antérieur</h3>
+            <p data-i18n="needs.p2Desc" class="text-slate-600 text-sm leading-relaxed mb-6">
               Vous avez déjà testé plusieurs traitements ou machines sans amélioration durable ? La TMO analyse précisément l'origine biomécanique et nerveuse du problème pour briser le cercle vicieux de la douleur.
             </p>
           </div>
           <div class="pt-4 border-t border-slate-200">
             <a href="#expertises" class="text-xs font-bold text-secondary flex items-center gap-1 hover:underline">
-              Comprendre la méthode TMO <span>→</span>
+              <span data-i18n="needs.p2Cta">Comprendre la méthode TMO <span>→</span></span>
             </a>
           </div>
         </div>
@@ -366,15 +377,15 @@
             <div class="w-12 h-12 rounded-xl bg-amber-100 text-divider-gold flex items-center justify-center mb-6 font-bold text-xl">
               🏃
             </div>
-            <span class="text-xs font-bold text-divider-gold uppercase tracking-wider">Sportifs & Clubs Locaux</span>
-            <h3 class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Rééducation & Reprise Sécurisée (RTP)</h3>
-            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            <span data-i18n="needs.p3Badge" class="text-xs font-bold text-divider-gold uppercase tracking-wider">Sportifs & Clubs Locaux</span>
+            <h3 data-i18n="needs.p3Title" class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Rééducation & Reprise Sécurisée (RTP)</h3>
+            <p data-i18n="needs.p3Desc" class="text-slate-600 text-sm leading-relaxed mb-6">
               Lésions musculaires, ligament croisé (LCA), tendinopathies (F.C. Welkenraedt, Gym La Concorde, coureurs). Tests fonctionnels et gestion de charge pour reprendre à 100% sans récidive.
             </p>
           </div>
           <div class="pt-4 border-t border-slate-200">
             <a href="tel:0472936978" class="text-xs font-bold text-secondary flex items-center gap-1 hover:underline">
-              Planifier un protocole Return To Play <span>→</span>
+              <span data-i18n="needs.p3Cta">Planifier un protocole Return To Play <span>→</span></span>
             </a>
           </div>
         </div>
@@ -386,9 +397,9 @@
   <section id="methode" class="w-full py-16 px-5 md:px-12 relative">
     <div class="max-w-7xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-12">
-        <div class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Notre Philosophie Thérapeutique</div>
-        <h2 class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Le Concept « Hands-On / Hands-Off »</h2>
-        <p class="text-slate-600 text-base mt-2">Conformément aux recommandations officielles du KCE : pas de machines passives isolées, mais une alliance entre soins manuels experts et autonomisation active.</p>
+        <div data-i18n="method.badge" class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Notre Philosophie Thérapeutique</div>
+        <h2 data-i18n="method.title" class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Le Concept « Hands-On / Hands-Off »</h2>
+        <p data-i18n="method.subtitle" class="text-slate-600 text-base mt-2">Conformément aux recommandations officielles du KCE : pas de machines passives isolées, mais une alliance entre soins manuels experts et autonomisation active.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -399,25 +410,25 @@
               👐
             </div>
             <div>
-              <span class="text-xs font-bold text-secondary uppercase tracking-wider">Phase 1 • Au Cabinet</span>
-              <h3 class="text-2xl font-bold text-primary">1. Hands-On : Le Soulagement Manuel</h3>
+              <span data-i18n="method.step1Badge" class="text-xs font-bold text-secondary uppercase tracking-wider">Phase 1 • Au Cabinet</span>
+              <h3 data-i18n="method.step1Title" class="text-2xl font-bold text-primary">1. Hands-On : Le Soulagement Manuel</h3>
             </div>
           </div>
-          <p class="text-slate-600 text-base leading-relaxed mb-4">
+          <p data-i18n="method.step1Desc" class="text-slate-600 text-base leading-relaxed mb-4">
             Le thérapeute utilise ses mains avec une grande précision clinique :
           </p>
           <ul class="space-y-2.5 text-sm text-slate-700">
             <li class="flex items-center gap-2">
               <span class="material-symbols-outlined text-secondary text-base">check_circle</span>
-              <span><strong>Mobilisations articulaires douces</strong> pour libérer les blocages.</span>
+              <span data-i18n-html="method.step1Item1"><strong>Mobilisations articulaires douces</strong> pour libérer les blocages.</span>
             </li>
             <li class="flex items-center gap-2">
               <span class="material-symbols-outlined text-secondary text-base">check_circle</span>
-              <span><strong>Travail myofascial ciblé</strong> pour relâcher les contractures profondes.</span>
+              <span data-i18n-html="method.step1Item2"><strong>Travail myofascial ciblé</strong> pour relâcher les contractures profondes.</span>
             </li>
             <li class="flex items-center gap-2">
               <span class="material-symbols-outlined text-secondary text-base">check_circle</span>
-              <span><strong>Techniques neurodynamiques</strong> pour libérer les trajets nerveux irrités.</span>
+              <span data-i18n-html="method.step1Item3"><strong>Techniques neurodynamiques</strong> pour libérer les trajets nerveux irrités.</span>
             </li>
           </ul>
         </div>
@@ -429,25 +440,25 @@
               🎯
             </div>
             <div>
-              <span class="text-xs font-bold text-divider-gold uppercase tracking-wider">Phase 2 • Votre Autonomie</span>
-              <h3 class="text-2xl font-bold text-primary">2. Hands-Off : La Prévention Durable</h3>
+              <span data-i18n="method.step2Badge" class="text-xs font-bold text-divider-gold uppercase tracking-wider">Phase 2 • Votre Autonomie</span>
+              <h3 data-i18n="method.step2Title" class="text-2xl font-bold text-primary">2. Hands-Off : La Prévention Durable</h3>
             </div>
           </div>
-          <p class="text-slate-600 text-base leading-relaxed mb-4">
+          <p data-i18n="method.step2Desc" class="text-slate-600 text-base leading-relaxed mb-4">
             Nous vous donnons les clés pour consolider vos progrès à la maison :
           </p>
           <ul class="space-y-2.5 text-sm text-slate-700">
             <li class="flex items-center gap-2">
               <span class="material-symbols-outlined text-divider-gold text-base">check_circle</span>
-              <span><strong>Exercices thérapeutiques simples et progressifs</strong> faciles à réaliser chez soi.</span>
+              <span data-i18n-html="method.step2Item1"><strong>Exercices thérapeutiques simples et progressifs</strong> faciles à réaliser chez soi.</span>
             </li>
             <li class="flex items-center gap-2">
               <span class="material-symbols-outlined text-divider-gold text-base">check_circle</span>
-              <span><strong>Déconstruction des peurs liées au mouvement</strong> (recommandé KCE).</span>
+              <span data-i18n-html="method.step2Item2"><strong>Déconstruction des peurs liées au mouvement</strong> (recommandé KCE).</span>
             </li>
             <li class="flex items-center gap-2">
               <span class="material-symbols-outlined text-divider-gold text-base">check_circle</span>
-              <span><strong>Programme personnalisé d'auto-gestion</strong> pour éviter toute rechute.</span>
+              <span data-i18n-html="method.step2Item3"><strong>Programme personnalisé d'auto-gestion</strong> pour éviter toute rechute.</span>
             </li>
           </ul>
         </div>
@@ -460,9 +471,9 @@
     <div class="max-w-7xl mx-auto">
       <div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
-          <div class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Qualifications Professionnelles Particulières</div>
-          <h2 class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Champs d'Expertise Clinique</h2>
-          <p class="text-slate-600 max-w-2xl text-base mt-2">Un niveau de spécialisation avancé reconnu par les instances médicales internationales (IFOMPT) et belges (MATHERA).</p>
+          <div data-i18n="expertises.badge" class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Qualifications Professionnelles Particulières</div>
+          <h2 data-i18n="expertises.title" class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Champs d'Expertise Clinique</h2>
+          <p data-i18n="expertises.subtitle" class="text-slate-600 max-w-2xl text-base mt-2">Un niveau de spécialisation avancé reconnu par les instances médicales internationales (IFOMPT) et belges (MATHERA).</p>
         </div>
       </div>
 
@@ -473,16 +484,16 @@
             <span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
           </div>
           <div>
-            <span class="text-xs font-bold text-secondary uppercase tracking-wider">Label International IFOMPT</span>
-            <h3 class="text-2xl md:text-3xl font-bold text-primary mb-3 mt-1 tracking-tight">Thérapie Manuelle Orthopédique (TMO)</h3>
-            <p class="text-slate-600 text-base leading-relaxed mb-6">
+            <span data-i18n="expertises.tmoBadge" class="text-xs font-bold text-secondary uppercase tracking-wider">Label International IFOMPT</span>
+            <h3 data-i18n="expertises.tmoTitle" class="text-2xl md:text-3xl font-bold text-primary mb-3 mt-1 tracking-tight">Thérapie Manuelle Orthopédique (TMO)</h3>
+            <p data-i18n="expertises.tmoDesc" class="text-slate-600 text-base leading-relaxed mb-6">
               Évaluation neuro-musculo-squelettique de haute précision pour identifier la cause profonde de vos douleurs de dos, cou et articulations. Pas de manipulation forcée : nous privilégions des techniques douces, adaptées et scientifiquement validées.
             </p>
           </div>
           <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-200">
-            <span class="bg-secondary/10 text-secondary text-xs font-bold px-3 py-1 rounded-lg">Raisonnement clinique</span>
-            <span class="bg-secondary/10 text-secondary text-xs font-bold px-3 py-1 rounded-lg">Mobilisations douces</span>
-            <span class="bg-secondary/10 text-secondary text-xs font-bold px-3 py-1 rounded-lg">Evidence-Based</span>
+            <span data-i18n="expertises.tmoTag1" class="bg-secondary/10 text-secondary text-xs font-bold px-3 py-1 rounded-lg">Raisonnement clinique</span>
+            <span data-i18n="expertises.tmoTag2" class="bg-secondary/10 text-secondary text-xs font-bold px-3 py-1 rounded-lg">Mobilisations douces</span>
+            <span data-i18n="expertises.tmoTag3" class="bg-secondary/10 text-secondary text-xs font-bold px-3 py-1 rounded-lg">Evidence-Based</span>
           </div>
         </div>
 
@@ -492,14 +503,14 @@
             <div class="w-12 h-12 rounded-xl bg-primary text-divider-gold flex items-center justify-center mb-6 shadow-sm">
               <span class="material-symbols-outlined text-2xl font-bold neon-icon-gold">speed</span>
             </div>
-            <span class="text-xs font-bold text-divider-gold uppercase tracking-wider">Clubs & Athlètes</span>
-            <h3 class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Kinésithérapie du Sport</h3>
-            <p class="text-slate-600 text-sm leading-relaxed">
+            <span data-i18n="expertises.sportBadge" class="text-xs font-bold text-divider-gold uppercase tracking-wider">Clubs & Athlètes</span>
+            <h3 data-i18n="expertises.sportTitle" class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Kinésithérapie du Sport</h3>
+            <p data-i18n="expertises.sportDesc" class="text-slate-600 text-sm leading-relaxed">
               Prise en charge des traumatismes du sport (entorses, déchirures, tendinopathies). Tests de reprise et réathlétisation individualisée.
             </p>
           </div>
           <div class="pt-4 mt-4 border-t border-slate-200">
-            <span class="text-xs text-slate-500 font-medium">Football, gymnastique, course, cyclisme</span>
+            <span data-i18n="expertises.sportSub" class="text-xs text-slate-500 font-medium">Football, gymnastique, course, cyclisme</span>
           </div>
         </div>
 
@@ -509,14 +520,14 @@
             <div class="w-12 h-12 rounded-xl bg-white text-secondary flex items-center justify-center mb-6 shadow-sm border border-secondary/20">
               <span class="material-symbols-outlined neon-icon text-2xl font-bold">medical_services</span>
             </div>
-            <span class="text-xs font-bold text-secondary uppercase tracking-wider">Chirurgie & Prothèses</span>
-            <h3 class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Rééducation Post-Opératoire</h3>
-            <p class="text-slate-600 text-sm leading-relaxed">
+            <span data-i18n="expertises.postopBadge" class="text-xs font-bold text-secondary uppercase tracking-wider">Chirurgie & Prothèses</span>
+            <h3 data-i18n="expertises.postopTitle" class="text-xl font-bold text-primary mb-3 mt-1 tracking-tight">Rééducation Post-Opératoire</h3>
+            <p data-i18n="expertises.postopDesc" class="text-slate-600 text-sm leading-relaxed">
               Suivi après prothèse de hanche/genou (PTH, PTG), ligamentoplastie (LCA), chirurgie de l'épaule et du rachis (en lien avec CHR Verviers).
             </p>
           </div>
           <div class="pt-4 mt-4 border-t border-slate-200">
-            <span class="text-xs text-slate-500 font-medium">Récupération des amplitudes & de la force</span>
+            <span data-i18n="expertises.postopSub" class="text-xs text-slate-500 font-medium">Récupération des amplitudes & de la force</span>
           </div>
         </div>
 
@@ -526,14 +537,14 @@
             <div class="w-12 h-12 rounded-xl bg-secondary/15 text-secondary flex items-center justify-center mb-6 shadow-sm">
               <span class="material-symbols-outlined text-2xl font-bold">sentiment_very_satisfied</span>
             </div>
-            <span class="text-xs font-bold text-secondary uppercase tracking-wider">Spécificité Cervico-Maxillo-Faciale</span>
-            <h3 class="text-xl md:text-2xl font-bold text-primary mb-3 mt-1 tracking-tight">Troubles de la Mâchoire (ATM) & Céphalées</h3>
-            <p class="text-slate-600 text-sm leading-relaxed">
+            <span data-i18n="expertises.atmBadge" class="text-xs font-bold text-secondary uppercase tracking-wider">Spécificité Cervico-Maxillo-Faciale</span>
+            <h3 data-i18n="expertises.atmTitle" class="text-xl md:text-2xl font-bold text-primary mb-3 mt-1 tracking-tight">Troubles de la Mâchoire (ATM) & Céphalées</h3>
+            <p data-i18n="expertises.atmDesc" class="text-slate-600 text-sm leading-relaxed">
               Traitement ciblé des blocages ou claquements de mâchoire, bruxisme, tensions crânio-mandibulaires et maux de tête d'origine cervicale (névralgies d'Arnold).
             </p>
           </div>
           <div class="pt-4 mt-4 border-t border-slate-200">
-            <span class="text-xs text-slate-500 font-medium">Soulagement des tensions profondes du cou et du visage</span>
+            <span data-i18n="expertises.atmSub" class="text-xs text-slate-500 font-medium">Soulagement des tensions profondes du cou et du visage</span>
           </div>
         </div>
       </div>
@@ -544,9 +555,9 @@
   <section id="osteo-vs-tmo" class="w-full py-16 px-5 md:px-12 relative">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-12">
-        <div class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Comprendre les Différences</div>
-        <h2 class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Thérapie Manuelle (TMO) ou Ostéopathie ?</h2>
-        <p class="text-slate-600 text-base mt-2">Vous hésitez entre consulter un ostéopathe ou un thérapeute manuel ? Voici les faits clairs et transparents pour vous aider.</p>
+        <div data-i18n="osteo.badge" class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Comprendre les Différences</div>
+        <h2 data-i18n="osteo.title" class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Thérapie Manuelle (TMO) ou Ostéopathie ?</h2>
+        <p data-i18n="osteo.subtitle" class="text-slate-600 text-base mt-2">Vous hésitez entre consulter un ostéopathe ou un thérapeute manuel ? Voici les faits clairs et transparents pour vous aider.</p>
       </div>
 
       <div class="glass-card rounded-3xl overflow-hidden border border-slate-200 shadow-lg">
@@ -554,31 +565,31 @@
           <table class="w-full text-left text-sm text-slate-700">
             <thead class="bg-primary text-white text-xs uppercase tracking-wider">
               <tr>
-                <th class="py-4 px-6">Critères</th>
-                <th class="py-4 px-6 text-secondary-fixed font-bold">Thérapie Manuelle Orthopédique (TMO)</th>
-                <th class="py-4 px-6 text-white/70">Ostéopathie</th>
+                <th data-i18n="osteo.thCriteria" class="py-4 px-6">Critères</th>
+                <th data-i18n="osteo.thTmo" class="py-4 px-6 text-secondary-fixed font-bold">Thérapie Manuelle Orthopédique (TMO)</th>
+                <th data-i18n="osteo.thOsteo" class="py-4 px-6 text-white/70">Ostéopathie</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-slate-200">
               <tr class="bg-white">
-                <td class="py-4 px-6 font-bold text-primary">Remboursement Mutuelle</td>
-                <td class="py-4 px-6 text-emerald-700 font-bold bg-emerald-50/50">✅ 100% Remboursé INAMI (6,25 € reste à charge)</td>
-                <td class="py-4 px-6 text-slate-500">❌ Non remboursé par l'assurance obligatoire (55 € à 75 € à charge)</td>
+                <td data-i18n="osteo.r1Crit" class="py-4 px-6 font-bold text-primary">Remboursement Mutuelle</td>
+                <td data-i18n="osteo.r1Tmo" class="py-4 px-6 text-emerald-700 font-bold bg-emerald-50/50">✅ 100% Remboursé INAMI (6,25 € reste à charge)</td>
+                <td data-i18n="osteo.r1Osteo" class="py-4 px-6 text-slate-500">❌ Non remboursé par l'assurance obligatoire (55 € à 75 € à charge)</td>
               </tr>
               <tr class="bg-slate-50/50">
-                <td class="py-4 px-6 font-bold text-primary">Formation & Statut</td>
-                <td class="py-4 px-6 text-secondary font-semibold">Spécialisation universitaire de kinésithérapie (IFOMPT)</td>
-                <td class="py-4 px-6 text-slate-600">Discipline privée non conventionnée</td>
+                <td data-i18n="osteo.r2Crit" class="py-4 px-6 font-bold text-primary">Formation & Statut</td>
+                <td data-i18n="osteo.r2Tmo" class="py-4 px-6 text-secondary font-semibold">Spécialisation universitaire de kinésithérapie (IFOMPT)</td>
+                <td data-i18n="osteo.r2Osteo" class="py-4 px-6 text-slate-600">Discipline privée non conventionnée</td>
               </tr>
               <tr class="bg-white">
-                <td class="py-4 px-6 font-bold text-primary">Preuves Scientifiques</td>
-                <td class="py-4 px-6 text-secondary font-semibold">100% Evidence-Based Practice & recommandé par le KCE</td>
-                <td class="py-4 px-6 text-slate-600">Approche empirique et conceptuelle</td>
+                <td data-i18n="osteo.r3Crit" class="py-4 px-6 font-bold text-primary">Preuves Scientifiques</td>
+                <td data-i18n="osteo.r3Tmo" class="py-4 px-6 text-secondary font-semibold">100% Evidence-Based Practice & recommandé par le KCE</td>
+                <td data-i18n="osteo.r3Osteo" class="py-4 px-6 text-slate-600">Approche empirique et conceptuelle</td>
               </tr>
               <tr class="bg-slate-50/50">
-                <td class="py-4 px-6 font-bold text-primary">Autonomie du Patient</td>
-                <td class="py-4 px-6 text-secondary font-semibold">Méthode Hands-On / Hands-Off : exercices pour éviter les récidives</td>
-                <td class="py-4 px-6 text-slate-600">Essentiellement manipulations passives répétées</td>
+                <td data-i18n="osteo.r4Crit" class="py-4 px-6 font-bold text-primary">Autonomie du Patient</td>
+                <td data-i18n="osteo.r4Tmo" class="py-4 px-6 text-secondary font-semibold">Méthode Hands-On / Hands-Off : exercices pour éviter les récidives</td>
+                <td data-i18n="osteo.r4Osteo" class="py-4 px-6 text-slate-600">Essentiellement manipulations passives répétées</td>
               </tr>
             </tbody>
           </table>
@@ -593,36 +604,36 @@
       <div class="text-center max-w-3xl mx-auto mb-12">
         <div class="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-700 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3">
           <span class="material-symbols-outlined text-sm">verified_user</span>
-          <span>100% Conventionné INAMI • Aucun Dépassement Surprise</span>
+          <span data-i18n="tarifs.badge">100% Conventionné INAMI • Aucun Dépassement Surprise</span>
         </div>
-        <h2 class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Tarifs Officiels & Remboursement Mutuelle</h2>
-        <p class="text-slate-600 text-base mt-2">Dilsad Igrek applique rigoureusement les tarifs de la convention nationale belge 2026 pour vous faire bénéficier du meilleur remboursement.</p>
+        <h2 data-i18n="tarifs.title" class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Tarifs Officiels & Remboursement Mutuelle</h2>
+        <p data-i18n="tarifs.subtitle" class="text-slate-600 text-base mt-2">Dilsad Igrek applique rigoureusement les tarifs de la convention nationale belge 2026 pour vous faire bénéficier du meilleur remboursement.</p>
       </div>
 
       <!-- 4 Price Metrics Cards -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
         <div class="glass-card rounded-3xl p-6 text-center border border-slate-200">
-          <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Tarif Officiel Séance</span>
+          <span data-i18n="tarifs.card1Title" class="text-xs font-bold text-slate-500 uppercase tracking-wider">Tarif Officiel Séance</span>
           <div class="text-4xl font-extrabold text-primary my-3">31,64 €</div>
-          <p class="text-xs text-slate-500">Tarif conventionné INAMI (2026)</p>
+          <p data-i18n="tarifs.card1Sub" class="text-xs text-slate-500">Tarif conventionné INAMI (2026)</p>
         </div>
 
         <div class="glass-card rounded-3xl p-6 text-center border border-emerald-300 bg-emerald-50/60">
-          <span class="text-xs font-bold text-emerald-700 uppercase tracking-wider">Remboursement Mutuelle</span>
+          <span data-i18n="tarifs.card2Title" class="text-xs font-bold text-emerald-700 uppercase tracking-wider">Remboursement Mutuelle</span>
           <div class="text-4xl font-extrabold text-emerald-700 my-3">25,39 €</div>
-          <p class="text-xs text-slate-600">Pris en charge par votre mutuelle</p>
+          <p data-i18n="tarifs.card2Sub" class="text-xs text-slate-600">Pris en charge par votre mutuelle</p>
         </div>
 
         <div class="glass-card rounded-3xl p-6 text-center border border-secondary/40 bg-secondary/5">
-          <span class="text-xs font-bold text-secondary uppercase tracking-wider">Votre Reste à Charge</span>
+          <span data-i18n="tarifs.card3Title" class="text-xs font-bold text-secondary uppercase tracking-wider">Votre Reste à Charge</span>
           <div class="text-4xl font-extrabold text-secondary my-3">6,25 €</div>
-          <p class="text-xs text-slate-600">Ticket modérateur ordinaire</p>
+          <p data-i18n="tarifs.card3Sub" class="text-xs text-slate-600">Ticket modérateur ordinaire</p>
         </div>
 
         <div class="glass-card rounded-3xl p-6 text-center border border-divider-gold/40 bg-divider-gold/5">
-          <span class="text-xs font-bold text-divider-gold uppercase tracking-wider">Statut BIM (Reste)</span>
+          <span data-i18n="tarifs.card4Title" class="text-xs font-bold text-divider-gold uppercase tracking-wider">Statut BIM (Reste)</span>
           <div class="text-4xl font-extrabold text-divider-gold my-3">2,50 €</div>
-          <p class="text-xs text-slate-600">Intervention majorée (BIM)</p>
+          <p data-i18n="tarifs.card4Sub" class="text-xs text-slate-600">Intervention majorée (BIM)</p>
         </div>
       </div>
 
@@ -630,20 +641,20 @@
       <div class="glass-card rounded-3xl p-8 max-w-4xl mx-auto border border-secondary/20 bg-blue-50/40">
         <h4 class="text-lg font-bold text-primary mb-3 flex items-center gap-2">
           <span class="material-symbols-outlined text-secondary">checklist</span>
-          <span>Pour votre première consultation, pensez à apporter :</span>
+          <span data-i18n="tarifs.checkTitle">Pour votre première consultation, pensez à apporter :</span>
         </h4>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs md:text-sm text-slate-700">
           <div class="flex items-center gap-2">
             <span class="text-secondary font-bold">1.</span>
-            <span>Votre prescription médicale (ordonnance)</span>
+            <span data-i18n="tarifs.check1">Votre prescription médicale (ordonnance)</span>
           </div>
           <div class="flex items-center gap-2">
             <span class="text-secondary font-bold">2.</span>
-            <span>Une vignette de votre mutuelle belge</span>
+            <span data-i18n="tarifs.check2">Une vignette de votre mutuelle belge</span>
           </div>
           <div class="flex items-center gap-2">
             <span class="text-secondary font-bold">3.</span>
-            <span>Vos éventuels examens (Radio, IRM, Écho)</span>
+            <span data-i18n="tarifs.check3">Vos éventuels examens (Radio, IRM, Écho)</span>
           </div>
         </div>
       </div>
@@ -654,19 +665,19 @@
   <section id="faq" class="w-full py-16 px-5 md:px-12">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-12">
-        <div class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Aide & Réponses</div>
-        <h2 class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Questions Fréquentes des Patients</h2>
-        <p class="text-slate-600 text-sm mt-2">Toutes les informations utiles et pratiques avant votre visite au cabinet.</p>
+        <div data-i18n="faq.badge" class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Aide & Réponses</div>
+        <h2 data-i18n="faq.title" class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Questions Fréquentes des Patients</h2>
+        <p data-i18n="faq.subtitle" class="text-slate-600 text-sm mt-2">Toutes les informations utiles et pratiques avant votre visite au cabinet.</p>
       </div>
 
       <div class="space-y-4">
         <!-- Q1 -->
         <details class="glass-card rounded-2xl p-5 border border-slate-200 group cursor-pointer" open>
           <summary class="font-bold text-primary flex items-center justify-between text-base">
-            <span>Faut-il une prescription médicale pour être remboursé ?</span>
+            <span data-i18n="faq.q1">Faut-il une prescription médicale pour être remboursé ?</span>
             <span class="material-symbols-outlined text-secondary transition group-open:rotate-180">expand_more</span>
           </summary>
-          <p class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-200 leading-relaxed">
+          <p data-i18n-html="faq.a1" class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-200 leading-relaxed">
             Oui. Pour que votre mutuelle prenne en charge la séance au tarif légal, une ordonnance délivrée par votre médecin traitant ou spécialiste est indispensable. Vous pouvez réserver votre rendez-vous dès aujourd'hui par téléphone (<a href="tel:0472936978" class="text-secondary font-bold underline">0472 93 69 78</a>) ou email et apporter la prescription le jour de votre première séance.
           </p>
         </details>
@@ -674,10 +685,10 @@
         <!-- Q2 -->
         <details class="glass-card rounded-2xl p-5 border border-slate-200 group cursor-pointer">
           <summary class="font-bold text-primary flex items-center justify-between text-base">
-            <span>Comment se déroule la première consultation ?</span>
+            <span data-i18n="faq.q2">Comment se déroule la première consultation ?</span>
             <span class="material-symbols-outlined text-secondary transition group-open:rotate-180">expand_more</span>
           </summary>
-          <p class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-200 leading-relaxed">
+          <p data-i18n-html="faq.a2" class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-200 leading-relaxed">
             La première séance dure entre <strong>45 et 60 minutes</strong>. Elle débute par une écoute détaillée de votre historique de santé, suivie d'un examen biomécanique approfondi pour poser un diagnostic précis. Nous réalisons les premiers gestes manuels de soulagement et définissons ensemble votre plan de soins.
           </p>
         </details>
@@ -685,10 +696,10 @@
         <!-- Q3 -->
         <details class="glass-card rounded-2xl p-5 border border-slate-200 group cursor-pointer">
           <summary class="font-bold text-primary flex items-center justify-between text-base">
-            <span>Combien de séances seront nécessaires ?</span>
+            <span data-i18n="faq.q3">Combien de séances seront nécessaires ?</span>
             <span class="material-symbols-outlined text-secondary transition group-open:rotate-180">expand_more</span>
           </summary>
-          <p class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-200 leading-relaxed">
+          <p data-i18n="faq.a3" class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-200 leading-relaxed">
             Notre objectif est de vous rendre autonome le plus rapidement possible sans séances inutiles. Dès le bilan initial, nous estimons ensemble le nombre de séances nécessaires. Grâce aux exercices d'autonomisation (Hands-Off), la plupart des patients constatent une amélioration durable en quelques séances.
           </p>
         </details>
@@ -696,10 +707,10 @@
         <!-- Q4 -->
         <details class="glass-card rounded-2xl p-5 border border-slate-200 group cursor-pointer">
           <summary class="font-bold text-primary flex items-center justify-between text-base">
-            <span>Quels vêtements porter lors de la séance ?</span>
+            <span data-i18n="faq.q4">Quels vêtements porter lors de la séance ?</span>
             <span class="material-symbols-outlined text-secondary transition group-open:rotate-180">expand_more</span>
           </summary>
-          <p class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-200 leading-relaxed">
+          <p data-i18n="faq.a4" class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-200 leading-relaxed">
             Privilégiez une tenue confortable ou de sport (short, t-shirt, legging) permettant un accès facile à la zone douloureuse et facilitant les mouvements lors des tests et exercices actifs.
           </p>
         </details>
@@ -707,10 +718,10 @@
         <!-- Q5 -->
         <details class="glass-card rounded-2xl p-5 border border-slate-200 group cursor-pointer">
           <summary class="font-bold text-primary flex items-center justify-between text-base">
-            <span>Quelles sont les langues parlées lors des consultations ?</span>
+            <span data-i18n="faq.q5">Quelles sont les langues parlées lors des consultations ?</span>
             <span class="material-symbols-outlined text-secondary transition group-open:rotate-180">expand_more</span>
           </summary>
-          <p class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-200 leading-relaxed">
+          <p data-i18n-html="faq.a5" class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-200 leading-relaxed">
             Les consultations peuvent être menées couramment en <strong>Français</strong>, en <strong>Allemand (Deutsch)</strong>, en <strong>Anglais (English)</strong> et en <strong>Kurde (Kurdî)</strong>, garantissant un accueil chaleureux pour tous les résidents de la région frontalière et locale.
           </p>
         </details>
@@ -722,9 +733,9 @@
   <section id="contact" class="w-full py-16 px-5 md:px-12 bg-slate-100/80 border-t border-slate-200">
     <div class="max-w-7xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-12">
-        <div class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Localisation & Prise de Rendez-vous</div>
-        <h2 class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Venir au Cabinet IGREK Physiothérapie</h2>
-        <p class="text-slate-600 text-base mt-2">Idéalement situé à Welkenraedt, facilement accessible depuis Lontzen, Aubel, Baelen, Henri-Chapelle, Eupen et Verviers.</p>
+        <div data-i18n="contact.badge" class="text-xs font-bold text-secondary uppercase tracking-widest mb-2">Localisation & Prise de Rendez-vous</div>
+        <h2 data-i18n="contact.title" class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">Venir au Cabinet IGREK Physiothérapie</h2>
+        <p data-i18n="contact.subtitle" class="text-slate-600 text-base mt-2">Idéalement situé à Welkenraedt, facilement accessible depuis Lontzen, Aubel, Baelen, Henri-Chapelle, Eupen et Verviers.</p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -734,7 +745,7 @@
             <div class="w-12 h-12 rounded-xl bg-secondary text-white flex items-center justify-center mb-6 shadow-sm">
               <span class="material-symbols-outlined text-2xl">location_on</span>
             </div>
-            <h4 class="text-lg font-bold text-primary mb-2">Adresse du Cabinet</h4>
+            <h4 data-i18n="contact.addrTitle" class="text-lg font-bold text-primary mb-2">Adresse du Cabinet</h4>
             <p class="text-sm text-slate-600 leading-relaxed mb-4">
               <strong>IGREK Physiothérapie</strong><br/>
               Boulevard Hector Grosjean 52a<br/>
@@ -743,7 +754,7 @@
           </div>
           <div class="pt-4 border-t border-slate-200 text-xs text-secondary font-bold flex items-center gap-1.5">
             <span class="material-symbols-outlined text-sm">local_parking</span>
-            <span>Parking gratuit & facile directement sur place</span>
+            <span data-i18n="contact.addrParking">Parking gratuit & facile directement sur place</span>
           </div>
         </div>
 
@@ -753,16 +764,16 @@
             <div class="w-12 h-12 rounded-xl bg-primary text-divider-gold flex items-center justify-center mb-6 shadow-sm">
               <span class="material-symbols-outlined text-2xl">schedule</span>
             </div>
-            <h4 class="text-lg font-bold text-primary mb-2">Horaires & Langues</h4>
+            <h4 data-i18n="contact.hoursTitle" class="text-lg font-bold text-primary mb-2">Horaires & Langues</h4>
             <p class="text-sm text-slate-600 leading-relaxed mb-4">
-              <strong>Du Lundi au Vendredi :</strong><br/>
+              <strong data-i18n="contact.hoursDays">Du Lundi au Vendredi :</strong><br/>
               8h00 — 19h00 (sur rendez-vous)<br/>
-              <span class="text-xs text-divider-gold-dark font-bold">Plages d'urgences réservées chaque jour</span>
+              <span data-i18n="contact.hoursUrgent" class="text-xs text-divider-gold-dark font-bold">Plages d'urgences réservées chaque jour</span>
             </p>
           </div>
           <div class="pt-4 border-t border-slate-200 text-xs text-slate-700 font-semibold flex items-center gap-1.5">
             <span class="material-symbols-outlined text-sm text-secondary">translate</span>
-            <span>Français • Deutsch • English • Kurdî</span>
+            <span data-i18n="contact.langLabel">Français • Deutsch • English • Kurdî</span>
           </div>
         </div>
 
@@ -772,8 +783,8 @@
             <div class="w-12 h-12 rounded-xl bg-secondary text-white flex items-center justify-center mb-6 shadow-sm">
               <span class="material-symbols-outlined text-2xl">contact_phone</span>
             </div>
-            <h4 class="text-lg font-bold text-primary mb-2">Contact & Rendez-vous</h4>
-            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            <h4 data-i18n="contact.cardTitle" class="text-lg font-bold text-primary mb-2">Contact & Rendez-vous</h4>
+            <p data-i18n="contact.cardDesc" class="text-xs text-slate-600 leading-relaxed mb-4">
               Pour réserver une séance de bilan ou pour une urgence du jour, contactez Dilsad Igrek directement par GSM ou email :
             </p>
             
@@ -791,7 +802,7 @@
 
           <a href="tel:0472936978" class="bg-gradient-to-r from-secondary to-[#0070eb] hover:opacity-95 text-white font-bold text-xs uppercase tracking-wider py-4 px-6 rounded-xl text-center transition flex items-center justify-center gap-2 shadow-md">
             <span class="material-symbols-outlined text-sm">phone_in_talk</span>
-            <span>Appeler le 0472 93 69 78</span>
+            <span data-i18n="contact.btnCall">Appeler le 0472 93 69 78</span>
           </a>
         </div>
       </div>
@@ -810,28 +821,28 @@
           IGREK<span class="text-secondary-fixed text-secondary">.PHYSIO</span>
         </div>
       </div>
-      <p class="text-xs text-white/70 max-w-sm leading-relaxed mb-4">
+      <p data-i18n="footer.desc" class="text-xs text-white/70 max-w-sm leading-relaxed mb-4">
         Cabinet de kinésithérapie spécialisé en Thérapie Manuelle Orthopédique (TMO) et kinésithérapie du sport à Welkenraedt. Soins bienveillants et 100% individuels, conventionné INAMI, critères d'excellence IFOMPT / MATHERA.
       </p>
-      <div class="text-xs text-divider-gold font-mono">
+      <div data-i18n="footer.inamiBadge" class="text-xs text-divider-gold font-mono">
         Praticien Agréé & Conventionné INAMI • GSM : 0472 93 69 78
       </div>
     </div>
 
     <div>
-      <h5 class="text-xs font-bold uppercase tracking-widest text-divider-gold mb-3">Navigation Rapide</h5>
+      <h5 data-i18n="footer.navTitle" class="text-xs font-bold uppercase tracking-widest text-divider-gold mb-3">Navigation Rapide</h5>
       <div class="flex flex-col gap-2 text-xs text-white/70">
-        <a href="#soins-adaptes" class="hover:text-white transition">Soins Adaptés</a>
-        <a href="#methode" class="hover:text-white transition">Méthode Hands-On / Off</a>
-        <a href="#expertises" class="hover:text-white transition">Expertises TMO & Sport</a>
-        <a href="#osteo-vs-tmo" class="hover:text-white transition">TMO vs Ostéopathie</a>
-        <a href="#tarifs" class="hover:text-white transition">Tarifs INAMI (6,25 €)</a>
-        <a href="#faq" class="hover:text-white transition">FAQ Patients</a>
+        <a data-i18n="nav.needs" href="#soins-adaptes" class="hover:text-white transition">Soins Adaptés</a>
+        <a data-i18n="nav.method" href="#methode" class="hover:text-white transition">Méthode Hands-On / Off</a>
+        <a data-i18n="nav.expertises" href="#expertises" class="hover:text-white transition">Expertises TMO & Sport</a>
+        <a data-i18n="nav.osteo" href="#osteo-vs-tmo" class="hover:text-white transition">TMO vs Ostéopathie</a>
+        <a data-i18n="nav.tarifs" href="#tarifs" class="hover:text-white transition">Tarifs INAMI (6,25 €)</a>
+        <a data-i18n="nav.faq" href="#faq" class="hover:text-white transition">FAQ Patients</a>
       </div>
     </div>
 
     <div>
-      <h5 class="text-xs font-bold uppercase tracking-widest text-divider-gold mb-3">Coordonnées & RDV</h5>
+      <h5 data-i18n="footer.coordTitle" class="text-xs font-bold uppercase tracking-widest text-divider-gold mb-3">Coordonnées & RDV</h5>
       <p class="text-xs text-white/70 leading-relaxed">
         Boulevard Hector Grosjean 52a<br/>
         4840 Welkenraedt (Belgique)<br/>
@@ -839,12 +850,658 @@
         <a href="mailto:igrekphysio@gmail.com" class="text-secondary hover:underline block font-semibold">igrekphysio@gmail.com</a>
         <span class="text-[11px] text-white/60 block mt-1">Consultations : FR • DE • EN • Kurdî</span>
       </p>
-      <div class="mt-4 text-[11px] text-white/50">
+      <div data-i18n="footer.rights" class="mt-4 text-[11px] text-white/50">
         © 2026 IGREK Physiothérapie — Dilsad Igrek. Tous droits réservés.
       </div>
     </div>
   </div>
 </footer>
+
+<!-- Multilingual Translation Engine JavaScript -->
+<script>
+const translations = {
+  fr: {
+    "emergency.badge": "Douleur Aiguë ou Blocage Récent ?",
+    "emergency.text": "Lumbago brutal, torticolis, entorse : des créneaux d'urgence sont réservés chaque jour.",
+    "emergency.btn": "Disponibilités du jour : <span class=\"underline decoration-2\">0472 93 69 78</span>",
+    "nav.needs": "Vos Besoins",
+    "nav.method": "Méthode Hands-On",
+    "nav.expertises": "Expertises",
+    "nav.osteo": "TMO vs Ostéo",
+    "nav.tarifs": "Tarifs INAMI",
+    "nav.faq": "FAQ",
+    "nav.contact": "Contact & Accès",
+    "nav.book": "Prendre RDV",
+    "hero.badgeInami": "100% Conventionné INAMI (Reste : 6,25 €)",
+    "hero.badgeIfompt": "Certifié IFOMPT & MATHERA",
+    "hero.title": "Soulager vos douleurs, <br/><span class=\"neon-text-gradient\">retrouver votre liberté</span> <br/>de mouvement.",
+    "hero.subtitle": "Prise en charge attentive du <strong>mal de dos, de la nuque, des épaules et des blessures sportives</strong> par <strong>Dilsad Igrek</strong> à Welkenraedt. Des soins individuels, bienveillants et scientifiquement éprouvés (Evidence-Based Practice / KCE) pour en finir avec la douleur et les traitements passifs inefficaces.",
+    "hero.g1Title": "Séance 100% individuelle",
+    "hero.g1Desc": "Un thérapeute dédié sans patients simultanés",
+    "hero.g2Title": "45 à 60 min au bilan initial",
+    "hero.g2Desc": "Écoute attentive & diagnostic approfondi",
+    "hero.g3Title": "Parking facile & gratuit",
+    "hero.g3Desc": "Directement devant le cabinet (Bd Grosjean 52a)",
+    "hero.g4Title": "Consultations en 4 langues",
+    "hero.g4Desc": "Français • Deutsch • English • Kurdî",
+    "hero.ctaCall": "Appeler : 0472 93 69 78",
+    "hero.ctaTarifs": "Tarifs INAMI (6,25 € à charge)",
+    "hero.clinicCity": "Welkenraedt (Liège)",
+    "hero.clinicTitle": "Cabinet IGREK Physiothérapie",
+    "hero.clinicHours": "8h00 — 19h00 (sur RDV)",
+    "needs.badge": "Une Réponse Précise à Chaque Situation",
+    "needs.title": "Quelle est votre situation actuelle ?",
+    "needs.subtitle": "Que vous soyez bloqué depuis ce matin, en souffrance depuis des mois ou sportif en reprise, nous adaptons notre prise en charge.",
+    "needs.p1Badge": "Urgence & Blocage Récent",
+    "needs.p1Title": "Lumbago, Torticolis ou Entorse Récente",
+    "needs.p1Desc": "Vous êtes bloqué, chaque mouvement est douloureux et vous devez être soulagé au plus vite. Nous mettons en œuvre des techniques manuelles de décompression et des conseils immédiats pour calmer l'inflammation.",
+    "needs.p1Cta": "Appeler d'urgence : <strong>0472 93 69 78</strong>",
+    "needs.p2Badge": "Douleur Persistante & Récidivante",
+    "needs.p2Title": "Mal de Dos Chronique ou Échec Antérieur",
+    "needs.p2Desc": "Vous avez déjà testé plusieurs traitements ou machines sans amélioration durable ? La TMO analyse précisément l'origine biomécanique et nerveuse du problème pour briser le cercle vicieux de la douleur.",
+    "needs.p2Cta": "Comprendre la méthode TMO →",
+    "needs.p3Badge": "Sportifs & Clubs Locaux",
+    "needs.p3Title": "Rééducation & Reprise Sécurisée (RTP)",
+    "needs.p3Desc": "Lésions musculaires, ligament croisé (LCA), tendinopathies (F.C. Welkenraedt, Gym La Concorde, coureurs). Tests fonctionnels et gestion de charge pour reprendre à 100% sans récidive.",
+    "needs.p3Cta": "Planifier un protocole Return To Play →",
+    "method.badge": "Notre Philosophie Thérapeutique",
+    "method.title": "Le Concept « Hands-On / Hands-Off »",
+    "method.subtitle": "Conformément aux recommandations officielles du KCE : pas de machines passives isolées, mais une alliance entre soins manuels experts et autonomisation active.",
+    "method.step1Badge": "Phase 1 • Au Cabinet",
+    "method.step1Title": "1. Hands-On : Le Soulagement Manuel",
+    "method.step1Desc": "Le thérapeute utilise ses mains avec une grande précision clinique :",
+    "method.step1Item1": "<strong>Mobilisations articulaires douces</strong> pour libérer les blocages.",
+    "method.step1Item2": "<strong>Travail myofascial ciblé</strong> pour relâcher les contractures profondes.",
+    "method.step1Item3": "<strong>Techniques neurodynamiques</strong> pour libérer les trajets nerveux irrités.",
+    "method.step2Badge": "Phase 2 • Votre Autonomie",
+    "method.step2Title": "2. Hands-Off : La Prévention Durable",
+    "method.step2Desc": "Nous vous donnons les clés pour consolider vos progrès à la maison :",
+    "method.step2Item1": "<strong>Exercices thérapeutiques simples et progressifs</strong> faciles à réaliser chez soi.",
+    "method.step2Item2": "<strong>Déconstruction des peurs liées au mouvement</strong> (recommandé KCE).",
+    "method.step2Item3": "<strong>Programme personnalisé d'auto-gestion</strong> pour éviter toute rechute.",
+    "expertises.badge": "Qualifications Professionnelles Particulières",
+    "expertises.title": "Champs d'Expertise Clinique",
+    "expertises.subtitle": "Un niveau de spécialisation avancé reconnu par les instances médicales internationales (IFOMPT) et belges (MATHERA).",
+    "expertises.tmoBadge": "Label International IFOMPT",
+    "expertises.tmoTitle": "Thérapie Manuelle Orthopédique (TMO)",
+    "expertises.tmoDesc": "Évaluation neuro-musculo-squelettique de haute précision pour identifier la cause profonde de vos douleurs de dos, cou et articulations. Pas de manipulation forcée : nous privilégions des techniques douces, adaptées et scientifiquement validées.",
+    "expertises.tmoTag1": "Raisonnement clinique",
+    "expertises.tmoTag2": "Mobilisations douces",
+    "expertises.tmoTag3": "Evidence-Based",
+    "expertises.sportBadge": "Clubs & Athlètes",
+    "expertises.sportTitle": "Kinésithérapie du Sport",
+    "expertises.sportDesc": "Prise en charge des traumatismes du sport (entorses, déchirures, tendinopathies). Tests de reprise et réathlétisation individualisée.",
+    "expertises.sportSub": "Football, gymnastique, course, cyclisme",
+    "expertises.postopBadge": "Chirurgie & Prothèses",
+    "expertises.postopTitle": "Rééducation Post-Opératoire",
+    "expertises.postopDesc": "Suivi après prothèse de hanche/genou (PTH, PTG), ligamentoplastie (LCA), chirurgie de l'épaule et du rachis (en lien avec CHR Verviers).",
+    "expertises.postopSub": "Récupération des amplitudes & de la force",
+    "expertises.atmBadge": "Spécificité Cervico-Maxillo-Faciale",
+    "expertises.atmTitle": "Troubles de la Mâchoire (ATM) & Céphalées",
+    "expertises.atmDesc": "Traitement ciblé des blocages ou claquements de mâchoire, bruxisme, tensions crânio-mandibulaires et maux de tête d'origine cervicale (névralgies d'Arnold).",
+    "expertises.atmSub": "Soulagement des tensions profondes du cou et du visage",
+    "osteo.badge": "Comprendre les Différences",
+    "osteo.title": "Thérapie Manuelle (TMO) ou Ostéopathie ?",
+    "osteo.subtitle": "Vous hésitez entre consulter un ostéopathe ou un thérapeute manuel ? Voici les faits clairs et transparents pour vous aider.",
+    "osteo.thCriteria": "Critères",
+    "osteo.thTmo": "Thérapie Manuelle Orthopédique (TMO)",
+    "osteo.thOsteo": "Ostéopathie",
+    "osteo.r1Crit": "Remboursement Mutuelle",
+    "osteo.r1Tmo": "✅ 100% Remboursé INAMI (6,25 € reste à charge)",
+    "osteo.r1Osteo": "❌ Non remboursé par l'assurance obligatoire (55 € à 75 € à charge)",
+    "osteo.r2Crit": "Formation & Statut",
+    "osteo.r2Tmo": "Spécialisation universitaire de kinésithérapie (IFOMPT)",
+    "osteo.r2Osteo": "Discipline privée non conventionnée",
+    "osteo.r3Crit": "Preuves Scientifiques",
+    "osteo.r3Tmo": "100% Evidence-Based Practice & recommandé par le KCE",
+    "osteo.r3Osteo": "Approche empirique et conceptuelle",
+    "osteo.r4Crit": "Autonomie du Patient",
+    "osteo.r4Tmo": "Méthode Hands-On / Hands-Off : exercices pour éviter les récidives",
+    "osteo.r4Osteo": "Essentiellement manipulations passives répétées",
+    "tarifs.badge": "100% Conventionné INAMI • Aucun Dépassement Surprise",
+    "tarifs.title": "Tarifs Officiels & Remboursement Mutuelle",
+    "tarifs.subtitle": "Dilsad Igrek applique rigoureusement les tarifs de la convention nationale belge 2026 pour vous faire bénéficier du meilleur remboursement.",
+    "tarifs.card1Title": "Tarif Officiel Séance",
+    "tarifs.card1Sub": "Tarif conventionné INAMI (2026)",
+    "tarifs.card2Title": "Remboursement Mutuelle",
+    "tarifs.card2Sub": "Pris en charge par votre mutuelle",
+    "tarifs.card3Title": "Votre Reste à Charge",
+    "tarifs.card3Sub": "Ticket modérateur ordinaire",
+    "tarifs.card4Title": "Statut BIM (Reste)",
+    "tarifs.card4Sub": "Intervention majorée (BIM)",
+    "tarifs.checkTitle": "Pour votre première consultation, pensez à apporter :",
+    "tarifs.check1": "Votre prescription médicale (ordonnance)",
+    "tarifs.check2": "Une vignette de votre mutuelle belge",
+    "tarifs.check3": "Vos éventuels examens (Radio, IRM, Écho)",
+    "faq.badge": "Aide & Réponses",
+    "faq.title": "Questions Fréquentes des Patients",
+    "faq.subtitle": "Toutes les informations utiles et pratiques avant votre visite au cabinet.",
+    "faq.q1": "Faut-il une prescription médicale pour être remboursé ?",
+    "faq.a1": "Oui. Pour que votre mutuelle prenne en charge la séance au tarif légal, une ordonnance délivrée par votre médecin traitant ou spécialiste est indispensable. Vous pouvez réserver votre rendez-vous dès aujourd'hui par téléphone (<a href=\"tel:0472936978\" class=\"text-secondary font-bold underline\">0472 93 69 78</a>) ou email et apporter la prescription le jour de votre première séance.",
+    "faq.q2": "Comment se déroule la première consultation ?",
+    "faq.a2": "La première séance dure entre <strong>45 et 60 minutes</strong>. Elle débute par une écoute détaillée de votre historique de santé, suivie d'un examen biomécanique approfondi pour poser un diagnostic précis. Nous réalisons les premiers gestes manuels de soulagement et définissons ensemble votre plan de soins.",
+    "faq.q3": "Combien de séances seront nécessaires ?",
+    "faq.a3": "Notre objectif est de vous rendre autonome le plus rapidement possible sans séances inutiles. Dès le bilan initial, nous estimons ensemble le nombre de séances nécessaires. Grâce aux exercices d'autonomisation (Hands-Off), la plupart des patients constatent une amélioration durable en quelques séances.",
+    "faq.q4": "Quels vêtements porter lors de la séance ?",
+    "faq.a4": "Privilégiez une tenue confortable ou de sport (short, t-shirt, legging) permettant un accès facile à la zone douloureuse et facilitant les mouvements lors des tests et exercices actifs.",
+    "faq.q5": "Quelles sont les langues parlées lors des consultations ?",
+    "faq.a5": "Les consultations peuvent être menées couramment en <strong>Français</strong>, en <strong>Allemand (Deutsch)</strong>, en <strong>Anglais (English)</strong> et en <strong>Kurde (Kurdî)</strong>, garantissant un accueil chaleureux pour tous les résidents de la région frontalière et locale.",
+    "contact.badge": "Localisation & Prise de Rendez-vous",
+    "contact.title": "Venir au Cabinet IGREK Physiothérapie",
+    "contact.subtitle": "Idéalement situé à Welkenraedt, facilement accessible depuis Lontzen, Aubel, Baelen, Henri-Chapelle, Eupen et Verviers.",
+    "contact.addrTitle": "Adresse du Cabinet",
+    "contact.addrParking": "Parking gratuit & facile directement sur place",
+    "contact.hoursTitle": "Horaires & Langues",
+    "contact.hoursDays": "Du Lundi au Vendredi :",
+    "contact.hoursUrgent": "Plages d'urgences réservées chaque jour",
+    "contact.langLabel": "Français • Deutsch • English • Kurdî",
+    "contact.cardTitle": "Contact & Rendez-vous",
+    "contact.cardDesc": "Pour réserver une séance de bilan ou pour une urgence du jour, contactez Dilsad Igrek directement par GSM ou email :",
+    "contact.btnCall": "Appeler le 0472 93 69 78",
+    "footer.desc": "Cabinet de kinésithérapie spécialisé en Thérapie Manuelle Orthopédique (TMO) et kinésithérapie du sport à Welkenraedt. Soins bienveillants et 100% individuels, conventionné INAMI, critères d'excellence IFOMPT / MATHERA.",
+    "footer.inamiBadge": "Praticien Agréé & Conventionné INAMI • GSM : 0472 93 69 78",
+    "footer.navTitle": "Navigation Rapide",
+    "footer.coordTitle": "Coordonnées & RDV",
+    "footer.rights": "© 2026 IGREK Physiothérapie — Dilsad Igrek. Tous droits réservés."
+  },
+
+  de: {
+    "emergency.badge": "Akute Schmerzen oder Blockade?",
+    "emergency.text": "Hexenschuss, steifer Nacken, Verstauchung: Tägliche Notfalltermine für schnelle Hilfe reserviert.",
+    "emergency.btn": "Termine heute: <span class=\"underline decoration-2\">0472 93 69 78</span>",
+    "nav.needs": "Ihre Situation",
+    "nav.method": "Hands-On Methode",
+    "nav.expertises": "Fachbereiche",
+    "nav.osteo": "OMT vs Osteo",
+    "nav.tarifs": "Tarife & Erstattung",
+    "nav.faq": "FAQ",
+    "nav.contact": "Kontakt & Anfahrt",
+    "nav.book": "Termin vereinbaren",
+    "hero.badgeInami": "100% LIKIV / INAMI-Konventioniert (Eigenanteil: 6,25 €)",
+    "hero.badgeIfompt": "IFOMPT & MATHERA Zertifiziert",
+    "hero.title": "Schmerzen lindern, <br/><span class=\"neon-text-gradient\">Ursachen verstehen,</span> <br/>Bewegungsfreiheit gewinnen.",
+    "hero.subtitle": "Gezielte Behandlung von <strong>Rückenschmerzen, Nacken, Schultern und Sportverletzungen</strong> durch <strong>Dilsad Igrek</strong> in Welkenraedt. Individuelle, evidenzbasierte Therapie (KCE Guidelines) ohne passive Dauerschleifen.",
+    "hero.g1Title": "100% Einzelbehandlung",
+    "hero.g1Desc": "Ein Therapeut ganz für Sie allein ohne Parallelpatienten",
+    "hero.g2Title": "45 bis 60 Min. Erstbefund",
+    "hero.g2Desc": "Ausführliche Anamnese & präzise klinische Untersuchung",
+    "hero.g3Title": "Kostenlose Parkplätze",
+    "hero.g3Desc": "Direkt vor der Praxis (Bd Grosjean 52a)",
+    "hero.g4Title": "Beratung in 4 Sprachen",
+    "hero.g4Desc": "Deutsch • Français • English • Kurdî",
+    "hero.ctaCall": "Anrufen: 0472 93 69 78",
+    "hero.ctaTarifs": "LIKIV-Tarife (6,25 € Eigenanteil)",
+    "hero.clinicCity": "Welkenraedt • Eupen • Lontzen",
+    "hero.clinicTitle": "Praxis IGREK Physiotherapie",
+    "hero.clinicHours": "8:00 — 19:00 Uhr (nach Vereinbarung)",
+    "needs.badge": "Individuelle Lösungen für jede Situation",
+    "needs.title": "Wie können wir Ihnen heute helfen?",
+    "needs.subtitle": "Egal ob akute Blockade seit heute Morgen, chronische Schmerzen oder Sportrehabilitation – wir passen unsere Behandlung genau an.",
+    "needs.p1Badge": "Akutfall & Schnelle Hilfe",
+    "needs.p1Title": "Hexenschuss, Tortikollis oder akute Verstauchung",
+    "needs.p1Desc": "Sie haben starke Schmerzen und jede Bewegung fällt schwer? Durch gezielte manuelle Entlastungstechniken und Sofortmaßnahmen beruhigen wir die Entzündung rasch.",
+    "needs.p1Cta": "Notfall anrufen: <strong>0472 93 69 78</strong>",
+    "needs.p2Badge": "Chronische Beschwerden",
+    "needs.p2Title": "Dauerhafte Rückenschmerzen oder bisherige Fehlversuche",
+    "needs.p2Desc": "Haben Sie bereits verschiedene Behandlungen oder passive Geräte ohne dauerhaften Erfolg probiert? Die OMT analysiert biomechanische und nervale Ursachen, um den Schmerzkreislauf zu durchbrechen.",
+    "needs.p2Cta": "OMT-Methode verstehen →",
+    "needs.p3Badge": "Sportler & Vereine",
+    "needs.p3Title": "Rehabilitation & Sichere Rückkehr zum Sport (RTP)",
+    "needs.p3Desc": "Muskelverletzungen, Kreuzbandriss (ACL), Sehnenprobleme (F.C. Welkenraedt, Gym La Concorde, Läufer). Funktionstests und Belastungssteuerung für 100% sicheren Wiedereinstieg.",
+    "needs.p3Cta": "Return To Play Protokoll starten →",
+    "method.badge": "Unser Behandlungsansatz",
+    "method.title": "Das « Hands-On / Hands-Off » Konzept",
+    "method.subtitle": "Gemäß den offiziellen KCE-Leitlinien: Keine isolierten Passivgeräte, sondern eine wirksame Kombination aus manueller Therapie und aktiver Patientenselbstständigkeit.",
+    "method.step1Badge": "Phase 1 • In der Praxis",
+    "method.step1Title": "1. Hands-On: Manuelle Schmerzlinderung",
+    "method.step1Desc": "Gezielte therapeutische Handgriffe mit klinischer Präzision:",
+    "method.step1Item1": "<strong>Sanfte Gelenkmobilisationen</strong> zur Lösung von Blockaden.",
+    "method.step1Item2": "<strong>Spezifische myofasziale Techniken</strong> gegen Muskelverspannungen.",
+    "method.step1Item3": "<strong>Neurodynamische Mobilisationen</strong> zur Entlastung gereizter Nervenbahnen.",
+    "method.step2Badge": "Phase 2 • Ihre Selbstständigkeit",
+    "method.step2Title": "2. Hands-Off: Nachhaltige Prävention",
+    "method.step2Desc": "Wir geben Ihnen die Werkzeuge für langfristige Beschwerdefreiheit:",
+    "method.step2Item1": "<strong>Einfache, progressive Heimübungen</strong> für Alltag und Sport.",
+    "method.step2Item2": "<strong>Abbau von Bewegungsängsten</strong> (KCE-Leitlinie).",
+    "method.step2Item3": "<strong>Individueller Selbstmanagement-Plan</strong> zur Vermeidung von Rückfällen.",
+    "expertises.badge": "Besondere klinische Qualifikationen",
+    "expertises.title": "Unsere Fachbereiche",
+    "expertises.subtitle": "Spezialisierte Weiterbildungen nach höchsten internationalen (IFOMPT) und belgischen Standards (MATHERA).",
+    "expertises.tmoBadge": "Internationales IFOMPT-Label",
+    "expertises.tmoTitle": "Orthopädische Manuelle Therapie (OMT)",
+    "expertises.tmoDesc": "Hochpräzise neuro-muskuloskelettale Untersuchung zur Ermittlung der tatsächlichen Ursache. Keine erzwungenen Manipulationen: wir setzen auf sanfte, wissenschaftlich fundierte Techniken.",
+    "expertises.tmoTag1": "Klinisches Reasoning",
+    "expertises.tmoTag2": "Sanfte Mobilisation",
+    "expertises.tmoTag3": "Evidenzbasiert",
+    "expertises.sportBadge": "Sportler & Athleten",
+    "expertises.sportTitle": "Sportphysiotherapie",
+    "expertises.sportDesc": "Behandlung von Sportverletzungen (Verstauchungen, Zerrungen, Sehnenbeschwerden). Spezifische Return-to-Sport Tests.",
+    "expertises.sportSub": "Fußball, Turnen, Laufen, Radsport",
+    "expertises.postopBadge": "Chirurgie & Gelenkersatz",
+    "expertises.postopTitle": "Postoperative Rehabilitation",
+    "expertises.postopDesc": "Nachbehandlung nach Hüft-/Knieprothesen (TEP), Kreuzband-OP, Schulter- und Wirbelsäulenchirurgie (in Kooperation mit CHR Verviers).",
+    "expertises.postopSub": "Wiedererlangung von Beweglichkeit & Kraft",
+    "expertises.atmBadge": "Kiefer & Gesichtsbereich",
+    "expertises.atmTitle": "Kiefergelenk (CMD) & Kopfschmerzen",
+    "expertises.atmDesc": "Behandlung von Kieferknacken, Zähneknirschen (Bruxismus), Verspannungen und zervikogenen Kopfschmerzen (z.B. Arnold-Neuralgie).",
+    "expertises.atmSub": "Linderung tiefer Verspannungen an Nacken und Kiefer",
+    "osteo.badge": "Unterschiede verstehen",
+    "osteo.title": "Manuelle Therapie (OMT) oder Osteopathie?",
+    "osteo.subtitle": "Sie sind unsicher zwischen Osteopathie und Manueller Therapie? Hier sind die klaren Fakten für Ihre Entscheidung.",
+    "osteo.thCriteria": "Kriterien",
+    "osteo.thTmo": "Orthopädische Manuelle Therapie (OMT)",
+    "osteo.thOsteo": "Osteopathie",
+    "osteo.r1Crit": "Krankenkassen-Erstattung",
+    "osteo.r1Tmo": "✅ 100% LIKIV/INAMI erstattet (Eigenanteil nur 6,25 €)",
+    "osteo.r1Osteo": "❌ Nicht durch die gesetzliche Kasse erstattet (55 € bis 75 € selbst zahlen)",
+    "osteo.r2Crit": "Ausbildung & Status",
+    "osteo.r2Tmo": "Universitäre Spezialisierung in Physiotherapie (IFOMPT)",
+    "osteo.r2Osteo": "Private Ausbildung, nicht konventioniert",
+    "osteo.r3Crit": "Wissenschaftliche Evidenz",
+    "osteo.r3Tmo": "100% Evidence-Based & offiziell von KCE empfohlen",
+    "osteo.r3Osteo": "Überwiegend empirischer Ansatz",
+    "osteo.r4Crit": "Patientenautonomie",
+    "osteo.r4Tmo": "Hands-On / Hands-Off Methode: Übungen zur Vermeidung von Rückfällen",
+    "osteo.r4Osteo": "Meist rein passive, wiederholte Behandlungen",
+    "tarifs.badge": "100% Konventioniert • Keine versteckten Zusatzkosten",
+    "tarifs.title": "Offizielle Tarife & Krankenkassen-Rückerstattung",
+    "tarifs.subtitle": "Dilsad Igrek wendet strikt die offiziellen belgischen LIKIV/INAMI-Tarife 2026 an, um Ihnen die maximale Erstattung zu sichern.",
+    "tarifs.card1Title": "Offizieller Sitzungstarif",
+    "tarifs.card1Sub": "Konventionierter Tarif (2026)",
+    "tarifs.card2Title": "Krankenkassen-Erstattung",
+    "tarifs.card2Sub": "Wird von Ihrer Krankenkasse übernommen",
+    "tarifs.card3Title": "Ihr Eigenanteil",
+    "tarifs.card3Sub": "Regulärer Eigenanteil",
+    "tarifs.card4Title": "BIM-Status (Eigenanteil)",
+    "tarifs.card4Sub": "Für Personen mit erhöhtem Erstattungsstatus",
+    "tarifs.checkTitle": "Bitte bringen Sie zum ersten Termin mit:",
+    "tarifs.check1": "Ihre ärztliche Verordnung (Rezept)",
+    "tarifs.check2": "Eine Vignette Ihrer belgischen Krankenkasse",
+    "tarifs.check3": "Vorhandene Befunde (Röntgen, MRT, Ultraschall)",
+    "faq.badge": "Hilfe & Informationen",
+    "faq.title": "Häufig gestellte Fragen von Patienten",
+    "faq.subtitle": "Alle wichtigen praktischen Informationen vor Ihrem ersten Praxisbesuch.",
+    "faq.q1": "Benötige ich ein ärztliches Rezept für die Erstattung?",
+    "faq.a1": "Ja. Damit Ihre Krankenkasse die Kosten übernimmt, ist eine ärztliche Verordnung Ihres Haus- oder Facharztes erforderlich. Sie können Ihren Termin bereits heute telefonisch (<a href=\"tel:0472936978\" class=\"text-secondary font-bold underline\">0472 93 69 78</a>) vereinbaren und das Rezept zum Termin mitbringen.",
+    "faq.q2": "Wie läuft die Erstuntersuchung ab?",
+    "faq.a2": "Der Ersttermin dauert zwischen <strong>45 und 60 Minuten</strong>. Er beginnt mit einem ausführlichen Gespräch über Ihre Beschwerden, gefolgt von einer präzisen klinischen Untersuchung. Anschließend erfolgen erste lindernde Maßnahmen und ein gemeinsamer Behandlungsplan.",
+    "faq.q3": "Wie viele Sitzungen sind erforderlich?",
+    "faq.a3": "Unser Ziel ist es, Sie schnellstmöglich beschwerdefrei und unabhängig zu machen. Durch gezielte Eigenübungen spüren die meisten Patienten bereits nach wenigen Sitzungen eine deutliche und dauerhafte Besserung.",
+    "faq.q4": "Welche Kleidung sollte ich tragen?",
+    "faq.a4": "Bequeme Kleidung oder Sportbekleidung (T-Shirt, kurze Hose, Leggings) erleichtert die Untersuchung und die aktive Durchführung von Übungen.",
+    "faq.q5": "In welchen Sprachen finden die Behandlungen statt?",
+    "faq.a5": "Behandlungen werden fließend auf <strong>Deutsch</strong>, <strong>Französisch</strong>, <strong>Englisch</strong> und <strong>Kurdisch (Kurdî)</strong> durchgeführt.",
+    "contact.badge": "Anfahrt & Terminvereinbarung",
+    "contact.title": "Praxis IGREK Physiotherapie in Welkenraedt",
+    "contact.subtitle": "Zentral gelegen in Welkenraedt, schnell erreichbar aus Eupen, Lontzen, Baelen, Henri-Chapelle und Umgebung.",
+    "contact.addrTitle": "Praxisadresse",
+    "contact.addrParking": "Kostenfreie Parkplätze direkt vor der Tür",
+    "contact.hoursTitle": "Öffnungszeiten & Sprachen",
+    "contact.hoursDays": "Montag bis Freitag:",
+    "contact.hoursUrgent": "Tägliche Notfalltermine reserviert",
+    "contact.langLabel": "Deutsch • Français • English • Kurdî",
+    "contact.cardTitle": "Kontakt & Terminbuchung",
+    "contact.cardDesc": "Für Ersttermine oder dringende Akutfälle erreichen Sie Dilsad Igrek direkt per Telefon oder E-Mail:",
+    "contact.btnCall": "Anrufen: 0472 93 69 78",
+    "footer.desc": "Spezialisierte Praxis für Orthopädische Manuelle Therapie (OMT) und Sportphysiotherapie in Welkenraedt. 100% Einzelbehandlung, LIKIV-konventioniert, IFOMPT / MATHERA Qualität.",
+    "footer.inamiBadge": "Anerkannter LIKIV-Therapeut • GSM: 0472 93 69 78",
+    "footer.navTitle": "Schnellnavigation",
+    "footer.coordTitle": "Kontakt & Termine",
+    "footer.rights": "© 2026 IGREK Physiotherapie — Dilsad Igrek. Alle Rechte vorbehalten."
+  },
+
+  en: {
+    "emergency.badge": "Acute Pain or Recent Blockage?",
+    "emergency.text": "Severe lumbago, stiff neck, acute sprain: Emergency slots reserved daily for quick relief.",
+    "emergency.btn": "Today's availability: <span class=\"underline decoration-2\">0472 93 69 78</span>",
+    "nav.needs": "Your Needs",
+    "nav.method": "Hands-On Method",
+    "nav.expertises": "Expertise",
+    "nav.osteo": "OMT vs Osteo",
+    "nav.tarifs": "Fees & Copay",
+    "nav.faq": "FAQ",
+    "nav.contact": "Contact & Access",
+    "nav.book": "Book Appointment",
+    "hero.badgeInami": "100% INAMI Registered (€6.25 patient copay)",
+    "hero.badgeIfompt": "IFOMPT & MATHERA Certified",
+    "hero.title": "Relieve your pain, <br/><span class=\"neon-text-gradient\">understand its root cause,</span> <br/>regain freedom of movement.",
+    "hero.subtitle": "Attentive care for <strong>back pain, neck stiffness, shoulder issues, and sports injuries</strong> by <strong>Dilsad Igrek</strong> in Welkenraedt. One-on-one, evidence-based physiotherapy (KCE guidelines) designed to break the cycle of recurring pain.",
+    "hero.g1Title": "100% One-on-One Sessions",
+    "hero.g1Desc": "A dedicated practitioner focused entirely on you with no simultaneous patients",
+    "hero.g2Title": "45 to 60 min Initial Assessment",
+    "hero.g2Desc": "Thorough consultation, in-depth biomechanical exam and immediate care",
+    "hero.g3Title": "Easy & Free Parking",
+    "hero.g3Desc": "Available directly in front of the clinic (Bd Grosjean 52a)",
+    "hero.g4Title": "Care in 4 Languages",
+    "hero.g4Desc": "English • Français • Deutsch • Kurdî",
+    "hero.ctaCall": "Call: 0472 93 69 78",
+    "hero.ctaTarifs": "INAMI Fees (€6.25 patient copay)",
+    "hero.clinicCity": "Welkenraedt • Liège Region",
+    "hero.clinicTitle": "IGREK Physiotherapy Clinic",
+    "hero.clinicHours": "8:00 AM — 7:00 PM (by appointment)",
+    "needs.badge": "Tailored Care for Every Patient",
+    "needs.title": "What is your current condition?",
+    "needs.subtitle": "Whether you are acutely blocked, dealing with persistent chronic pain, or an athlete recovering from injury, we adapt our approach.",
+    "needs.p1Badge": "Emergency & Acute Issue",
+    "needs.p1Title": "Severe Back Pain, Stiff Neck or Recent Sprain",
+    "needs.p1Desc": "Locked up and every movement hurts? We apply targeted manual decompression techniques and immediate guidance to rapidly calm inflammation.",
+    "needs.p1Cta": "Emergency Call: <strong>0472 93 69 78</strong>",
+    "needs.p2Badge": "Chronic & Recurrent Pain",
+    "needs.p2Title": "Long-standing Back Pain or Past Treatment Failure",
+    "needs.p2Desc": "Have you tried passive machines or generic treatments without lasting results? OMT pinpoints biomechanical and neural drivers to resolve recurring pain.",
+    "needs.p2Cta": "Understand OMT Method →",
+    "needs.p3Badge": "Athletes & Local Sports",
+    "needs.p3Title": "Rehabilitation & Safe Return To Play (RTP)",
+    "needs.p3Desc": "Muscle tears, ACL rehabilitation, tendonitis (F.C. Welkenraedt, Gym La Concorde, runners). Functional testing and load management for 100% safe return.",
+    "needs.p3Cta": "Start Return To Play protocol →",
+    "method.badge": "Our Therapeutic Philosophy",
+    "method.title": "The « Hands-On / Hands-Off » Concept",
+    "method.subtitle": "Aligned with official KCE guidelines: No passive machine reliance, but a proven combination of expert manual relief and active patient autonomy.",
+    "method.step1Badge": "Phase 1 • In Clinic",
+    "method.step1Title": "1. Hands-On: Expert Manual Relief",
+    "method.step1Desc": "High-precision clinical techniques applied by your therapist:",
+    "method.step1Item1": "<strong>Gentle joint mobilizations</strong> to unlock restricted areas.",
+    "method.step1Item2": "<strong>Targeted myofascial release</strong> to soothe deep tension.",
+    "method.step1Item3": "<strong>Neurodynamic techniques</strong> to relieve irritated nerve pathways.",
+    "method.step2Badge": "Phase 2 • Your Autonomy",
+    "method.step2Title": "2. Hands-Off: Long-Term Prevention",
+    "method.step2Desc": "Giving you the tools to maintain progress and prevent recurrence:",
+    "method.step2Item1": "<strong>Simple, progressive home exercises</strong> tailored to your routine.",
+    "method.step2Item2": "<strong>Deconstruction of movement fear</strong> (KCE best practice).",
+    "method.step2Item3": "<strong>Custom self-management program</strong> for long-lasting health.",
+    "expertises.badge": "Specialized Clinical Credentials",
+    "expertises.title": "Clinical Fields of Expertise",
+    "expertises.subtitle": "Advanced qualifications recognized by international (IFOMPT) and Belgian (MATHERA) standards.",
+    "expertises.tmoBadge": "International IFOMPT Label",
+    "expertises.tmoTitle": "Orthopedic Manual Therapy (OMT)",
+    "expertises.tmoDesc": "High-precision neuro-musculoskeletal assessment to find the true source of your pain. No forced manipulations: we prioritize gentle, evidence-based techniques.",
+    "expertises.tmoTag1": "Clinical Reasoning",
+    "expertises.tmoTag2": "Gentle Mobilization",
+    "expertises.tmoTag3": "Evidence-Based",
+    "expertises.sportBadge": "Athletes & Active Care",
+    "expertises.sportTitle": "Sports Physiotherapy",
+    "expertises.sportDesc": "Targeted care for sports injuries (sprains, tears, tendinopathies). Objective return-to-sport testing and progressive loading.",
+    "expertises.sportSub": "Soccer, gymnastics, running, cycling",
+    "expertises.postopBadge": "Surgery & Joint Replacement",
+    "expertises.postopTitle": "Post-Operative Rehabilitation",
+    "expertises.postopDesc": "Rehabilitation after hip/knee replacement, ACL reconstruction, shoulder and spinal surgery (in coordination with CHR Verviers).",
+    "expertises.postopSub": "Restoring full range of motion & strength",
+    "expertises.atmBadge": "Jaw & Craniofacial Care",
+    "expertises.atmTitle": "TMJ Disorders (Jaw) & Headaches",
+    "expertises.atmDesc": "Targeted treatment for jaw clicking, teeth grinding (bruxism), and cervicogenic headaches (including Arnold neuralgia).",
+    "expertises.atmSub": "Relieving deep neck, jaw and facial tension",
+    "osteo.badge": "Clear Understanding",
+    "osteo.title": "Manual Therapy (OMT) vs Osteopathy?",
+    "osteo.subtitle": "Wondering about the difference between an osteopath and an orthopedic manual therapist? Here are the facts.",
+    "osteo.thCriteria": "Criteria",
+    "osteo.thTmo": "Orthopedic Manual Therapy (OMT)",
+    "osteo.thOsteo": "Osteopathy",
+    "osteo.r1Crit": "Insurance Reimbursement",
+    "osteo.r1Tmo": "✅ 100% INAMI Reimbursed (Patient pays €6.25 copay)",
+    "osteo.r1Osteo": "❌ Not covered by statutory health insurance (€55 to €75 out-of-pocket)",
+    "osteo.r2Crit": "Training & Status",
+    "osteo.r2Tmo": "University specialization in physiotherapy (IFOMPT)",
+    "osteo.r2Osteo": "Private practice credential, unregulated pricing",
+    "osteo.r3Crit": "Scientific Evidence",
+    "osteo.r3Tmo": "100% Evidence-Based Practice & KCE recommended",
+    "osteo.r3Osteo": "Primarily conceptual / empirical model",
+    "osteo.r4Crit": "Patient Autonomy",
+    "osteo.r4Tmo": "Hands-On / Hands-Off: active exercises to prevent relapse",
+    "osteo.r4Osteo": "Mainly passive repeated adjustments",
+    "tarifs.badge": "100% Conventioned • Zero Hidden Fees",
+    "tarifs.title": "Official Fees & Health Insurance Reimbursement",
+    "tarifs.subtitle": "Dilsad Igrek strictly applies the official Belgian national convention fees (2026) ensuring maximum reimbursement.",
+    "tarifs.card1Title": "Official Session Fee",
+    "tarifs.card1Sub": "Standard INAMI tariff (2026)",
+    "tarifs.card2Title": "Mutuelle Reimbursement",
+    "tarifs.card2Sub": "Covered by Belgian health insurance",
+    "tarifs.card3Title": "Your Net Copay",
+    "tarifs.card3Sub": "Standard patient copayment",
+    "tarifs.card4Title": "BIM Status (Copay)",
+    "tarifs.card4Sub": "For preferential reimbursement holders",
+    "tarifs.checkTitle": "For your first consultation, please bring:",
+    "tarifs.check1": "Your medical prescription (doctor's referral)",
+    "tarifs.check2": "A vignette sticker from your Belgian mutuelle",
+    "tarifs.check3": "Relevant imaging reports (X-ray, MRI, Ultrasound)",
+    "faq.badge": "Help & Information",
+    "faq.title": "Frequently Asked Questions",
+    "faq.subtitle": "Everything you need to know before visiting the clinic.",
+    "faq.q1": "Do I need a doctor's prescription for reimbursement?",
+    "faq.a1": "Yes. A prescription issued by your general practitioner or specialist is required to claim official reimbursement from your Belgian mutuelle. You can book your appointment today by phone (<a href=\"tel:0472936978\" class=\"text-secondary font-bold underline\">0472 93 69 78</a>) or email and bring the prescription on your first visit.",
+    "faq.q2": "What happens during the initial consultation?",
+    "faq.a2": "The initial assessment lasts <strong>45 to 60 minutes</strong>. It includes an in-depth conversation about your symptoms, a comprehensive clinical exam, initial hands-on treatment, and a clear personalized recovery plan.",
+    "faq.q3": "How many sessions will I need?",
+    "faq.a3": "Our goal is to get you back on track as quickly as possible without unnecessary appointments. With our Hands-Off active exercise approach, most patients experience significant, lasting improvement within a few sessions.",
+    "faq.q4": "What should I wear to my appointment?",
+    "faq.a4": "Wear comfortable or athletic clothing (shorts, t-shirt, leggings) allowing easy access to the painful area and freedom of movement for active tests.",
+    "faq.q5": "What languages are spoken during consultations?",
+    "faq.a5": "Consultations can be conducted fluently in <strong>English</strong>, <strong>French</strong>, <strong>German</strong>, and <strong>Kurdish (Kurdî)</strong>.",
+    "contact.badge": "Location & Appointments",
+    "contact.title": "Visit IGREK Physiotherapy Clinic",
+    "contact.subtitle": "Conveniently located in Welkenraedt, easily accessible from Eupen, Lontzen, Baelen, Aubel and Verviers.",
+    "contact.addrTitle": "Clinic Address",
+    "contact.addrParking": "Easy & free parking available right on site",
+    "contact.hoursTitle": "Hours & Languages",
+    "contact.hoursDays": "Monday to Friday:",
+    "contact.hoursUrgent": "Daily emergency slots available",
+    "contact.langLabel": "English • Français • Deutsch • Kurdî",
+    "contact.cardTitle": "Contact & Booking",
+    "contact.cardDesc": "To schedule your initial assessment or an emergency visit, contact Dilsad Igrek directly via phone or email:",
+    "contact.btnCall": "Call 0472 93 69 78",
+    "footer.desc": "Physiotherapy clinic specializing in Orthopedic Manual Therapy (OMT) and sports recovery in Welkenraedt. 100% individual care, INAMI registered, IFOMPT / MATHERA standards.",
+    "footer.inamiBadge": "INAMI Registered Practitioner • GSM: 0472 93 69 78",
+    "footer.navTitle": "Quick Navigation",
+    "footer.coordTitle": "Contact & Booking",
+    "footer.rights": "© 2026 IGREK Physiotherapy — Dilsad Igrek. All rights reserved."
+  },
+
+  ku: {
+    "emergency.badge": "Êşa Giran an Xitbûna Nû?",
+    "emergency.text": "Lumbago ya giran, stûxwarbûn, werimîna lebatê: Her roj ji bo rewşên lezgîn dorên taybet veqetandî ne.",
+    "emergency.btn": "Dora îro: <span class=\"underline decoration-2\">0472 93 69 78</span>",
+    "nav.needs": "Pêdiviyên We",
+    "nav.method": "Rêbaza Hands-On",
+    "nav.expertises": "Pisporî",
+    "nav.osteo": "TMO an Osteopatî",
+    "nav.tarifs": "Biha & Vegerandin",
+    "nav.faq": "Pirsên Pir Pirsyar",
+    "nav.contact": "Têkilî & Navnîşan",
+    "nav.book": "Dora Xwe Bigirin",
+    "hero.badgeInami": "100% Peymandarê INAMI (Para we: 6,25 €)",
+    "hero.badgeIfompt": "Sertîfîkayên IFOMPT & MATHERA",
+    "hero.title": "Êşa xwe kêm bikin, <br/><span class=\"neon-text-gradient\">sedema wê fam bikin,</span> <br/>azadiya tevgera xwe bistînin.",
+    "hero.subtitle": "Tedawiya baldar a <strong>êşa piştê, stû, mil û birîndariyên werzişê</strong> ji aliyê <strong>Dilsad Igrek</strong> ve li Welkenraedt. Xizmetek takekesî, bi rûmet û li gorî pîvanên zanistî (EBP / KCE) ji bo bidawîanîna êşê.",
+    "hero.g1Title": "100% Rûniştina Takekesî",
+    "hero.g1Desc": "Fîzyoterapîstek tenê ji bo we, bêyî nexweşên hevdem",
+    "hero.g2Title": "45 heta 60 xulek muayeneya yekem",
+    "hero.g2Desc": "Guhdariya baldar û teşhîsa kûr a mekanîkî",
+    "hero.g3Title": "Otoparka hêsan û belaş",
+    "hero.g3Desc": "Rast li ber klînîkê (Bd Grosjean 52a)",
+    "hero.g4Title": "Şêwirmendî bi 4 zimanan",
+    "hero.g4Desc": "Kurdî • Français • Deutsch • English",
+    "hero.ctaCall": "Telefon: 0472 93 69 78",
+    "hero.ctaTarifs": "Bihayên INAMI (Para we: 6,25 €)",
+    "hero.clinicCity": "Welkenraedt • Herêma Liège",
+    "hero.clinicTitle": "Klînîka IGREK Fîzyoterapî",
+    "hero.clinicHours": "8:00 — 19:00 (bi randevû)",
+    "needs.badge": "Ji bo Her Rewşê Bersivek Taybet",
+    "needs.title": "Rewşa we ya niha çi ye?",
+    "needs.subtitle": "Hûn îro serê sibê xit bûbin, bi mehan e êşê dikişînin an jî werzişvanek in ku vedigere meydanê, em dermankirina we li gorî pêdiviya we saz dikin.",
+    "needs.p1Badge": "Rewşa Lezgîn & Xitbûn",
+    "needs.p1Title": "Lumbago, Stûxwarbûn an Werimîna Lebatê ya Nû",
+    "needs.p1Desc": "Hûn xit bûne û her tevger dibe sedema êşê? Bi rêbazên destî yên nerm û şîretên rasterast, em êş û iltîhabê di cih de kêm dikin.",
+    "needs.p1Cta": "Ji bo lezgîniyê bigerin: <strong>0472 93 69 78</strong>",
+    "needs.p2Badge": "Êşa Berdewam û Dubarebûyî",
+    "needs.p2Title": "Êşa Piştê ya Kronîk an Bêencambûna Tedawiyên Berê",
+    "needs.p2Desc": "We gelek derman an amûrên pasîf ceribandine lê encamek mayînde negirtiye? TMO sedema bingehîn a biomekanîk û damaran dibîne da ku zincîra êşê bişkîne.",
+    "needs.p2Cta": "Rêbaza TMO fam bikin →",
+    "needs.p3Badge": "Werzişvan & Yaneyên Herêmî",
+    "needs.p3Title": "Rehabîlîtasyon & Vegera Ewle bo Werzişê (RTP)",
+    "needs.p3Desc": "Birîndariyên masûlkeyan, çirandina bejna xaçerêk (LCA), tendînopatî (F.C. Welkenraedt, Gym La Concorde, bazdan). Testên fonksiyonel ji bo vegera 100% ewle.",
+    "needs.p3Cta": "Protokola Return To Play dest pê bikin →",
+    "method.badge": "Felsefeya Me ya Tedawiyê",
+    "method.title": "Konsepta « Hands-On / Hands-Off »",
+    "method.subtitle": "Li gorî rênimayên fermî yên KCE: Bêyî amûrên pasîf ên tenêkirî, hevgirtina destwerdana bi destan û çalakiya nexweş bixwe.",
+    "method.step1Badge": "Qonaxa 1 • Li Klînîkê",
+    "method.step1Title": "1. Hands-On: Rehetkirina bi Destan",
+    "method.step1Desc": "Pispor bi destên xwe bi hûrbîniyek klînîkî tevdigere:",
+    "method.step1Item1": "<strong>Mobilîzasyona nerm a lebat û movikan</strong> bo vekirina xitbûnan.",
+    "method.step1Item2": "<strong>Xebata mîyofasyal a taybet</strong> bo nermkirina masûlkeyên girjbûyî.",
+    "method.step1Item3": "<strong>Teknîkên neurodînamîk</strong> bo rihetkirina rêyên damaran.",
+    "method.step2Badge": "Qonaxa 2 • Xwebawerî & Pêşîlêgirtin",
+    "method.step2Title": "2. Hands-Off: Parastina Mayînde",
+    "method.step2Desc": "Em rêyên başbûnê didin destê we da ku êş careke din venegere:",
+    "method.step2Item1": "<strong>Tevgerên dermankirinê yên hêsan û pêşverû</strong> ku li malê tên kirin.",
+    "method.step2Item2": "<strong>Rakirina tirsên ji tevgerê</strong> (li gorî pêşniyara KCE).",
+    "method.step2Item3": "<strong>Bernameyek taybet a xwe-rêvebirinê</strong> bo parastina mayînde.",
+    "expertises.badge": "Qabîliyetên Klînîkî yên Taybet",
+    "expertises.title": "Qadên Pisporiya Klînîkî",
+    "expertises.subtitle": "Asteke bilind a pisporiyê ya ku ji aliyê saziyên navneteweyî (IFOMPT) û yên Belçîkayê (MATHERA) ve tê pejirandin.",
+    "expertises.tmoBadge": "Etîketa Navneteweyî ya IFOMPT",
+    "expertises.tmoTitle": "Terapiya Destî ya Ortobedîk (TMO)",
+    "expertises.tmoDesc": "Nirxandina neuro-muskuloskeletî ya pir hûr bo dîtina koka êşê. Em rêbazên nerm, ewle û zanistî bi kar tînin bêyî zordarî.",
+    "expertises.tmoTag1": "Ramana klînîkî",
+    "expertises.tmoTag2": "Mobilîzasyona nerm",
+    "expertises.tmoTag3": "Li ser bingeha delîlan",
+    "expertises.sportBadge": "Yane & Werzişvan",
+    "expertises.sportTitle": "Kînesîterapiya Werzişê",
+    "expertises.sportDesc": "Tedawiya travmayên werzişê (werimîn, çirîn, pirsgirêkên rîhan). Testên vegerê û amadekirina laş.",
+    "expertises.sportSub": "Futbol, jîmnastîk, bez, duçerxe",
+    "expertises.postopBadge": "Emeliyat & Protez",
+    "expertises.postopTitle": "Rehabîlîtasyona Piştî Emeliyatê",
+    "expertises.postopDesc": "Şopandina piştî proteza qorik/çongê (PTH, PTG), bejna xaçerêk (LCA), emeliyata mil û piştê (bi hevkariya CHR Verviers).",
+    "expertises.postopSub": "Vegera hêz û firehiya tevgerê",
+    "expertises.atmBadge": "Pisporiya Çen û Rû",
+    "expertises.atmTitle": "Pirsgirêkên Çenê (ATM) & Serêş",
+    "expertises.atmDesc": "Dermankirina dengdan an asêbûna çenê, dirandina diranan (bruxîzm) û serêşên ji stûyê tên.",
+    "expertises.atmSub": "Rehetkirina girjbûnên kûr ên stû û rû",
+    "osteo.badge": "Cudahiyan Fam Bikin",
+    "osteo.title": "Terapiya Destî (TMO) an Osteopatî?",
+    "osteo.subtitle": "Hûn di navbera osteopatî û terapiya destî de dudil in? Li vir agahiyên zelal û rast hene bo we.",
+    "osteo.thCriteria": "Pîvan",
+    "osteo.thTmo": "Terapiya Destî ya Ortobedîk (TMO)",
+    "osteo.thOsteo": "Osteopatî",
+    "osteo.r1Crit": "Vegerandina Pereyan ji Sîgortayê",
+    "osteo.r1Tmo": "✅ 100% Ji aliyê INAMI ve tê vegerandin (Para we tenê 6,25 €)",
+    "osteo.r1Osteo": "❌ Ji aliyê sîgortaya mecbûrî ve nayê dayîn (55 € heta 75 € hûn didin)",
+    "osteo.r2Crit": "Perwerde & Statu",
+    "osteo.r2Tmo": "Pisporiya zanîngehê di fîzyoterapiyê de (IFOMPT)",
+    "osteo.r2Osteo": "Dîsîplîna taybet a nepeymandar",
+    "osteo.r3Crit": "Delîlên Zanistî",
+    "osteo.r3Tmo": "100% Li ser bingeha delîlan & ji aliyê KCE ve tê pêşniyarkirin",
+    "osteo.r3Osteo": "Nêzîkatiya ampîrîk û têgehî",
+    "osteo.r4Crit": "Xwebaweriya Nexweş",
+    "osteo.r4Tmo": "Rêbaza Hands-On / Hands-Off: tevger ji bo pêşîlêgirtina dubarebûnê",
+    "osteo.r4Osteo": "Bi piranî tenê manîpulasyonên pasîf ên dubare",
+    "tarifs.badge": "100% Li gorî Peymana INAMI • Bêyî Mesrefên Veşartî",
+    "tarifs.title": "Bihayên Fermî & Vegerandina Sîgortayê",
+    "tarifs.subtitle": "Dilsad Igrek bi awayekî tund bihayên fermî yên peymana neteweyî ya Belçîkayê ya sala 2026-an bi kar tîne.",
+    "tarifs.card1Title": "Bihayê Fermî yê Rûniştinê",
+    "tarifs.card1Sub": "Bihayê peymandarê INAMI (2026)",
+    "tarifs.card2Title": "Vegerandina Mutuelle",
+    "tarifs.card2Sub": "Ji aliyê sîgortaya we ve tê dayîn",
+    "tarifs.card3Title": "Para We ya Mayî",
+    "tarifs.card3Sub": "Heqdestê asayî yê nexweş",
+    "tarifs.card4Title": "Statûya BIM (Para We)",
+    "tarifs.card4Sub": "Ji bo kesên xwedî mafê zêdekirî",
+    "tarifs.checkTitle": "Ji kerema xwe ji bo rûniştina yekem bi xwe re bînin:",
+    "tarifs.check1": "Reçeteya xwe ya bijîşkî (ordonnance)",
+    "tarifs.check2": "Vînyeta mutuelle ya Belçîkayê",
+    "tarifs.check3": "Raporên muayeneyê hebin (Radyo, IRM, Eko)",
+    "faq.badge": "Alîkarî & Bersiv",
+    "faq.title": "Pirsên Pir Pirsyar ên Nexweşan",
+    "faq.subtitle": "Hemû agahiyên girîng û pêwîst berî serdana we ya klînîkê.",
+    "faq.q1": "Gelo ji bo vegerandina drav reçeteya bijîşk hewce ye?",
+    "faq.a1": "Belê. Ji bo ku sîgorta heqê rûniştinê vegerîne, reçeteyek ji bijîşkê we pêwîst e. Hûn dikarin îro bi rêya telefonê (<a href=\"tel:0472936978\" class=\"text-secondary font-bold underline\">0472 93 69 78</a>) an emailê randevû bigirin û reçeteyê roja rûniştinê bînin.",
+    "faq.q2": "Muayeneya yekem çawa derbas dibe?",
+    "faq.a2": "Rûniştina yekem di navbera <strong>45 û 60 xulekan</strong> de didome. Ew bi guhdarîkirina dîroka tenduristiya we dest pê dike, bi muayeneyek mekanîkî ya kûr didome, û gava yekem a tedawiyê tê avêtin.",
+    "faq.q3": "Çend rûniştin pêwîst in?",
+    "faq.a3": "Armanca me ew e ku hûn di demek herî kin de baş bibin bêyî rûniştinên zêde. Bi saya tevgerên Hands-Off, piraniya nexweşan di çend rûniştinan de encamek baş dibînin.",
+    "faq.q4": "Divê di dema tedawiyê de çi cil li xwe bikim?",
+    "faq.a4": "Cilên rehet an werzişê (şort, t-shirt, tayt) li xwe bikin da ku herêmên bi êş bi hêsanî werin kontrolkirin û hûn bikaribin bi hêsanî tevbigerin.",
+    "faq.q5": "Tedawî bi kîjan zimanan tê meşandin?",
+    "faq.a5": "Şêwirmendî û tedawî bi rehetî bi zimanên <strong>Kurdî</strong>, <strong>Fransî</strong>, <strong>Almanî</strong> û <strong>Îngilîzî</strong> tên kirin.",
+    "contact.badge": "Navnîşan & Randevû",
+    "contact.title": "Serdana Klînîka IGREK Fîzyoterapî",
+    "contact.subtitle": "Navendek nûjen li Welkenraedt, bi hêsanî ji Eupen, Lontzen, Baelen, Henri-Chapelle û derdorê tê gihîştin.",
+    "contact.addrTitle": "Navnîşana Klînîkê",
+    "contact.addrParking": "Otoparka belaş û hêsan rast li ber derî heye",
+    "contact.hoursTitle": "Demjimêr & Ziman",
+    "contact.hoursDays": "Duşem heta Înê:",
+    "contact.hoursUrgent": "Ji bo rewşên lezgîn her roj dem hene",
+    "contact.langLabel": "Kurdî • Français • Deutsch • English",
+    "contact.cardTitle": "Têkilî & Randevû",
+    "contact.cardDesc": "Ji bo tomarkirina randevûyê an ji bo lezgîniyê, rasterast bi telefon an emailê têkevin têkiliyê:",
+    "contact.btnCall": "Telefon: 0472 93 69 78",
+    "footer.desc": "Klînîka fîzyoterapiyê ya pispor di Terapiya Destî ya Ortobedîk (TMO) û werzişê de li Welkenraedt. Xizmeta takekesî, peymandarê INAMI, standardên bilind ên IFOMPT / MATHERA.",
+    "footer.inamiBadge": "Fîzyoterapîstê Peymandarê INAMI • GSM: 0472 93 69 78",
+    "footer.navTitle": "Rêberiya Bilez",
+    "footer.coordTitle": "Têkilî & Randevû",
+    "footer.rights": "© 2026 IGREK Fîzyoterapî — Dilsad Igrek. Hemû maf parastî ne."
+  }
+};
+
+function setLanguage(lang) {
+  if (!translations[lang]) lang = 'fr';
+  
+  document.documentElement.lang = lang;
+  localStorage.setItem('igrek_lang', lang);
+
+  // Update active state of language buttons
+  ['fr', 'de', 'en', 'ku'].forEach(l => {
+    const btn = document.getElementById('btn-' + l);
+    if (btn) {
+      if (l === lang) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    }
+  });
+
+  // Translate all text nodes with data-i18n
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang] && translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+
+  // Translate all HTML nodes with data-i18n-html
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.getAttribute('data-i18n-html');
+    if (translations[lang] && translations[lang][key]) {
+      el.innerHTML = translations[lang][key];
+    }
+  });
+}
+
+// Auto-detect language on load
+document.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const paramLang = urlParams.get('lang');
+  const hashLang = window.location.hash ? window.location.hash.substring(1).toLowerCase() : null;
+  const savedLang = localStorage.getItem('igrek_lang');
+  
+  let targetLang = 'fr';
+  if (['fr', 'de', 'en', 'ku'].includes(paramLang)) {
+    targetLang = paramLang;
+  } else if (['fr', 'de', 'en', 'ku'].includes(hashLang)) {
+    targetLang = hashLang;
+  } else if (savedLang && ['fr', 'de', 'en', 'ku'].includes(savedLang)) {
+    targetLang = savedLang;
+  } else {
+    // Check browser languages
+    const browserLang = (navigator.language || navigator.userLanguage || '').substring(0, 2).toLowerCase();
+    if (browserLang === 'de') targetLang = 'de';
+    else if (browserLang === 'en') targetLang = 'en';
+    else if (browserLang === 'ku') targetLang = 'ku';
+    else targetLang = 'fr';
+  }
+
+  setLanguage(targetLang);
+});
+</script>
 
 </body>
 </html>
