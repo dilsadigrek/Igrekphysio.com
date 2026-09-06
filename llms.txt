@@ -1,10 +1,11 @@
 # IGREK Physiothérapie — Dilsad Igrek (Kinésithérapeute TMO Welkenraedt)
 
-> Cabinet de kinésithérapie spécialisé en Thérapie Manuelle Orthopédique (TMO) et kinésithérapie du sport à Welkenraedt (Belgique).
+> Cabinet de kinésithérapie générale, respiratoire, traumatologie et spécialisé en Thérapie Manuelle Orthopédique (TMO) à Welkenraedt (Belgique).
 
 ## Informations Pratiques & Coordonnées
 - **Praticien** : Dilsad Igrek
 - **Spécialisation** : Thérapie Manuelle Orthopédique (TMO), certifié IFOMPT & membre MATHERA.
+- **Domaines de prise en charge** : Kinésithérapie générale, kiné respiratoire, traumatologie et blessures, kinésithérapie du sport, rééducation post-opératoire et ATM.
 - **Statut** : 100% Conventionné INAMI (aucun dépassement d'honoraires).
 - **Adresse** : Boulevard Hector Grosjean 52a, 4840 Welkenraedt, Province de Liège, Belgique.
 - **GSM / Téléphone** : 0472 93 69 78 (+32 472 93 69 78)
@@ -28,10 +29,9 @@
   2. *Hands-Off* : Exercices personnalisés et progressifs à domicile pour rendre le patient autonome et éviter les récidives.
 - **Evidence-Based Practice (EBP)** : Conforme aux recommandations du Centre Fédéral d'Expertise des Soins de Santé (KCE).
 
-## Champs d'Expertise & Pathologies
-1. **Mal de dos & Rachis** : Lombalgies aiguës et chroniques, lumbagos, sciatiques, hernies discales, blocages du bassin.
-2. **Cervicales & Nuque** : Torticolis, névralgies cervico-brachiales (NCB), céphalées d'origine cervicale (névralgie d'Arnold).
-3. **Épaule & Membre Supérieur** : Tendinopathies de la coiffe des rotateurs, conflits sous-acromiaux, capsulite rétractile.
-4. **Kinésithérapie du Sport** : Entorses, déchirures musculaires, rééducation du ligament croisé (LCA), protocole Return To Play (F.C. Welkenraedt, Gym La Concorde, cyclistes, coureurs).
-5. **Rééducation Post-Opératoire** : Prothèses totales de hanche et de genou (PTH, PTG), chirurgies du rachis et de l'épaule.
-6. **Mâchoire & ATM** : Dysfonctions temporo-mandibulaires, bruxisme, claquements articulaires.
+## Champs d'Expertise & Domaines de Prise en Charge
+1. **Thérapie Manuelle Orthopédique (TMO / IFOMPT)** : Évaluation neuro-musculo-squelettique de haute précision, mal de dos (lombalgies, lumbagos, sciatiques, hernies), douleurs cervicales (torticolis, NCB), épaules et articulations.
+2. **Kiné Générale & Respiratoire** : Désencombrement bronchique, réadaptation à l'effort, réentraînement respiratoire et affections pulmonaires aiguës ou chroniques.
+3. **Traumatologie & Blessures Traumatiques** : Fractures, entorses aiguës, luxations, déchirures musculaires et lésions ligamentaires.
+4. **Kinésithérapie du Sport** : Suivi des sportifs locaux (F.C. Welkenraedt, Gym La Concorde, coureurs, cyclistes), rééducation du ligament croisé (LCA), tendinopathies et protocoles Return To Play (RTP).
+5. **Rééducation Post-Opératoire & ATM** : Suivi après prothèses (PTH, PTG), chirurgies orthopédiques, troubles de la mâchoire (ATM, bruxisme, claquements) et maux de tête d'origine cervicale.
